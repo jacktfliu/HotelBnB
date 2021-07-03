@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
     entry: './frontend/hotelbnb.jsx',
     output: {
-        path: path.resolve(__dirname),
+        path: path.resolve(__dirname, 'app', 'asset', 'javascript'),
         filename: 'bundle.js',
 
     },
