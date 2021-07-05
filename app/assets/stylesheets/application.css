@@ -14,4 +14,12 @@
  *= require_self
  */
 
- 
+body {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    background-color: white;
+    background-image: url('main-background-image.jpeg');
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
