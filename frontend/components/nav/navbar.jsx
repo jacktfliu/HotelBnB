@@ -19,14 +19,8 @@ class NavBar extends React.Component{
         <div>
             <nav className='login-signup'>
             <div><h1>HotelBnB</h1></div>
-            <button onClick={() =>  }></button>
+            <button>Icon</button>
             </nav>
-
-            {/* <hgroup className='header-group'>
-                 <h1 className='header-name'>Welcome, {this.props.currentUser.username}!</h1>
-                 <button className='header-button' onClick={this.props.logout}>Log out</button>
-            </hgroup> */}
-
         </div>
         )
     }
