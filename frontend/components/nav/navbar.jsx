@@ -25,23 +25,32 @@ class NavBar extends React.Component{
         }
     }
 
+
     render(){
-        console.log(this.props)
+
         return(
         <div>
             <nav className='login-signup'>
            <Link to='/' className='home-link'>HotelBnB</Link>
             <div className='icon-dropdown'>
-            <button className='icon' onClick={this.toggleDropDown.bind(this)}><i className="fas fa-grip-lines" ></i>    
+            <button className='icon' onClick={this.toggleDropDown.bind(this)}>
+                <i className="fas fa-grip-lines" ></i>    
                 <i className="far fa-user-circle" ></i>
-                </button>
+            </button>
+                {this.props.currentUser ?
+                    <div className='dropdownbutton' id='dropdownmenu'>
+                        <p>Welcome {this.props.currentUser.username}</p>
+                        <a className='logout' onClick={() => this.props.logout()}>Log Out</a>
+                    </div>
+                :
                 <div className='dropdownbutton' id='dropdownmenu'>
                     <div className='dropdown'id='dropdown-menu'>
                         <a onClick={() => this.props.openModal('login')}>Log In</a>
                         <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
-                        <a onClick={() => this.demoUser(user)}>Demo User</a>
+                        <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
                     </div>
                 </div>
+                }   
             </div>  
             </nav>
         </div>

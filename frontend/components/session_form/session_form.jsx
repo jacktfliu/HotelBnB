@@ -12,6 +12,10 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
 
   update(field) {
     return e => this.setState({
@@ -23,6 +27,16 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
+  }
+
+  demoUserSignin(demoUser){
+      return e => {
+        e.preventDefault()
+        this.props.action(demoUser).then
+        (() => {
+          this.props.otherForm(demoUser).then(this.props.closeModal)
+        })
+      }
   }
 
   renderErrors() {
@@ -38,6 +52,10 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const demoUser = {
+        username: 'DemoUser',
+        password: 'DemoUser'
+    }
     
     if (this.props.formType === 'login'){
         return (

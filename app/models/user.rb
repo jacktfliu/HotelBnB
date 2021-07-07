@@ -19,7 +19,7 @@ class User < ApplicationRecord
     validates :first_name, :last_name, presence: true
 
     has_many :listings,
-        class_name: :Listing
+        class_name: :Listing,
         foreign_key: :host_id
 
     attr_reader :password
