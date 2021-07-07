@@ -7,7 +7,6 @@
 #  email           :string           not null
 #  first_name      :string           not null
 #  last_name       :string           not null
-#  date_of_birth   :date             not null
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
@@ -18,6 +17,10 @@ class User < ApplicationRecord
     validates :password_digest, presence: true 
     validates :password, length: {minimum: 6, allow_nil: true}
     validates :first_name, :last_name, presence: true
+
+    has_many :listings,
+        class_name: :Listing
+        foreign_key: :host_id
 
     attr_reader :password
 

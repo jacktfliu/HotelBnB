@@ -29,7 +29,6 @@ class NavBar extends React.Component{
         console.log(this.props)
         return(
         <div>
-            Hi {this.props.currentUser}
             <nav className='login-signup'>
            <Link to='/' className='home-link'>HotelBnB</Link>
             <div className='icon-dropdown'>
