@@ -44,7 +44,7 @@ class SessionForm extends React.Component {
         <div>
             <form onSubmit={this.handleSubmit} className='login-form-box'>
                 Welcome to HotelBnB!
-                 Please {this.props.formType} or {this.props.navlink}
+                 Please {this.props.formType} or {this.props.otherForm}
                  {this.renderErrors()}
                 <br/>
                 <label>Username:
@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           Welcome to HotelBnB!
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          Please {this.props.formType} or {this.props.otherForm}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -120,7 +120,6 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>

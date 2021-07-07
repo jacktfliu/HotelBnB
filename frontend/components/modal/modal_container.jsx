@@ -1,5 +1,6 @@
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import Modal from './modal';
 
 const mSTP = state => {
   return {
@@ -9,7 +10,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
   return {
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
   };
 };
 

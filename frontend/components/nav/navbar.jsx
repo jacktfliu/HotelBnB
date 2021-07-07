@@ -1,49 +1,54 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
 class NavBar extends React.Component{
     constructor(props){
         super(props)
     }
 
-    componentDidMount(){
-
+    dropDown(e) {
+        if (!e.target.closest(".dropdown-menu") && !e.target.closest(".home-link")) {
+            document.querySelector(".dropdown-menu").style.display = 'none'
+            document.removeEventListener("click", this.dropDownEvent)
+        }
     }
-
-    handleSubmit(){
-
+    
+    toggleDropDown(){
+        const drop = document.getElementById('dropdownmenu')
+        if (drop.style.display !== 'flex'){
+            drop.style.display = 'flex'
+            document.addEventListener('click', this.dropDown)
+        } else {
+            drop.style.display = 'none'
+            document.removeEventListener('click', this.dropDown)
+        }
     }
 
     render(){
+        console.log(this.props)
         return(
         <div>
+            Hi {this.props.currentUser}
             <nav className='login-signup'>
-            <div><h1>HotelBnB</h1></div>
-            <button>Icon</button>
+           <Link to='/' className='home-link'>HotelBnB</Link>
+            <div className='icon-dropdown'>
+            <button className='icon' onClick={this.toggleDropDown.bind(this)}><i className="fas fa-grip-lines" ></i>    
+                <i className="far fa-user-circle" ></i>
+                </button>
+                <div className='dropdownbutton' id='dropdownmenu'>
+                    <div className='dropdown'id='dropdown-menu'>
+                        <a onClick={() => this.props.openModal('login')}>Log In</a>
+                        <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
+                        <a onClick={() => this.demoUser(user)}>Demo User</a>
+                    </div>
+                </div>
+            </div>  
             </nav>
         </div>
         )
     }
     
-    
-    // sessionLinks = () => (
-    //     <nav className='login-signup'>
-    //     <div><h1>HotelBnB</h1></div>
-    //     <ul class='dropdown'>
-    //         <li>Sign Up</li>
-    //         <li>Login</li>
-    //     </ul>
-    //     </nav>
-    // )
-
-    // usernavBar = () => (
-    //     <hgroup className='header-group'>
-    //         <h1 className='header-name'>Welcome, {props.currentUser.username}!</h1>
-    //         <button className='header-button' onClick={props.logout}>Log out</button>
-    //     </hgroup>
-    // )
-
-    // return (props.currentUser ? usernavBar() : sessionLinks())
 }
 
 export default NavBar 

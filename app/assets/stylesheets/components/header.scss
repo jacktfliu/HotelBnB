@@ -1,0 +1,49 @@
+.login-signup{
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icon{
+    font-size: 25px;
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.icon-dropdown{
+    display: flex;
+    flex-direction: column;   
+}
+
+.home-link:link{
+    color: white;
+}
+.home-link:visited{
+    color: white;
+}
+.home-link:hover{
+    color: white;
+}
+.home-link:focus{
+    color: white;
+}
+.home-link:active{
+    color: white;
+}
+
+.home-link{
+    text-decoration: none;
+    color: white;
+}
+
+
