@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!([{username: 'jack', password: '1234561', first_name: 'jacky', last_name: 'lacky', email:'hello@hello.com'}])
 
-listing = Listing.create!([{title: "PentHouse", price: 150.00, description: 'this is the spot', location: 'nyc', bedroom: 5, bathroom: 3, longitude: 40.7484, latitude: 73.9857, owner_id: 1 }])
+
+User.delete_all
+User.connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
+User.create({username: "DemoUser", email: "demo@user.com", password: "DemoUser",first_name: 'Demo', last_name: 'Demo'})
+
+# user = User.create!([{username: 'jack', password: '1234561', first_name: 'jacky', last_name: 'lacky', email:'hello@hello.com'}])
+# listing = Listing.create!([{title: "PentHouse", price: 150.00, description: 'this is the spot', location: 'nyc', bedroom: 5, bathroom: 3, longitude: 40.7484, latitude: 73.9857, owner_id: 1 }])
