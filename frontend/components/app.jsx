@@ -10,12 +10,18 @@ import {
 import Splash from './splash/splashpage'
 import NavBarContainer from "./nav/navbar_container";
 import ModalContainer from "./modal/modal_container";
+import ListingShowContainer from './listings/listing_show_container'
+import ListingFormConatiner from './listings/listing_form_container'
 
 const App = () => (
     <div>
       <ModalContainer/>
-      <Route path='/' component={NavBarContainer}/>
-      <Splash/>
+      <Switch>
+        <Route path='/' component={NavBarContainer}/>
+        <Route path='/listings/show' component={ListingShowContainer}/>
+        <Route path='/listings/new' component={ListingFormConatiner}/>
+      </Switch>
+        <Splash/>
     </div>
 )
 

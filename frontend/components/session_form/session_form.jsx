@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-                  <br/>
+            <br/>
             <label>First Name:
               <input type="first_name"
                 value={this.state.first_name}
@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-                  <br/>
+            <br/>
             <label>Last Name:
               <input type="last_name"
                 value={this.state.last_name}

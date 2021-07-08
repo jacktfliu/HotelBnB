@@ -4,6 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+
 }
 
 .icon{
@@ -46,24 +49,24 @@
 }
 
 .personal-link:link{
-    color: black;
+    color: white;
 }
 .personal-link:visited{
-    color: black;
+    color: white;
 }
 .personal-link:hover{
-    color: black;
+    color: white;
 }
 .personal-link:focus{
-    color: black;
+    color: white;
 }
 .personal-link:active{
-    color: black;
+    color: white;
 }
 .personal-link{
     text-decoration: none;
-    color: black;
+    color: white;
     margin-right: 10px;
     padding: 10;
-    font-size: 20px;
+    font-size: 18px;
 }

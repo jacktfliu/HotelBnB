@@ -1,28 +1,40 @@
 import React from "react"
+import {Link} from 'react-router-dom'
 
 class SplashPage extends React.Component{
     render(){
         return (
-        <div className='splashpage'>
-            <div>background image</div>
-
+        <div>
+            <div className='splashpage'>
+                <div className="background-image"></div>
+            </div>
+            
             <div>
-            explore cities 
-                <a >Pic 1</a>
-                <a >Pic 2</a>
-                <a >Pic 3</a>
-                <a >Pic 4</a>
-                <a >Pic 5</a>
-                <a >Pic 6</a>
+                <div className='cities'>Explore cities </div>
+                <div className='explore'>
+                    <div className='first-splash'>
+                        <Link className='splash-newyork' onClick={() => click}>New York</Link>
+                        <Link className='splash-philly'>Philadelphia</Link>
+                        <Link className='splash-virginia'>Virginia Beach</Link>
+                        <Link className='splash-vegas'>Las Vegas</Link>
+                        <Link className='splash-boston'>Boston</Link>
+                        <Link className='splash-florida'>Florida</Link>
+                    </div>
+                </div>
             </div>
 
             <div>
-            Live anywhere
-                <a >Pic 1</a>
-                <a >Pic 2</a>
-                <a >Pic 3</a>
+                <div className='live-anywhere'>Live Anywhere</div>
+                <div className='anywhere'>
+                    <div className='second-splash'>
+                        <Link className='splash-outdoor'>Outdoor getaways</Link>
+                        <Link className='splash-unique'>Unique Stays</Link>
+                        <Link className='splash-pets'>Pets allowed</Link>
+                    </div>
+                </div>
             </div>
 
+            
         </div>
         )
     }   
