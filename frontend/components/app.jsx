@@ -7,22 +7,21 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import Splash from './splash/splashpage'
+import SplashPage from './splash/splashpage'
 import NavBarContainer from "./nav/navbar_container";
 import ModalContainer from "./modal/modal_container";
-import ListingShowContainer from './listings/listing_show_container'
-import ListingFormConatiner from './listings/listing_form_container'
+import ListingIndexContainer from "./listing_index/listing_index_container";
+import { Fragment } from "react";
 
 const App = () => (
-    <div>
-      <ModalContainer/>
+    <Fragment>
+        <NavBarContainer/>
+        <ModalContainer/>
       <Switch>
-        <Route path='/' component={NavBarContainer}/>
-        <Route path='/listings/show' component={ListingShowContainer}/>
-        <Route path='/listings/new' component={ListingFormConatiner}/>
+        {/* <Route exact path='/listings/:listingId' component={ListingIndexContainer}/> */}
+        <Route exact path="/" component={SplashPage} />
       </Switch>
-        <Splash/>
-    </div>
+    </Fragment>
 )
 
 export default App
