@@ -40,10 +40,30 @@
 .home-link:active{
     color: white;
 }
-
 .home-link{
     text-decoration: none;
     color: white;
 }
 
-
+.personal-link:link{
+    color: black;
+}
+.personal-link:visited{
+    color: black;
+}
+.personal-link:hover{
+    color: black;
+}
+.personal-link:focus{
+    color: black;
+}
+.personal-link:active{
+    color: black;
+}
+.personal-link{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    padding: 10;
+    font-size: 20px;
+}

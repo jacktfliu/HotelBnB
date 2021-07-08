@@ -11,9 +11,9 @@ class SplashPage extends React.Component{
                 <a >Pic 1</a>
                 <a >Pic 2</a>
                 <a >Pic 3</a>
-                <a>Pic 4</a>
-                <a>Pic 5</a>
-                <a>Pic 6</a>
+                <a >Pic 4</a>
+                <a >Pic 5</a>
+                <a >Pic 6</a>
             </div>
 
             <div>
