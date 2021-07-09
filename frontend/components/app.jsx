@@ -11,16 +11,18 @@ import SplashPage from './splash/splashpage'
 import NavBarContainer from "./nav/navbar_container";
 import ModalContainer from "./modal/modal_container";
 import ListingIndexContainer from "./listing_index/listing_index_container";
+import ListingShowContainer from './listing_show/listing_show_container'
 import { Fragment } from "react";
 
 const App = () => (
     <Fragment>
         <NavBarContainer/>
         <ModalContainer/>
-      <Switch>
-        {/* <Route exact path='/listings/:listingId' component={ListingIndexContainer}/> */}
-        <Route exact path="/" component={SplashPage} />
-      </Switch>
+          <Switch>
+            <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
+            <Route exact path='/listings' component={ListingIndexContainer}/>
+            <Route exact path="/" component={SplashPage} />
+          </Switch>
     </Fragment>
 )
 

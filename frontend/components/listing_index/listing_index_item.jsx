@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+
 
 class ListingIndexItem extends React.Component{
     constructor(props){
@@ -15,11 +15,11 @@ class ListingIndexItem extends React.Component{
     render(){
         return(
             <div className='listing-index-item' onClick={this.handleClick}>
-                <div>Listing</div>
+                <div></div>
 
             </div>
         )
     }
 }
 
-export default withRouter(ListingIndexItem)
+export default ListingIndexItem

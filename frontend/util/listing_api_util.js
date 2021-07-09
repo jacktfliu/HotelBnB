@@ -4,7 +4,7 @@ export const fetchListings = listing => (
         url: 'api/listings',
         data: {listing}
     })
-).then(response => console.log(response))
+)
 
 export const fetchListing = id => (
     $.ajax({

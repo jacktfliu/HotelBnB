@@ -7,9 +7,9 @@ const mSTP = (state) => ({
     listings: Object.values(state.entities.listings)
 })
 
-const mDTP = (state) => ({
-    fetchListing: (id) => dispatchEvent(fetchListing(id)),
-    fetchListings: () => dispatchEvent(fetchListings())
+const mDTP = (dispatch) => ({
+    fetchListing: (id) => dispatch(fetchListing(id)),
+    fetchListings: () => dispatch(fetchListings())
 })
 
 export default withRouter(connect(mSTP, mDTP)(ListingIndex))
