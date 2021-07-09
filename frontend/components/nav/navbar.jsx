@@ -36,18 +36,17 @@ class NavBar extends React.Component{
                         {
                             this.state.clicked ?(
                             this.props.currentUser ?
-                            <div id='dropdown-menu' onClick={this.handleClick}>
+                            <div className='dropdown' onClick={this.handleClick}>
                                 <p>Welcome {this.props.currentUser.username}</p>
                                 <a className='logout' onClick={() => this.props.logout()}>Log Out</a>
                             </div>
                             :
-                            <div id='dropdownbutton' >
-                            <div className='dropdown'id='dropdown-menu' >
+                            <div className='dropdown'>
                                 <a onClick={() => this.props.openModal('login')}>Log In</a>
                                 <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
                                 <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
                             </div>
-                            </div>
+                           
                         ) : ''
                         }
                     </div>  

@@ -1,25 +1,24 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
+const ListingIndexItem = props => {
+    const {listing}  = props
+    // console.log(props)
+    return(
+        <div>
+            <h1>
+                <Link to={`/listings/${listing.id}`}>{listing.title}</Link>
+            </h1>
 
-class ListingIndexItem extends React.Component{
-    constructor(props){
-        super(props)
+            <label>Price:
+                {listing.price}
+            </label>
 
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick(){
-        this.props.history.push(`/listings/${this.props.spot.id}`)
-    }
-
-    render(){
-        return(
-            <div className='listing-index-item' onClick={this.handleClick}>
-                <div></div>
-
-            </div>
-        )
-    }
+            <label>Description:
+                {listing.description}
+            </label>
+        </div>
+    )
 }
 
 export default ListingIndexItem

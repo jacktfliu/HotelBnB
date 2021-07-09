@@ -17,22 +17,6 @@ class ListingIndex extends React.Component{
             <div>
                 <h1>THIS IS ALL THE LISTINGS</h1>
                {listings.map(listing => <ListingIndexItem listing={listing} key={listing.id}/>)} 
-
-               <Link to={`listings/${listings.id}`}>
-                   HOUSE 1
-               </Link>
-
-               <Link to={`listings/${listings.id}`}>
-                   HOUSE 2
-               </Link>
-
-               <Link to={`listings/${listings.id}`}>
-                   HOUSE 3
-               </Link>
-
-               <Link to={`listings/${listings.id}`}>
-                   HOUSE 4
-               </Link>
             </div>
         )
     }

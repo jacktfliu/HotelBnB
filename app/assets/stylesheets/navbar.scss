@@ -1,0 +1,28 @@
+.icon-dropdown{
+    display: flex;
+    flex-direction: column;   
+}
+
+.home-link:link{
+    color: white;
+}
+.home-link:visited{
+    color: white;
+}
+.home-link:hover{
+    color: white;
+}
+.home-link:focus{
+    color: white;
+}
+.home-link:active{
+    color: white;
+}
+.home-link{
+    text-decoration: none;
+    color: white;
+}
+
+#dropdown-menu {
+  display: flex;
+}

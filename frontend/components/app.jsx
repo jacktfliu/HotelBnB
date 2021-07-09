@@ -19,11 +19,12 @@ const App = () => (
         <NavBarContainer/>
         <ModalContainer/>
           <Switch>
-            <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
-            <Route exact path='/listings' component={ListingIndexContainer}/>
             <Route exact path="/" component={SplashPage} />
+            <Route exact path='/listings' component={ListingIndexContainer}/>
+            <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
           </Switch>
     </Fragment>
+
 )
 
 export default App

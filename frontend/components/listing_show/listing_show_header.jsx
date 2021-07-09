@@ -4,11 +4,11 @@ const ListingHeader = (listing) => {
     return (
         <div>
             <div>
-                <h1>{listing.title}</h1>
+                THIS IS ONE LISTING
             </div>
 
             <div>
-                <div>{listing.location}</div>
+               
             </div>
         </div>
     )
