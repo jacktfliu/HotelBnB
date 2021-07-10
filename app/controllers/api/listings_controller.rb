@@ -10,10 +10,15 @@ class Api::ListingsController < ApplicationController
         @listing = Listing.find(params[:id])
     end
 
+    def new 
+        @listing = :listing.new
+        render :new
+    end
+
     def create 
         @listing = Listing.new(listing_params)
 
-        if @listing.save 
+        if @listing.save
             render :show
         else 
             render json: @listing.errors.full_messages, status: 422
@@ -33,8 +38,8 @@ class Api::ListingsController < ApplicationController
     def destroy 
         @listing = Listing.find(params[:id])
 
-        if @listing && @listing.destroy
-            render 
+        if @listing.destroy
+            render :show
         else 
             render json: @listing.errors.full_messages, status: 403
         end
@@ -51,7 +56,8 @@ class Api::ListingsController < ApplicationController
             :bedroom, 
             :bathroom, 
             :longitude, 
-            :latitude
+            :latitude,
+            :owner_id
         )
     end
 

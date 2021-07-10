@@ -38,7 +38,7 @@ class NavBar extends React.Component{
                             this.props.currentUser ?
                             <div className='dropdown' onClick={this.handleClick}>
                                 <p>Welcome {this.props.currentUser.username}</p>
-                                <a onClick={() => this.props.createListing}>Host</a>
+                                <Link to='/listing/new'>Host</Link>
                                 <a className='logout' onClick={() => this.props.logout()}>Log Out</a>
                             </div>
                             :

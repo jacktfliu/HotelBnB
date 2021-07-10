@@ -9,10 +9,12 @@ class ListingForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        this.props.createListing(this.state)
+        this.props.createListing(this.state).then(
+            (list) => this.props.history.push(`/listings/${list.listing.id}`)
+        )
     }
 
-    update(field){
+    handleUpdate(field){
         return (e) => {
             this.setState({[field]: e.target.value})
         }
@@ -23,54 +25,57 @@ class ListingForm extends React.Component{
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <h1>Create A Listing!</h1>
+                    <div>
+
 
                     <input className='create-listing-form' 
-                        onChange={this.update('title')} 
+                        onChange={this.handleUpdate('title')} 
                         type='text' 
                         value={this.state.title}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('price')} 
+                        onChange={this.handleUpdate('price')} 
                         type='text' 
                         value={this.state.price}
                     />
 
                     <textarea className='create-listing-form' 
-                        onChange={this.update('description')}  
+                        onChange={this.handleUpdate('description')}  
                         value={this.state.description}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('location')} 
+                        onChange={this.handleUpdate('location')} 
                         type='text' 
                         value={this.state.location}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('bedroom')} 
+                        onChange={this.handleUpdate('bedroom')} 
                         type='text' 
                         value={this.state.bedroom}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('bathroom')} 
+                        onChange={this.handleUpdate('bathroom')} 
                         type='text' 
                         value={this.state.bathroom}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('longitude')} 
+                        onChange={this.handleUpdate('longitude')} 
                         type='text' 
                         value={this.state.longitude}
                     />
 
                     <input className='create-listing-form' 
-                        onChange={this.update('latitude')} 
+                        onChange={this.handleUpdate('latitude')} 
                         type='text' 
                         value={this.state.latitude}
                     />
                     <input type="submit"/>
+                    </div>
                 </form>
             </div>
         )

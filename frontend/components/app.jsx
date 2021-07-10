@@ -11,7 +11,7 @@ import NavBarContainer from "./nav/navbar_container";
 import ModalContainer from "./modal/modal_container";
 import ListingIndexContainer from "./listing_index/listing_index_container";
 import ListingShowContainer from './listing_show/listing_show_container'
-import ListingFormContainer from './listing_form/listing_form_container'
+import CreateFormContainer from './listing_form/create_form_container'
 import { Fragment } from "react";
 
 const App = () => (
@@ -22,7 +22,7 @@ const App = () => (
             <Route exact path="/" component={SplashPage} />
             <Route exact path='/listings' component={ListingIndexContainer}/>
             <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
-            <Route exact path='listings/new' component={ListingFormContainer}/>
+            <Route path='/listing/new' component={CreateFormContainer}/>
           </Switch>
     </Fragment>
 

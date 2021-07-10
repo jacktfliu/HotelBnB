@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_09_192743) do
+ActiveRecord::Schema.define(version: 2021_07_10_013549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,13 +21,12 @@ ActiveRecord::Schema.define(version: 2021_07_09_192743) do
     t.string "location", null: false
     t.integer "bedroom", null: false
     t.integer "bathroom", null: false
-    t.integer "owner_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price", null: false
     t.float "longitude", null: false
     t.float "latitude", null: false
-    t.index ["owner_id"], name: "index_listings_on_owner_id", unique: true
+    t.integer "owner_id", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

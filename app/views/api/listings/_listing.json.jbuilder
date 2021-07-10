@@ -8,4 +8,5 @@ json.extract! listing,
             :bedroom, 
             :bathroom, 
             :longitude, 
-            :latitude
+            :latitude,
+            :owner_id
