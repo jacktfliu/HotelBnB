@@ -6,15 +6,15 @@ const ListingIndexItem = props => {
 
     return(
         <div>
-            <h1>
+            <h1 className='listing-header'>
                 <Link to={`/listings/${listing.id}`}>{listing.title}</Link>
             </h1>
 
-            <label>Price:
+            <label className='listing-price'>Price:
                 {listing.price}
             </label>
 
-            <label>Description:
+            <label className='listing-description'>Description:
                 {listing.description}
             </label>
 

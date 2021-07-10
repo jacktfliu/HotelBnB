@@ -3,3 +3,56 @@
     width: 50%;
     border: solid 1px red; 
 }
+
+.curved-button{
+
+}
+
+.listing-page-header{
+    padding-left: 26px;
+    padding-top: 60px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.listing-page-button{
+    padding-top: 26px;
+    padding-left: 18px;
+}
+
+.curved-button{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    padding-top: 70px;
+    padding: 8px 16px;
+    outline: none;
+    background: transparent;
+    margin: 0;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.listing-page-words{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    padding-top: 26px;
+    padding-left: 28px;
+    font-size: 15px;
+}
+
+.listings{
+    border: solid 1px red; 
+}
+
+.listing-header{
+    border: solid 1px red; 
+}
+
+.listing-price{
+    border: solid 1px red; 
+}
+
+.listing-description{
+    border: solid 1px red; 
+}

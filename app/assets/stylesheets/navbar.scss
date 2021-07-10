@@ -50,19 +50,28 @@
     border-radius: 20px;
     cursor: pointer;
     border: 1px solid lightgray;
+    box-shadow:rgba(0, 0, 0, 0.08) 0px 1px 12px;
     &:hover{
         background: lightgrey;
     }
     i {
         &:first-child{
-            width: 18px;
+            width: 22px;
             height: 16px;
+            font-size: 20px;
+            align-items: center;
+            display: flex;
+            color: grey;
         }
 
         &:last-child{
+            font-size: 25px;
             width: 16px;
             height: 16px;
             margin-left: 5px;
+            align-items: center;
+            display: flex;
+            color: grey;
         }
     }
 }
