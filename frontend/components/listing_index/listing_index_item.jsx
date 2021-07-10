@@ -17,6 +17,7 @@ const ListingIndexItem = props => {
             <label>Description:
                 {listing.description}
             </label>
+
         </div>
     )
 }

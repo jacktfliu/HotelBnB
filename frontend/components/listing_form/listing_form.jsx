@@ -5,11 +5,12 @@ class ListingForm extends React.Component{
         super(props)
         this.state = this.props.listing          
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleUpdate = this.handleUpdate.bind(this)
     }
 
     handleSubmit(e){
         e.preventDefault()
-        this.props.createListing(this.state).then(
+        this.props.action(this.state).then(
             (list) => this.props.history.push(`/listings/${list.listing.id}`)
         )
     }
@@ -23,10 +24,9 @@ class ListingForm extends React.Component{
     render(){
         return(
             <div>
+                <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <h1>Create A Listing!</h1>
                     <div>
-
 
                     <input className='create-listing-form' 
                         onChange={this.handleUpdate('title')} 
@@ -74,7 +74,7 @@ class ListingForm extends React.Component{
                         type='text' 
                         value={this.state.latitude}
                     />
-                    <input type="submit"/>
+                    <button type='submit'>{this.props.formType}</button>
                     </div>
                 </form>
             </div>

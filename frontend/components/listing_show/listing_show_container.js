@@ -1,6 +1,8 @@
 import {connect} from 'react-redux'
 import { fetchListings, fetchListing } from '../../actions/listing_action'
 import ListingShow from './listing_show'
+import { deleteListing } from '../../actions/listing_action'
+import { updateListing } from '../../actions/listing_action'
 
 const mSTP = (state, ownProps) => {
     // currentUser: state.entities.users[state.session.id],
@@ -13,7 +15,9 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return{
         fetchListings: () => dispatch(fetchListings()),
-        fetchListing: (id) => dispatch(fetchListing(id))
+        fetchListing: (id) => dispatch(fetchListing(id)),
+        deleteListing: (listingId) => dispatch(deleteListing(listingId)),
+        updateListing: (listing) => dispatch(updateListing(listing))
     }
 }
 

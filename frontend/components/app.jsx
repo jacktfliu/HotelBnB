@@ -6,6 +6,7 @@ import ModalContainer from "./modal/modal_container";
 import ListingIndexContainer from "./listing_index/listing_index_container";
 import ListingShowContainer from './listing_show/listing_show_container'
 import CreateFormContainer from './listing_form/create_form_container'
+import EditFormContainer from './listing_form/edit_form_containter'
 import { Fragment } from "react";
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -19,6 +20,7 @@ const App = () => (
             <Route exact path='/listings' component={ListingIndexContainer}/>
             <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
             <ProtectedRoute path='/listing/new' component={CreateFormContainer}/>
+            <ProtectedRoute path='/listings/:listingId/edit' component={EditFormContainer}/>
           </Switch>
     </Fragment>
 
