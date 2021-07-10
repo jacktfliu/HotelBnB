@@ -15,8 +15,13 @@ class ListingIndex extends React.Component{
         const {listings} = this.props
         return(
             <div>
-                <h1>THIS IS ALL THE LISTINGS</h1>
-               {listings.map(listing => <ListingIndexItem listing={listing} key={listing.id}/>)} 
+                <div className='listing-right'>
+                    {listings.map(listing => <ListingIndexItem listing={listing} key={listing.id}/>)} 
+                </div>
+
+                <div className='map-right'>
+                    MAP
+                </div>
             </div>
         )
     }

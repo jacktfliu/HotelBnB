@@ -33,8 +33,8 @@ class NavBar extends React.Component{
 
                     <div className='header'>
                         <button className='icon-button' onClick={this.handleClick}>
-                            <i className="fas fa-grip-lines icon-2x"></i>    
-                            <i className="far fa-user-circle" ></i>
+                                <i className="fas fa-grip-lines icon-large"></i>    
+                                <i className="far fa-user-circle" ></i>
                         </button>
                      
                         {
