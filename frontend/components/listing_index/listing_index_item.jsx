@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const ListingIndexItem = props => {
     const {listing}  = props
-    // console.log(props)
+
     return(
         <div>
             <h1>

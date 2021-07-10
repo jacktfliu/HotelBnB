@@ -1,13 +1,19 @@
-import { create } from 'enhanced-resolve'
 import React from 'react'
 import { connect } from 'react-redux'
-
 import { createListing } from '../../actions/listing_action'
-import ListingShow from '../listing_show/listing_show'
 import ListingForm from './listing_form'
 
 const mSTP = (state) => ({
-
+    listing: {
+        title: '',
+        price: '',
+        description: '', 
+        location: '',
+        bedroom: '',
+        bathroom: '',
+        longitude: '',
+        latitude: '' 
+    }
 })
 
 const mDTP = (dispatch) => ({

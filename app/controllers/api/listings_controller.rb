@@ -1,5 +1,5 @@
 class Api::ListingsController < ApplicationController
-    before_action :require_logged_in, only: [:create]
+    before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def index 
         @listings = Listing.all
@@ -21,12 +21,22 @@ class Api::ListingsController < ApplicationController
     end
 
     def update
-        @listing = listing.find(params[:id])
+        @listing = Listing.find(params[:id])
 
         if @listing && @listing.update(listing_params)
             render :show
         else 
             render json: @spot.errors.full_messages, status: 422
+        end
+    end
+
+    def destroy 
+        @listing = Listing.find(params[:id])
+
+        if @listing && @listing.destroy
+            render 
+        else 
+            render json: @listing.errors.full_messages, status: 403
         end
     end
 

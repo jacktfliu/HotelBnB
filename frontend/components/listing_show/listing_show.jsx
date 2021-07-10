@@ -12,14 +12,14 @@ class ListingShow extends React.Component{
     }
 
     componentDidMount(){
-        debugger
+        
         this.props.fetchListing(this.props.match.params.listingId).then(() =>{
             this.setState({loading: false})
         })
     }
 
     compononetDidUpdate(){
-        debugger
+        
         if (this.props.listingId){
             this.props.fetchListing(this.props.match.params.listingId)
         } 
@@ -29,14 +29,14 @@ class ListingShow extends React.Component{
     render(){
         const {listing} = this.props
         if (this.state.loading){
-            debugger
+            
             return(
                 <>
                     loading
                 </>
             )
         } else {
-            debugger
+            
         return(
             <div>
                 <div>

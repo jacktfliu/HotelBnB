@@ -1,15 +1,15 @@
 import {RECEIVE_LISTING, RECEIVE_LISTINGS} from '../actions/listing_action'
 
+
 const listingsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type){
         case RECEIVE_LISTINGS:
-            debugger
             return action.listings
-        // case RECEIVE_LISTING:
-        //     return action.listing
+        case RECEIVE_LISTING:
+            const newListing = { [action.listing.id]: action.listing }
+            return Object.assign({}, state, newListing);
         default: 
-        debugger
             return state
     }
 }

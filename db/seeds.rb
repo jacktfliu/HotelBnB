@@ -66,4 +66,5 @@ listing4 = Listing.create(
     latitude: 36.112625,
     owner_id: 4
 )
-
+    
+   
