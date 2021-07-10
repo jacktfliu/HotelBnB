@@ -24,15 +24,19 @@ class NavBar extends React.Component{
 
     render(){
         return(
-        <div className='nav-bar'>
+        <div >
                 <nav className='login-signup'>
-                <div><Link to='/' className='home-link'>HotelBnB</Link></div>
-                    <div className='icon-dropdown'>
-                        <button className='icon' onClick={this.handleClick}>
-                            <i className="fas fa-grip-lines" ></i>    
+
+                    <div className='home-link'>
+                        <Link to='/' className='title'>HotelBnB</Link>
+                    </div>
+
+                    <div className='header'>
+                        <button className='icon-button' onClick={this.handleClick}>
+                            <i className="fas fa-grip-lines icon-2x"></i>    
                             <i className="far fa-user-circle" ></i>
                         </button>
-                        
+                     
                         {
                             this.state.clicked ?(
                             this.props.currentUser ?
@@ -48,7 +52,7 @@ class NavBar extends React.Component{
                                 <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
                             </div>
                            
-                        ) : ''
+                            ) : ''
                         }
                     </div>  
                 </nav>

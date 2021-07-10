@@ -1,28 +1,70 @@
-.icon-dropdown{
-    display: flex;
-    flex-direction: column;   
-}
 
-.home-link:link{
-    color: white;
+.title:link{
+    color: rgb(255, 56, 92);
 }
-.home-link:visited{
-    color: white;
+.title:visited{
+    color: rgb(255, 56, 92);
 }
-.home-link:hover{
-    color: white;
+.title:hover{
+    color: rgb(255, 56, 92);
 }
-.home-link:focus{
-    color: white;
+.title:focus{
+    color: rgb(255, 56, 92);
 }
-.home-link:active{
-    color: white;
+.title:active{
+    color: rgb(255, 56, 92);
 }
-.home-link{
+.title {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 56, 92);
 }
 
-#dropdown-menu {
-  display: flex;
+.home-link{
+    color: rgb(255, 56, 92);
+    font-size: 25px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-weight: bold;
 }
+
+.login-signup{
+    height: 62px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-button{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+    i {
+        &:first-child{
+            width: 16px;
+            height: 16px;
+        }
+
+        &:last-child{
+            width: 16px;
+            height: 16px;
+            margin-left: 6px;
+        }
+    }
+}
+
+
+
+
+
