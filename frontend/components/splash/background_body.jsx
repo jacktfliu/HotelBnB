@@ -3,8 +3,10 @@ import React from 'react'
 
 const BackgroundBody = () => {
     return(
-        <div className='splashpage'>
+        <div className='splash-container'>
             <div className="background-image"></div>
+            <div className='background-word'>Not sure where to go?</div>
+            <button className='suprise-me'>Suprise me</button>
         </div>
     )
 }

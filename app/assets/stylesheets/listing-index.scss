@@ -4,16 +4,12 @@
     border: solid 1px red; 
 }
 
-.curved-button{
-
-}
-
 .listing-page-header{
     padding-left: 26px;
-    padding-top: 60px;
+    padding-top: 75px;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     color: black;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -25,7 +21,7 @@
 .curved-button{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     padding-top: 70px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     outline: none;
     background: transparent;
     margin: 0;
@@ -38,21 +34,43 @@
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     padding-top: 26px;
     padding-left: 28px;
+    padding-bottom: 30px;
     font-size: 15px;
 }
 
 .listings{
-    border: solid 1px red; 
+    border: solid 1px blue; 
 }
 
 .listing-header{
-    border: solid 1px red; 
+    border: solid 1px blue; 
 }
 
 .listing-price{
-    border: solid 1px red; 
+    border: solid 1px blue; 
 }
 
 .listing-description{
+    border: solid 1px blue; 
+}
+
+.listing-right-box{
     border: solid 1px red; 
+    border-top: 1px solid ;
+    padding: 24px 0;
+    display: flex;
+}
+
+.listing-image{
+    background-image: url('NewYorkCity.jpeg');
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px red; 
+    padding-left: 30px;
+}
+
+.listing-header{
+
 }

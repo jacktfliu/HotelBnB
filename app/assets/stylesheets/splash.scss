@@ -1,3 +1,4 @@
+
 .background-image{
     background-image: url('mainpage-unsplash.jpeg');
     background-size: 100%;
@@ -8,4 +9,24 @@
     font-size: 14px;    
 }
 
+.suprise-me{
+    border: solid 1px red; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 40px;
+    outline: none;
+    background: transparent;
+    margin: 0;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin-right: 10px;
+    display: flex;
+    box-shadow:rgba(0, 0, 0, 0.08) 0px 1px 12px;
+}
 
+.background-word{
+    border: solid 1px red; 
+    font-size: 16px;
+    font-weight: bold;
+    
+}
