@@ -1,4 +1,5 @@
 import React from 'react'
+import { render } from 'react-dom'
 import { Link } from 'react-router-dom'
 
 
@@ -10,6 +11,7 @@ class ListingShow extends React.Component{
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.userEditDelete = this.userEditDelete.bind(this)
     }
 
     handleSubmit(e){
@@ -33,9 +35,19 @@ class ListingShow extends React.Component{
         } 
     }
 
+    userEditDelete(){
+        return(
+            <div>
+                <Link to={`/listings/${this.props.listing.id}/edit`}>Edit Listing</Link>
+                <button onClick={this.handleSubmit}>Delete Event</button>
+            </div>
+        )
+    }
+
 
     render(){
-        const {listing, deleteListing} = this.props
+
+        const {listing, currentUser} = this.props
         if (this.state.loading){
             
             return(
@@ -45,7 +57,9 @@ class ListingShow extends React.Component{
             )
         } else {
             
+    
         return(
+            
             <div className='show-container'>
                 <div className='show-header'>
                     <div>
@@ -59,8 +73,7 @@ class ListingShow extends React.Component{
                         <p>Location: {listing.location}</p>
                     </div>
                     <div>
-                        <Link to={`/listings/${listing.id}/edit`}>Edit Listing</Link>
-                        <button onClick={this.handleSubmit}>Delete Event</button>
+                        {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
                     </div>
                 </div>
                 
@@ -89,3 +102,8 @@ class ListingShow extends React.Component{
 }
 
 export default ListingShow
+
+
+                    
+                    
+            

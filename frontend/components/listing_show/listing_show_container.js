@@ -5,10 +5,10 @@ import { deleteListing } from '../../actions/listing_action'
 import { updateListing } from '../../actions/listing_action'
 
 const mSTP = (state, ownProps) => {
-    // currentUser: state.entities.users[state.session.id],
     return{
-    listing: state.entities.listings[ownProps.match.params.listingId],
-    listingId: ownProps.match.params.listingId
+        currentUser: state.entities.users[state.session.id],
+        listing: state.entities.listings[ownProps.match.params.listingId],
+        listingId: ownProps.match.params.listingId
     }
 }
 
