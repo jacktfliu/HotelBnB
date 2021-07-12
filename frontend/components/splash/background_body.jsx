@@ -1,14 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 const BackgroundBody = () => {
     return(
         <div className='splash-container'>
-            <div className='image-container'>
-                <div className="background-image"></div>
-            </div>
-            <div className='background-word'>Not sure where to go?</div>
-            <button className='suprise-me'>Suprise me</button>
+            
+            <div className='background-word'>Not sure where to go? Perfect.</div>
+            <Link to='/listings' className='suprise-me'>Suprise me</Link>
+           
         </div>
     )
 }

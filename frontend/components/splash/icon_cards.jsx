@@ -3,28 +3,67 @@ import { Link } from 'react-router-dom'
 
 const IconCards = () => {
     return (
-        <div>
+        <div className='icon-cards'>
             <div>
                 <div className='cities'>Explore cities </div>
                 <div className='explore'>
-                    <div className='first-splash'>
-                        <Link to={`listings`} className='splash-newyork'>New York</Link>
-                        <Link to={`listings`} className='splash-philly'>Philadelphia</Link>
-                        <Link to={`listings`} className='splash-virginia'>Virginia Beach</Link>
-                        <Link to={`listings`} className='splash-vegas'>Las Vegas</Link>
-                        <Link to={`listings`} className='splash-boston'>Boston</Link>
-                        <Link to={`listings`} className='splash-florida'>Florida</Link>
+                    <div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-words' to={`listings`}>New York</Link>
+                            </div>
+                        </div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-image' to={`listings`}>Philadelphia</Link>
+                            </div>
+                        </div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-image' to={`listings`}>Virginia Beach</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-image' to={`listings`}>Las Vegas</Link>
+                            </div>
+                        </div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-image' to={`listings`}>Boston</Link>
+                            </div>
+                        </div>
+                        <div className='first-splash-box'>
+                            <div className='first-splash-image'>
+                                <Link className='first-splash-image' to={`listings`}>Florida</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
+            <div className='icon-cards'>
                 <div className='live-anywhere'>Live Anywhere</div>
                 <div className='anywhere'>
-                    <div className='second-splash'>
-                        <Link to={`listings`} className='splash-outdoor'>Outdoor getaways</Link>
-                        <Link to={`listings`} className='splash-unique'>Unique Stays</Link>
-                        <Link to={`listings`} className='splash-pets'>Pets allowed</Link>
+                    <div>
+                        <div className='second-splash-box'>
+                            <div className='second-splash-image'>
+                                <Link to={`listings`}>Outdoor getaways</Link>
+                            </div>
+                        </div>
+                         <div className='second-splash-box'>
+                            <div className='second-splash-image'>
+                                <Link to={`listings`}>Unique Stays</Link>
+                            </div>
+                        </div>
+                         <div className='second-splash-box'>
+                            <div className='second-splash-image'>
+                                <Link to={`listings`}>Pets allowed</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

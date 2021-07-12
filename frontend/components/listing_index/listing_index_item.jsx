@@ -7,9 +7,9 @@ const ListingIndexItem = props => {
     return(
         <div className='listing-left-box'>
             <div className='listing-image'>IMAGE PLACEHOLDER</div>
-                <div className='listing-items-container'>
+                <Link className='listing-items-container' to={`/listings/${listing.id}`}>
                     <h1 className='listing-header'>
-                        <Link to={`/listings/${listing.id}`}>{listing.title}</Link>
+                        <div className='listing-title'>{listing.title}</div>
                     </h1>
 
                     <div className='listing-description'>
@@ -23,7 +23,7 @@ const ListingIndexItem = props => {
                     <div className='listing-price'>
                         ${listing.price} / night
                     </div>
-                </div>
+                </Link>
         </div>
     )
 }

@@ -36,24 +36,26 @@ class NavBar extends React.Component{
                                 <i className="fas fa-grip-lines icon-large"></i>    
                                 <i className="far fa-user-circle" ></i>
                         </button>
-                     
-                        {
-                            this.state.clicked ?(
-                            this.props.currentUser ?
-                            <div className='dropdown' onClick={this.handleClick}>
-                                <p>Welcome {this.props.currentUser.username}</p>
-                                <Link to='/listing/new'>Host</Link>
-                                <a className='logout' onClick={() => this.props.logout()}>Log Out</a>
-                            </div>
-                            :
-                            <div className='dropdown'>
-                                <a onClick={() => this.props.openModal('login')}>Log In</a>
-                                <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
-                                <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
-                            </div>
-                           
-                            ) : ''
-                        }
+
+                        <div className='dropdwon'>
+                            {
+                                this.state.clicked ?(
+                                this.props.currentUser ?
+                                <div className='dropdown-content' onClick={this.handleClick}>
+                                    <a>Welcome {this.props.currentUser.username}</a>
+                                    <Link to='/listing/new'>Host</Link>
+                                    <a onClick={() => this.props.logout()}>Log Out</a>
+                                </div>
+                                :
+                                <div className='dropdown-content'>
+                                    <a onClick={() => this.props.openModal('login')}>Log In</a>
+                                    <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
+                                    <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
+                                </div>
+                            
+                                ) : ''
+                            }
+                        </div>
                     </div>  
                 </nav>
         </div>

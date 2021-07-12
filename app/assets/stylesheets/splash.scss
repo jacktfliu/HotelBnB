@@ -1,36 +1,147 @@
 
-.background-image{
+.splash-container{
+    display: flex;
     background-image: url('mainpage-unsplash.jpeg');
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;   
-}
-
-.image-container{
-    width: 100vw;
-    height: 60vh;
-    border: solid 1px red;
-}
-
-.suprise-me{
-    border: solid 1px red; 
-    font-size: 16px;
-    font-weight: bold;
-    padding: 20px 40px;
-    outline: none;
-    background: transparent;
-    margin: 0;
-    border: 1px solid grey;
-    border-radius: 30px;
-    margin-right: 10px;
-    display: flex;
-    box-shadow:rgba(0, 0, 0, 0.08) 0px 1px 12px;
-}
-
-.background-word{
-    border: solid 1px red; 
-    font-size: 16px;
-    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+    .image-container{
+      
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .suprise-me{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 40px;
+        outline: none;
+        background: white;
+        margin: 0;
+        border: 1px solid grey;
+        border-radius: 30px;
+        margin-right: 10px;
+        display: flex;
+        box-shadow:rgba(0, 0, 0, 0.3) 1px 0px 12px;
+        justify-content: center;
+        line-height: 20px;
+
+        &:hover{
+            box-shadow:rgba(255, 255, 255, 0.8) 1px 0px 12px;
+        }
+    }
+
+    .suprise-me:link{
+        color: purple;
+    }
+    .suprise-me:visited{
+        color: purple;
+    }
+    .suprise-me:hover{
+        color: purple;
+    }
+    .suprise-me:focus{
+        color: purple;
+    }
+    .suprise-me:active{
+        color: purple;
+    }
+    .suprise-me {
+        text-decoration: none;
+        color: purple;
+    }
+
+    .background-word{
+        font-size: 20px;
+        font-weight: bold; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        line-height: 36px;
+    }
 }
+
+.icon-cards{
+    border: solid red 1px;
+    
+
+    .cities{
+        border: solid blue 1px;
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 40px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .live-anywhere{
+        border: solid blue 1px;
+        width: 300px;
+        margin-top: 80px;
+        margin-left: 40px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.explore{
+    border: solid red 1px;
+    width: 1065px;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.first-splash-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px red; 
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.first-splash-box{
+    border: solid 1px red; 
+    width: 320px;
+    height: 130px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.anywhere{
+    border: solid red 1px;
+    width: 1065px;
+    height: 360px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.second-splash-box{
+    border: solid 1px red; 
+    width: 350px;
+    height: 300px;
+    display: inline-block
+}
+
+.second-splash-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px red; 
+    padding-left: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
