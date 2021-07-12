@@ -1,0 +1,28 @@
+.show-container{
+    border: solid red 1px;
+    height: 1000px;
+    margin-left: 80px;
+}
+
+.show-header{
+    margin-top: 40px;
+    border: solid blue 1px;
+    display: flex;
+    height: 100px;
+}
+
+.show-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.show-review{
+    font-size: 12px;
+    color: grey;
+}
+
+.show-review-box{
+    display: flex;
+    
+    align-items: bottom;
+}

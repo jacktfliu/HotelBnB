@@ -1,6 +1,4 @@
 import React from 'react'
-import ListingHeader from './listing_show_header'
-import ListingBody from './listing_show_body'
 import { Link } from 'react-router-dom'
 
 
@@ -48,21 +46,31 @@ class ListingShow extends React.Component{
         } else {
             
         return(
-            <div>
-                <div>
-                    <ListingHeader/>
-                        <div>
-                            <h1>Title: {listing.title}</h1>
-                            <p>Price: {listing.price}</p>
-                            <p>Description: {listing.description}</p>
-                            <p>Location: {listing.location}</p>
-                            <p>Bedroom: {listing.bedroom}</p>
-                            <p>Latitude: {listing.latitude}</p>
-                            <p>Longitude: {listing.longitude}</p>
-                            <Link to={`/listings/${listing.id}/edit`}>Edit Listing</Link>
-                            <button onClick={this.handleSubmit}>Delete Event</button>
-                        </div>
-                    <ListingBody/>
+            <div className='show-container'>
+                <div className='show-header'>
+                    <div>
+                        <h1 className='show-title'>{listing.title}</h1>
+                    </div>
+                    <div className='show-review-box'>
+                        <h2 className='show-reviews'>Reviews</h2>
+                    </div>
+                    <p>Location: {listing.location}</p>
+                    <div>
+                        <Link to={`/listings/${listing.id}/edit`}>Edit Listing</Link>
+                        <button onClick={this.handleSubmit}>Delete Event</button>
+                    </div>
+                </div>
+
+                <div className='show-photo'>
+                    <div className='show-photo-single'>PHOTOS</div>
+                </div>
+
+                <div className='show-body'>
+                    <p>Price: {listing.price}</p>
+                    <p>Description: {listing.description}</p>
+                    <p>Bedroom: {listing.bedroom}</p>
+                    <p>Latitude: {listing.latitude}</p>
+                    <p>Longitude: {listing.longitude}</p>
                 </div>
             </div>
         )

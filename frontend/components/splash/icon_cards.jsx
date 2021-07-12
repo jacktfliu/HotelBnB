@@ -15,12 +15,12 @@ const IconCards = () => {
                         </div>
                         <div className='first-splash-box'>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-image' to={`listings`}>Philadelphia</Link>
+                                <Link className='first-splash-word' to={`listings`}>Philadelphia</Link>
                             </div>
                         </div>
                         <div className='first-splash-box'>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-image' to={`listings`}>Virginia Beach</Link>
+                                <Link className='first-splash-word' to={`listings`}>Virginia Beach</Link>
                             </div>
                         </div>
                     </div>
@@ -28,17 +28,17 @@ const IconCards = () => {
                     <div>
                         <div className='first-splash-box'>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-image' to={`listings`}>Las Vegas</Link>
+                                <Link className='first-splash-word' to={`listings`}>Las Vegas</Link>
                             </div>
                         </div>
                         <div className='first-splash-box'>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-image' to={`listings`}>Boston</Link>
+                                <Link className='first-splash-word' to={`listings`}>Boston</Link>
                             </div>
                         </div>
                         <div className='first-splash-box'>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-image' to={`listings`}>Florida</Link>
+                                <Link className='first-splash-word' to={`listings`}>Florida</Link>
                             </div>
                         </div>
                     </div>
