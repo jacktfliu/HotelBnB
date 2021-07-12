@@ -9,6 +9,12 @@
     border: solid blue 1px;
     display: flex;
     height: 100px;
+    flex-direction: column;
+    .show-review-box{
+        display: flex;
+        border: solid red 1px;
+        align-items: bottom;
+    }
 }
 
 .show-title{
@@ -16,13 +22,16 @@
     font-weight: bold;
 }
 
-.show-review{
+.show-reviews{
     font-size: 12px;
     color: grey;
+    decoration: none;
 }
 
-.show-review-box{
-    display: flex;
-    
-    align-items: bottom;
+.show-photo-left{
+    border: solid red 1px;
+    height: 400px;
 }
+
+
+

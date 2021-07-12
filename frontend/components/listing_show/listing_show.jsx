@@ -51,23 +51,33 @@ class ListingShow extends React.Component{
                     <div>
                         <h1 className='show-title'>{listing.title}</h1>
                     </div>
+
                     <div className='show-review-box'>
-                        <h2 className='show-reviews'>Reviews</h2>
+                        <Link className='show-reviews'>Reviews</Link>
                     </div>
-                    <p>Location: {listing.location}</p>
+                    <div>
+                        <p>Location: {listing.location}</p>
+                    </div>
                     <div>
                         <Link to={`/listings/${listing.id}/edit`}>Edit Listing</Link>
                         <button onClick={this.handleSubmit}>Delete Event</button>
                     </div>
                 </div>
+                
+                <div className='show-photo-left'>
+                    <div className='show-photo-one'>PHOTOS</div>
+                </div>
 
-                <div className='show-photo'>
-                    <div className='show-photo-single'>PHOTOS</div>
+                <div className='show-photo-right'>
+                    <div className='show-photo-two'></div>
+                    <div className='show-photo-two'></div>
+                    <div className='show-photo-two'></div>
+                    <div className='show-photo-two'></div>
                 </div>
 
                 <div className='show-body'>
                     <p>Price: {listing.price}</p>
-                    <p>Description: {listing.description}</p>
+                    <p>{listing.description}</p>
                     <p>Bedroom: {listing.bedroom}</p>
                     <p>Latitude: {listing.latitude}</p>
                     <p>Longitude: {listing.longitude}</p>
