@@ -9,8 +9,8 @@ const IconCards = () => {
                 <div className='explore'>
                     <div className='city-row-wrapper'>
                         <div className='first-splash-box'>
+                                <Link className='first-splash-word' to={`listings`}>New York</Link>
                             <div className='first-splash-image'>
-                                <Link className='first-splash-words' to={`listings`}>New York</Link>
                             </div>
                         </div>
                         <div className='first-splash-box'>

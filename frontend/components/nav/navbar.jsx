@@ -33,31 +33,35 @@ class NavBar extends React.Component{
 
                     <div className='header'>
                         <button className='icon-button' onClick={this.handleClick}>
-                                <i className="fas fa-grip-lines icon-large"></i>    
-                                <i className="far fa-user-circle" ></i>
+                                <div className='icon1'>
+                                    <i class="fas fa-grip-lines icon-large"></i>    
+                                </div>
+                                <div className='icon2'>
+                                    <i class="far fa-user-circle" ></i>
+                                </div>
+                                <div className='dropdown'>
+                                    {
+                                        this.state.clicked ?(
+                                        this.props.currentUser ?
+                                        <div className='dropdown-content' onClick={this.handleClick}>
+                                            <ul className='drop-down-inside'>Welcome {this.props.currentUser.username}</ul>
+                                            <Link className='drop-down-inside' to='/listing/new'>Host</Link>
+                                            <ul className='drop-down-inside' onClick={() => this.props.logout()}>Log Out</ul>
+                                        </div>
+                                        :
+                                        <div className='dropdown-content'>
+                                            <ul className='drop-down-inside' onClick={() => this.props.openModal('login')}>Log In</ul>
+                                            <ul className='drop-down-inside' onClick={() => this.props.openModal('signup')}>Sign Up</ul>
+                                            <ul className='drop-down-inside' onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</ul>
+                                        </div>
+                                    
+                                        ) : ''
+                                    }
+                                </div>
                         </button>
                     </div>
-                    <div>
-                        <div className='dropdwon'>
-                            {
-                                this.state.clicked ?(
-                                this.props.currentUser ?
-                                <div className='dropdown-content' onClick={this.handleClick}>
-                                    <a>Welcome {this.props.currentUser.username}</a>
-                                    <Link to='/listing/new'>Host</Link>
-                                    <a onClick={() => this.props.logout()}>Log Out</a>
-                                </div>
-                                :
-                                <div className='dropdown-content'>
-                                    <a onClick={() => this.props.openModal('login')}>Log In</a>
-                                    <a onClick={() => this.props.openModal('signup')}>Sign Up</a>
-                                    <a onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</a>
-                                </div>
-                            
-                                ) : ''
-                            }
-                        </div>
-                    </div>  
+                    
+                  
                 </nav>
         </div>
         )

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Root from './components/root'
 import configureStore from './store/store'
 import {login, logout, signup} from './actions/session_actions'
-import {fetchListings} from './actions/listing_action'
+import {fetchListings, createReview} from './actions/listing_action'
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch
     window.getState = store.getState
     window.fetchListings = fetchListings;
+    window.createReview = createReview
     
     ReactDOM.render(<Root store={store} />, document.getElementById('root'))
 })

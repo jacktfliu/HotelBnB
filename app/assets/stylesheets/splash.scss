@@ -54,14 +54,14 @@
         color: purple;
     }
 
-    .background-word{
-        font-size: 20px;
-        font-weight: bold; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 36px;
-    }
+    // .background-word{
+    //     font-size: 20px;
+    //     font-weight: bold; 
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     line-height: 36px;
+    // }
 }
 
 .icon-cards{
@@ -115,6 +115,13 @@
     display: inline-block;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.first-splash-word{
+    font-size: 30px;
+    display: flex;
+    position: relative;
+    margin-right: 30px;
 }
 
 .anywhere{

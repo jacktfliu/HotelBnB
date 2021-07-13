@@ -56,46 +56,76 @@
     &:hover{
         box-shadow:rgba(0, 0, 0, .25) 1px 5px 10px;
     }
-    i {
-        &:first-child{
-            width: 22px;
-            height: 16px;
-            font-size: 20px;
-            align-items: center;
-            display: flex;
-            color: grey;
-        }
-
-        &:last-child{
-            font-size: 25px;
-            width: 16px;
-            height: 16px;
-            margin-left: 5px;
-            align-items: center;
-            display: flex;
-            color: grey;
-        }
-    }
+    
 }
 
-// .dropdown-content {
-//     flex-direction: column;
-//     background-color: #f9f9f9;
-//     min-width: 160px;
-//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//     padding: 12px 16px;
-//     z-index: 1;
-//     margin-right: 20px;
-//     position: absolute;
-// }
+.icon1{
+    width: 22px;
+    height: 16px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    color: grey;
+}
 
-// .dropdown{
-//     position: relative;
-//     flex-direction: column;
-//     // display: flex;
-//     float: right;
-//     margin-top: 30px;
-// }
+.icon2{
+    font-size: 25px;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    align-items: center;
+    display: flex;
+    color: grey;
+}
+
+.dropdown-content {
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    padding: 12px 16px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    flex-direction: column;
+    height: 100px;
+    position: relative;
+    margin-top: 190px;
+    margin-right: 110px;
+}
+
+.dropdown{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.drop-down-inside {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-content: left;
+}
+
+.drop-down-inside:link{
+    color: black;
+}
+.drop-down-inside:visited{
+    color: black;
+}
+.drop-down-inside:hover{
+    color: black;
+}
+.drop-down-inside:focus{
+    color: black;
+}
+.drop-down-inside:active{
+    color: black;
+}
+.drop-down-inside {
+    text-decoration: none;
+    color: black;
+}
 
 
 

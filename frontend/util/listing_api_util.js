@@ -35,3 +35,18 @@ export const deleteListing = listingId => (
         url: `/api/listings/${listingId}`
     })
 )
+
+export const createReview = review => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/reviews',
+        data: { review }
+    })
+);
+
+export const deleteReview = reviewId => (
+    $.ajax({
+        method: 'delete',
+        url: `/api/reviews/${reviewId}`
+    })
+)

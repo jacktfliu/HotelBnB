@@ -1,6 +1,7 @@
 import React from 'react'
-import { render } from 'react-dom'
 import { Link } from 'react-router-dom'
+import ReviewFormContainer from '../review_form/review_form_container'
+import {ProtectedRoute} from '../../util/route_util'
 
 
 class ListingShow extends React.Component{
@@ -47,7 +48,7 @@ class ListingShow extends React.Component{
 
     render(){
 
-        const {listing, currentUser} = this.props
+        const {listing, currentUser, listingId} = this.props
         if (this.state.loading){
             
             return(
@@ -95,6 +96,19 @@ class ListingShow extends React.Component{
                     <p>Latitude: {listing.latitude}</p>
                     <p>Longitude: {listing.longitude}</p>
                 </div>
+
+                {/* <ReviewShow/> */}
+
+                <Link
+                component={ReviewFormContainer}
+                to={`/listings/${listingId}/review`}
+                label="Leave a Review"
+                />
+
+                {/* <ProtectedRoute
+                    path="/listings/:listingId/review"
+                    component={ReviewFormContainer}
+                /> */}
             </div>
         )
         }
