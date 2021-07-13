@@ -6,7 +6,7 @@ const BackgroundBody = () => {
     return(
         <div className='splash-container'>
             
-            <div className='background-word'>Not sure where to go? Perfect.</div>
+            {/* <div className='background-word'>Not sure where to go? Perfect.</div> */}
             <Link to='/listings' className='suprise-me'>Suprise me</Link>
            
         </div>

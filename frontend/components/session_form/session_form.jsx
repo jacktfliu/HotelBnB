@@ -57,26 +57,28 @@ class SessionForm extends React.Component {
         password: 'DemoUser'
     }
     
-    if (this.props.formType === 'Login'){
+    if (this.props.formType === 'login'){
         return (
         <div>
             <form onSubmit={this.handleSubmit} className='login-form-box'>
               <div className='modal-content'>
                 <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
-                <div className='modal-header'>
+                <div className='modal-header-message'>
                   Welcome to HotelBnB!
                 </div>
 
-                <label>Username:
-                    <input type="text"
+                <label className='login-box'>
+                    <input type="Username"
+                    placeholder='Username'
                     value={this.state.username}
                     onChange={this.update('username')}
                     className="login-input"
                     />
                 </label>
 
-                <label>Password:
+                <label>
                     <input type="password"
+                    placeholder='Password'
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
@@ -84,7 +86,7 @@ class SessionForm extends React.Component {
                 </label>
 
                 <input className="session-button" type="submit" value={this.props.formType} />
-                <div> Please {this.props.formType} or {this.props.otherForm}
+                <div> Please {this.props.formType} or <div>{this.props.otherForm}</div>
                 {this.renderErrors()}</div>
               </div>
             </form>
@@ -96,19 +98,23 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className='modal-content'>
           <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
-            Welcome to HotelBnB!
+            <div className='modal-header-message'>
+              Welcome to HotelBnB!
+            </div>
             <div className="login-form">
               
-              <label>Username:
+              <label>
                   <input type="text"
+                  placeholder='Username'
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
                   />
               </label>
               
-              <label>Password:
+              <label>
                   <input type="password"
+                  placeholder='Password'
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
@@ -116,8 +122,9 @@ class SessionForm extends React.Component {
               </label>
               
               
-              <label>Email:
+              <label>
                 <input type="email"
+                  placeholder='Email'
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="login-input"
@@ -125,8 +132,9 @@ class SessionForm extends React.Component {
               </label>
               
               
-              <label>First Name:
+              <label>
                 <input type="first_name"
+                  placeholder='First Name'
                   value={this.state.first_name}
                   onChange={this.update('first_name')}
                   className="login-input"
@@ -134,8 +142,9 @@ class SessionForm extends React.Component {
               </label>
               
               
-              <label>Last Name:
+              <label>
                 <input type="last_name"
+                  placeholder='Last Name'
                   value={this.state.last_name}
                   onChange={this.update('last_name')}
                   className="login-input"
@@ -143,7 +152,7 @@ class SessionForm extends React.Component {
               </label>
               
               <input className="session-button" type="submit" value={this.props.formType} />
-              <div>Please {this.props.formType} or {this.props.otherForm}
+              <div>Please {this.props.formType} or <div >{this.props.otherForm}</div>
               {this.renderErrors()}</div>
             </div>
           </div>

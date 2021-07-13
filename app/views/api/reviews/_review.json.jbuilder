@@ -1,0 +1,1 @@
+json.extract! listing,  :listing_id, :rating, :body, :user_id

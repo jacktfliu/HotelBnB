@@ -24,7 +24,7 @@ class NavBar extends React.Component{
 
     render(){
         return(
-        <div >
+        <div className='navbar'>
                 <nav className='login-signup'>
 
                     <div className='home-link'>
@@ -36,7 +36,8 @@ class NavBar extends React.Component{
                                 <i className="fas fa-grip-lines icon-large"></i>    
                                 <i className="far fa-user-circle" ></i>
                         </button>
-
+                    </div>
+                    <div>
                         <div className='dropdwon'>
                             {
                                 this.state.clicked ?(

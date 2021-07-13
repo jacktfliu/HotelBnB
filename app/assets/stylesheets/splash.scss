@@ -3,7 +3,7 @@
     display: flex;
     background-image: url('mainpage-unsplash.jpeg');
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-repeat: no-repeat;   
     flex-direction: column;
@@ -11,7 +11,6 @@
     align-items: center;
     
     .image-container{
-      
         width: 100vw;
         height: 60vh;
     }
@@ -22,10 +21,9 @@
         padding: 20px 40px;
         outline: none;
         background: white;
-        margin: 0;
         border: 1px solid grey;
         border-radius: 30px;
-        margin-right: 10px;
+        margin-top: 200px;
         display: flex;
         box-shadow:rgba(0, 0, 0, 0.3) 1px 0px 12px;
         justify-content: center;
@@ -62,76 +60,86 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 18px;
         line-height: 36px;
     }
 }
 
 .icon-cards{
-    border: solid red 1px;
-
-
     .cities{
-        border: solid blue 1px;
-        width: 200px;
-        margin-top: 20px;
-        margin-left: 40px;
+        margin-top: 50px;
         font-size: 30px;
         font-weight: bold;
+        width: 20%;
+        display: flex;
     }
 
     .live-anywhere{
-        border: solid blue 1px;
         width: 300px;
         margin-top: 80px;
         margin-left: 40px;
         font-size: 30px;
         font-weight: bold;
+        margin-bottom: 30px
     }
+} 
+
+.explore-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 460px;
 }
 
 .explore{
-    border: solid red 1px;
-    width: 1065px;
-    height: 250px;
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
+    border: solid black 1px;
+    box-sizing: border-box;
+    width: 85%;
+    height: 340px;
+    overflow: hidden;
+    float: left;
 }
 
 .first-splash-image{
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 10px;
     overflow: hidden;
-    border: solid 1px red; 
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
+    border: solid 1px blue; 
+    cursor: pointer;
 }
 
 .first-splash-box{
-    border: solid 1px red; 
-    width: 320px;
-    height: 130px;
+    border: solid 1px orange; 
+    width: 385px;
+    height: 140px;
     display: inline-block;
-    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .anywhere{
     border: solid red 1px;
-    width: 1065px;
+    box-sizing: border-box;
+    width: 85%;
+    height: 350px;
+    overflow: hidden;
+    float: left;
+}
+
+.live-anywhere-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 360px;
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
+
 }
 
 .second-splash-box{
-    border: solid 1px red; 
     width: 350px;
-    height: 300px;
+    height: 350px;
+    justify-content: center;
     display: inline-block;
+    margin-right: 40px;
 }
 
 .second-splash-image{
@@ -139,11 +147,31 @@
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
-    border: solid 1px red; 
-    padding-left: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
+    border: solid 1px green;
+    cursor: pointer;
 }
 
-
+.second-splash-word:link{
+    color: black;
+}
+.second-splash-word:visited{
+    color: black;
+}
+.second-splash-word:hover{
+    color: black;
+}
+.second-splash-word:focus{
+    color: black;
+}
+.second-splash-word:active{
+    color: black;
+}
+.second-splash-word {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 8px;
+    display: flex;
+}
 

@@ -15,19 +15,21 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
-  def edit 
-
-  end
-
-  def update 
-
-  end
-
   def destroy
+    @review = Review.find(params[:id])
 
+    if @review.destroy
+        render :show
+    else 
+        render json: @review.errors.full_messages, status: 403
+    end
   end
 
   private
+
+  def review_params 
+    params.require(:review).permit(:listing_id, :rating, :body, :user_id)
+  end
 
   def review_params
     params.require(:review).permit()
