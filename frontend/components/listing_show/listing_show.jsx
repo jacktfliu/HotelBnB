@@ -59,7 +59,6 @@ class ListingShow extends React.Component{
             )
         } else {
             
-    
         return(
             
             <div className='show-container'>
@@ -96,7 +95,7 @@ class ListingShow extends React.Component{
                 </div>
 
                 <div>
-                    <ReviewsFormContainer/>
+                    <ReviewsFormContainer listingId={listingId}/>
                 </div>
             </div>
         )

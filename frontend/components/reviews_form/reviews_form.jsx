@@ -3,14 +3,8 @@ import React from 'react'
 class ReviewsForm extends React.Component{
     constructor(props){
         super(props)
-        // this.state = this.props.review
-        
-        this.state = {
-            body:'HELLO THIS IS A REIVEW',
-            rating: 4,
-            user_id: 1,
-            listing_id: 2
-        }
+        this.state = this.props.review
+
         this.updateBody = this.updateBody.bind(this)
         this.updateRating = this.updateRating.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -30,14 +24,13 @@ class ReviewsForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        // let user_id = currentUser.id
-        // let listing_id = ownProps.match.params.listingId
-        // console.log(user_id, listing_id)
-        // debugger
+
         this.props.createReview(this.state)
         this.setState({
             body: '',
             rating: 0,
+            user_id: this.props.user_id,
+            listing_id: this.props.listingId
         })
     }
 
