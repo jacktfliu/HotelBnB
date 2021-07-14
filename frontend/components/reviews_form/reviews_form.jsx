@@ -10,9 +10,6 @@ class ReviewsForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    componentDidMount(){
-
-    }
 
     updateBody(e){
         this.setState({body: e.currentTarget.value})
@@ -29,7 +26,6 @@ class ReviewsForm extends React.Component{
         this.setState({
             body: '',
             rating: 0,
-            user_id: this.props.user_id,
             listing_id: this.props.listingId
         })
     }

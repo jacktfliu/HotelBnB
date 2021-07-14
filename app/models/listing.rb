@@ -23,4 +23,8 @@ class Listing < ApplicationRecord
         class_name: :User,
         foreign_key: :owner_id
 
+    has_many :reviews,
+        class_name: :Review,
+        foreign_key: :listing_id
+
 end

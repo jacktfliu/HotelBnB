@@ -22,6 +22,10 @@ class User < ApplicationRecord
         class_name: :Listing,
         foreign_key: :host_id
 
+    has_many :reviews,
+        class_name: :Review,
+        foreign_key: :user_id
+
     attr_reader :password
 
     after_initialize :ensure_session_token

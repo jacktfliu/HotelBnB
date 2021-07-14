@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {ProtectedRoute} from '../../util/route_util'
 import ReviewsFormContainer from '../reviews_form/reviews_form_container'
+import ReviewIndexItem from '../reviews_form/review_index_item'
 
 
 
@@ -14,7 +14,9 @@ class ListingShow extends React.Component{
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.userEditDelete = this.userEditDelete.bind(this)
+        console.log(this.props)
     }
+
 
     handleSubmit(e){
         e.preventDefault()
@@ -46,20 +48,26 @@ class ListingShow extends React.Component{
         )
     }
 
-
+    
     render(){
-
-        const {listing, currentUser, listingId} = this.props
         if (this.state.loading){
+            return null
+        }
+        
+
+        const {listing, currentUser, listingId, reviews} = this.props
+        
+        let reviewItems = reviews.map(review => {
             
-            return(
-                <>
-                    loading
-                </>
-            )
-        } else {
+            console.log(review);
+                return (
+                <ReviewIndexItem key={review.id} review={review}/>   
+                )
+            }  
+        )
             
         return(
+            
             
             <div className='show-container'>
                 <div className='show-header'>
@@ -93,6 +101,10 @@ class ListingShow extends React.Component{
                     <p>Latitude: {listing.latitude}</p>
                     <p>Longitude: {listing.longitude}</p>
                 </div>
+                
+                <div>
+                   {reviewItems}
+                </div>
 
                 <div>
                     <ReviewsFormContainer listingId={listingId}/>
@@ -101,7 +113,7 @@ class ListingShow extends React.Component{
         )
         }
     }
-}
+
 
 export default ListingShow
 
