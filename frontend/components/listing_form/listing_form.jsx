@@ -26,56 +26,97 @@ class ListingForm extends React.Component{
             <div>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='share'>Share your home</div>
+                    <div className='update-edit'>
+                        <div className=''>
+                            <div>
+                                What is your Title?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('title')} 
+                                type='text' 
+                                value={this.state.title}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('title')} 
-                        type='text' 
-                        value={this.state.title}
-                    />
+                        <div className=''>
+                            <div>
+                                What is your Price per day? 
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('price')} 
+                                type='text' 
+                                value={this.state.price}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('price')} 
-                        type='text' 
-                        value={this.state.price}
-                    />
+                        <div>
+                             <div>
+                                Describe your place
+                            </div>
+                            <textarea className='create-listing-form' 
+                                onChange={this.handleUpdate('description')}  
+                                value={this.state.description}
+                            />
+                        </div>
 
-                    <textarea className='create-listing-form' 
-                        onChange={this.handleUpdate('description')}  
-                        value={this.state.description}
-                    />
+                        <div>
+                            <div>
+                                What is your city location?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('location')} 
+                                type='text' 
+                                value={this.state.location}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('location')} 
-                        type='text' 
-                        value={this.state.location}
-                    />
+                        <div>
+                            <div>
+                                How many bedrooms do you have? 
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('bedroom')} 
+                                type='text' 
+                                value={this.state.bedroom}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('bedroom')} 
-                        type='text' 
-                        value={this.state.bedroom}
-                    />
+                        <div>
+                            <div>
+                                How many bathrooms do you have?
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('bathroom')} 
-                        type='text' 
-                        value={this.state.bathroom}
-                    />
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('bathroom')} 
+                                type='text' 
+                                value={this.state.bathroom}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('longitude')} 
-                        type='text' 
-                        value={this.state.longitude}
-                    />
+                        <div>
+                            <div>
+                                what is your longitude?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('longitude')} 
+                                type='text' 
+                                value={this.state.longitude}
+                            />
+                        </div>
 
-                    <input className='create-listing-form' 
-                        onChange={this.handleUpdate('latitude')} 
-                        type='text' 
-                        value={this.state.latitude}
-                    />
-                    <button type='submit'>{this.props.formType}</button>
+                        <div>
+                            <div>
+                                What is your latitude?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('latitude')} 
+                                type='text' 
+                                value={this.state.latitude}
+                            />
+                        </div>
                     </div>
+                        <button className='form-button' type='submit'>Submit {this.props.formType}</button>
                 </form>
             </div>
         )

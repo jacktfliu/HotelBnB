@@ -38,19 +38,13 @@
     font-size: 15px;
 }
 
-.listings{
-    border: solid 1px blue; 
-    border-bottom: 1px solid lightgray
-}
-
 .listing-items-container{
     width: 100%;
 }
 
 
 .listing-left-box{
-    border: solid 1px red; 
-    border-top: 1px solid ;
+    border-top: 1px solid rgb(229, 229, 229);
     padding: 24px 0;
     display: flex;
 
@@ -113,11 +107,12 @@
     width: 450px;
     height: 200px;
     border-radius: 10px;
-    overflow: hidden;
-    border: solid 1px red; 
+    overflow: hidden; 
     padding-left: 30px;
     margin-right: 20px;
     margin-left: 20px;
+    background-image: url('PamBeach.jpg');
+    background-size: 450px 200px;
 }
 
 
@@ -144,7 +139,7 @@
     .listing-left{
         min-height: calc(100vh - 80px);
         width: 840px;
-        border: solid 1px red; 
+
     }
 
 }

@@ -14,7 +14,6 @@ class ListingShow extends React.Component{
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.userEditDelete = this.userEditDelete.bind(this)
-        console.log(this.props)
     }
 
 
@@ -26,10 +25,11 @@ class ListingShow extends React.Component{
     }
 
     componentDidMount(){
-        
         this.props.fetchListing(this.props.match.params.listingId).then(() =>{
             this.setState({loading: false})
         })
+
+        // this.props.fetchReview(this.props.match.params.reviewId)
     }
 
     compononetDidUpdate(){
@@ -55,13 +55,11 @@ class ListingShow extends React.Component{
         }
         
 
-        const {listing, currentUser, listingId, reviews} = this.props
+        const {listing, currentUser, listingId, reviews, deleteReview} = this.props
         
         let reviewItems = reviews.map(review => {
-            
-            console.log(review);
                 return (
-                <ReviewIndexItem key={review.id} review={review}/>   
+                <ReviewIndexItem key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser}/>   
                 )
             }  
         )

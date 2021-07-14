@@ -6,7 +6,7 @@ const ListingIndexItem = props => {
 
     return(
         <div className='listing-left-box'>
-            <div className='listing-image'>IMAGE PLACEHOLDER</div>
+            <div className='listing-image'></div>
                 <Link className='listing-items-container' to={`/listings/${listing.id}`}>
                     <h1 className='listing-header'>
                         <div className='listing-title'>{listing.title}</div>

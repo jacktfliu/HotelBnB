@@ -1,16 +1,21 @@
 import React from 'react'
 
 const ReviewIndexItem = props => {
+
+
     return (
         <div>
             <div>
+                {/* {props.currentUser.username} */}
+            </div>
+            <div>Rating:
+                {props.review.rating}
+            </div>
+            <div>Comment:
                 {props.review.body}
             </div>
             <div>
-                {props.review.rating}
-            </div>
-            <div>
-                <button onClick={() => props.deleteReview(props.reviewId)}></button>
+                {props.currentUser && props.currentUser.id === props.review.user_id ? <button onClick={() => props.deleteReview(props.review.id)}>Delete</button> : '' }
             </div>
         </div>
     )
