@@ -1,8 +1,6 @@
 import {connect} from 'react-redux'
-import { fetchListings, fetchListing } from '../../actions/listing_action'
 import ListingShow from './listing_show'
-import { deleteListing } from '../../actions/listing_action'
-import { updateListing } from '../../actions/listing_action'
+import { updateListing, fetchListings, fetchListing, deleteListing  } from '../../actions/listing_action'
 
 const mSTP = (state, ownProps) => {
     return{

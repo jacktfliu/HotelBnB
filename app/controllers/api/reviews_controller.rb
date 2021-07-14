@@ -6,6 +6,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
+    # puts review_params
     @review = Review.new(review_params)
     
     if @review.save
@@ -28,6 +29,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params 
-    params.require(:reviews).permit(:listing_id, :rating, :body, :user_id)
+    params.require(:review).permit(:listing_id, :rating, :body, :user_id)
   end
 end

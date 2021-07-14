@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ReviewFormContainer from '../review_form/review_form_container'
 import {ProtectedRoute} from '../../util/route_util'
+import ReviewsFormContainer from '../reviews_form/reviews_form_container'
+
 
 
 class ListingShow extends React.Component{
@@ -66,10 +67,7 @@ class ListingShow extends React.Component{
                     <div>
                         <h1 className='show-title'>{listing.title}</h1>
                     </div>
-
-                    <div className='show-review-box'>
-                        <Link className='show-reviews'>Reviews</Link>
-                    </div>
+                    
                     <div>
                         <p>Location: {listing.location}</p>
                     </div>
@@ -97,18 +95,9 @@ class ListingShow extends React.Component{
                     <p>Longitude: {listing.longitude}</p>
                 </div>
 
-                {/* <ReviewShow/> */}
-
-                <Link
-                component={ReviewFormContainer}
-                to={`/listings/${listingId}/review`}
-                label="Leave a Review"
-                />
-
-                {/* <ProtectedRoute
-                    path="/listings/:listingId/review"
-                    component={ReviewFormContainer}
-                /> */}
+                <div>
+                    <ReviewsFormContainer/>
+                </div>
             </div>
         )
         }

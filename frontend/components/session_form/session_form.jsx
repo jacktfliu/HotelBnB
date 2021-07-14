@@ -86,7 +86,7 @@ class SessionForm extends React.Component {
                 </label>
 
                 <input className="session-button" type="submit" value={this.props.formType} />
-                <div> Please {this.props.formType} or <div>{this.props.otherForm}</div>
+                <div> <div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
                 {this.renderErrors()}</div>
               </div>
             </form>
@@ -152,7 +152,7 @@ class SessionForm extends React.Component {
               </label>
               
               <input className="session-button" type="submit" value={this.props.formType} />
-              <div>Please {this.props.formType} or <div >{this.props.otherForm}</div>
+              <div><div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
               {this.renderErrors()}</div>
             </div>
           </div>

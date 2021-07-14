@@ -3,8 +3,6 @@ import * as APIUtil from '../util/listing_api_util'
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS'
 export const RECEIVE_LISTING = 'RECEIVE_LISTING'
 export const REMOVE_LISTING = 'REMOVE_LISTING'
-export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
-export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 export const receiveListings = listings => ({
     type: RECEIVE_LISTINGS,
@@ -21,27 +19,6 @@ export const removeListing = listingId => ({
     listingId
 })
 
-export const receiveReview = ({ review}) => ({
-  type: RECEIVE_REVIEW,
-  review,
-});
-
-export const removeReview = (reviewId) => ({
-  type: REMOVE_REVIEW,
-  reviewId
-})
-
-export const createReview = review => dispatch => (
-  APIUtil.createReview(review).then(review => (
-    dispatch(receiveReview(review))
-  ))
-);
-
-export const deleteReview = (reviewId) => dispatch => (
-  APIUtil.deleteReview(reviewId).then(reviewId => (
-    dispatch(removeReview(reviewId))
-  ))
-)
 
 export const fetchListings = () => dispatch => (
   APIUtil.fetchListings().then(listings => (

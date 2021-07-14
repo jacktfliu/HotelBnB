@@ -53,15 +53,6 @@
         text-decoration: none;
         color: purple;
     }
-
-    // .background-word{
-    //     font-size: 20px;
-    //     font-weight: bold; 
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     line-height: 36px;
-    // }
 }
 
 .icon-cards{
@@ -72,16 +63,15 @@
         width: 20%;
         display: flex;
     }
-
-    .live-anywhere{
-        width: 300px;
-        margin-top: 80px;
-        margin-left: 40px;
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 30px
-    }
 } 
+
+.explore{
+    box-sizing: border-box;
+    width: 85%;
+    height: 380px;
+    overflow: hidden;
+    float: left;
+}
 
 .explore-wrapper {
     display: flex;
@@ -90,89 +80,72 @@
     height: 460px;
 }
 
-.explore{
-    border: solid black 1px;
-    box-sizing: border-box;
-    width: 85%;
-    height: 340px;
-    overflow: hidden;
-    float: left;
-}
-
-.first-splash-image{
-    width: 140px;
-    height: 140px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: solid 1px blue; 
-    cursor: pointer;
-}
-
 .first-splash-box{
-    border: solid 1px orange; 
-    width: 385px;
-    height: 140px;
-    display: inline-block;
-    margin-top: 20px;
-    cursor: pointer;
+    flex-direction: row;
+    height: 30%;
+    width: 30%;
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.city-content{
+    display:flex;
+    flex-direction: row;
 }
 
 .first-splash-word{
-    font-size: 30px;
+    font-size: 22px;
+    line-height: 20px;
+    color: rgb(34, 34, 34);
     display: flex;
-    position: relative;
-    margin-right: 30px;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-right: 20%;
 }
 
-.anywhere{
-    border: solid red 1px;
-    box-sizing: border-box;
-    width: 85%;
-    height: 350px;
-    overflow: hidden;
-    float: left;
+.first-splash-word1{
+    font-size: 22px;
+    line-height: 20px;
+    color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-right: 10%;
 }
 
-.live-anywhere-wrapper{
+.first-splash-word2{
+    font-size: 22px;
+    line-height: 20px;
+    color: rgb(34, 34, 34);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 360px;
-
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-right: 10%;
+}
+.first-splash-word3{
+    font-size: 22px;
+    line-height: 20px;
+    color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-right: 24%;
 }
 
 .second-splash-box{
-    width: 350px;
-    height: 350px;
-    justify-content: center;
-    display: inline-block;
-    margin-right: 40px;
+    flex-direction: row;
+    margin: 2%;
+    padding: 20px;
+    justify-content: space-between;
 }
 
-.second-splash-image{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: solid 1px green;
-    cursor: pointer;
-}
-
-.second-splash-word:link{
-    color: black;
-}
-.second-splash-word:visited{
-    color: black;
-}
-.second-splash-word:hover{
-    color: black;
-}
-.second-splash-word:focus{
-    color: black;
-}
-.second-splash-word:active{
-    color: black;
-}
 .second-splash-word {
     text-decoration: none;
     color: black;
@@ -181,4 +154,104 @@
     margin-top: 8px;
     display: flex;
 }
+
+.footer-container{
+    box-sizing: border-box;
+    width: 85%;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+}
+
+.first-splash-image1{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('NewYorkCity.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image1{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('NewYorkCity.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image2{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('Boston.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image3{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('LasVegas.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image4{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('Florida.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image5{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('Philadelphia.jpg');
+    background-size: 140px 140px;
+}
+
+.first-splash-image6{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('VirginiaBeach.jpg');
+    background-size: 140px 140px;
+}
+
+.second-splash-image1{
+    background-image: url('Unique.jpg');
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.second-splash-image2{
+    background-image: url('Outdoor.jpg');
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.second-splash-image3{
+    background-image: url('Pet.jpg');
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
 

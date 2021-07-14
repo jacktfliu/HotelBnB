@@ -6,70 +6,67 @@ const IconCards = () => {
         <div className='icon-cards'>
             <div className='explore-wrapper'>
                 <div className='cities'>Explore cities </div>
-                <div className='explore'>
+                <h1 className='explore'>
                     <div className='city-row-wrapper'>
-                        <div className='first-splash-box'>
-                                <Link className='first-splash-word' to={`listings`}>New York</Link>
-                            <div className='first-splash-image'>
-                            </div>
+                        <div className='city-content'>
+                            <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image1'></div>
+                                <div className='first-splash-word'>New York</div>
+                            </Link>
+                           <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image2'></div>
+                                <div className='first-splash-word3'>Boston</div>
+                            </Link>
+                           <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image3' ></div>
+                                <div className='first-splash-word'>Las Vegas</div>
+                            </Link>
                         </div>
-                        <div className='first-splash-box'>
-                            <div className='first-splash-image'>
-                                <Link className='first-splash-word' to={`listings`}>Philadelphia</Link>
-                            </div>
-                        </div>
-                        <div className='first-splash-box'>
-                            <div className='first-splash-image'>
-                                <Link className='first-splash-word' to={`listings`}>Virginia Beach</Link>
-                            </div>
+                        <div className='city-content'>
+                             <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image4'></div>
+                                <div className='first-splash-word3'>Florida</div>
+                            </Link>
+                           <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image5'></div>
+                                <div className='first-splash-word1'>Philadelphia</div>
+                            </Link>
+                           <Link to={`listings`} className='first-splash-box'>
+                                <div className='first-splash-image6'></div>
+                                <div className='first-splash-word2'>Virginia Beach</div>
+                            </Link>
                         </div>
                     </div>
-
-                    <div className='city-row-wrapper'>
-                        <div className='first-splash-box'>
-                            <div className='first-splash-image'>
-                                <Link className='first-splash-word' to={`listings`}>Las Vegas</Link>
-                            </div>
-                        </div>
-                        <div className='first-splash-box'>
-                            <div className='first-splash-image'>
-                                <Link className='first-splash-word' to={`listings`}>Boston</Link>
-                            </div>
-                        </div>
-                        <div className='first-splash-box'>
-                            <div className='first-splash-image'>
-                                <Link className='first-splash-word' to={`listings`}>Florida</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </h1>
             </div>
 
             <div className='icon-cards'>
-                <div className='live-anywhere-wrapper'>
-                    <div className='live-anywhere'>Live Anywhere</div>
-                        <div className='anywhere'>
-                            <div className='live-anywhere-row'>
-                                <div className='second-splash-box'>
-                                    <div className='second-splash-image'>
-                                    </div>
-                                        <Link className='second-splash-word' to={`listings`}>Outdoor getaways</Link>
-                                </div>
-                                <div className='second-splash-box'>
-                                    <div className='second-splash-image'>
-                                    </div>
-                                        <Link className='second-splash-word' to={`listings`}>Unique Stays</Link>
-                                </div>
-                                <div className='second-splash-box'>
-                                    <div className='second-splash-image'>
-                                    </div>
-                                        <Link className='second-splash-word' to={`listings`}>Pets allowed</Link>
-                                </div>
+                <div className='explore-wrapper'>
+                    <div className='cities'>Live anywhere</div>
+                    <h1 className='explore'>
+                        <div className='city-row-wrapper'>
+                            <div className='city-content'>
+                                <Link to={`listings`} className='second-splash-box'>
+                                    <div className='second-splash-image1'></div>
+                                    <div className='second-splash-word'>Unique stays</div>
+                                </Link>
+                                <Link to={`listings`} className='second-splash-box'>
+                                    <div className='second-splash-image2'></div>
+                                    <div className='second-splash-word'>Outdoor getaway</div>
+                                </Link>
+                                <Link to={`listings`} className='second-splash-box'>
+                                    <div className='second-splash-image3'></div>
+                                    <div className='second-splash-word'>Pets allowed</div>
+                                </Link>
                             </div>
                         </div>
-                    </div>
+                    </h1>
+                </div>
             </div>
 
+            <div className='footer-container'>
+
+            </div>
         </div>
     )
 }
