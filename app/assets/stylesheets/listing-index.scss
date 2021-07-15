@@ -1,3 +1,4 @@
+
 .listing-page-header{
     padding-left: 26px;
     padding-top: 75px;
@@ -125,21 +126,26 @@
         right: 0;
         top: 0;
         bottom: 0;
-        border: solid 1px red; 
         overflow: hidden;
     }
+    
+    #map-container {
+        width: 100%;
+        height: 150%;
+    };
 
     .map-right{
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: sticky;
+        top:0;
     }
     
     .listing-left{
         min-height: calc(100vh - 80px);
         width: 840px;
-
     }
 
 }

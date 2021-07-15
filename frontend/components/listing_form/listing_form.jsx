@@ -23,7 +23,7 @@ class ListingForm extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='border-box-form'>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className='share'>Share your home</div>

@@ -5,9 +5,6 @@ const ReviewIndexItem = props => {
 
     return (
         <div>
-            <div>
-                {/* {props.currentUser.username} */}
-            </div>
             <div>Rating:
                 {props.review.rating}
             </div>

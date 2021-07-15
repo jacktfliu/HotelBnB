@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 const IconCards = () => {
     return (
         <div className='icon-cards'>
+
+            <div className='cities'>Explore cities </div>
             <div className='explore-wrapper'>
-                <div className='cities'>Explore cities </div>
                 <h1 className='explore'>
                     <div className='city-row-wrapper'>
                         <div className='city-content'>
@@ -41,8 +42,8 @@ const IconCards = () => {
             </div>
 
             <div className='icon-cards'>
+                <div className='cities'>Live anywhere</div>
                 <div className='explore-wrapper'>
-                    <div className='cities'>Live anywhere</div>
                     <h1 className='explore'>
                         <div className='city-row-wrapper'>
                             <div className='city-content'>
@@ -64,7 +65,7 @@ const IconCards = () => {
                 </div>
             </div>
 
-            <div className='footer-container'>
+                <div className='footer-container'>
 
             </div>
         </div>
