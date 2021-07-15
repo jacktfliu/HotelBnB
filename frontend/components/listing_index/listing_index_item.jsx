@@ -17,7 +17,7 @@ const ListingIndexItem = props => {
                     </div>
 
                     <div className='listing-index-am'>
-                        Wifi * Air conditioning * Kitchen * Heating
+                        Wifi · Air conditioning · Kitchen · Heating
                     </div>
 
                     <div className='listing-price'>

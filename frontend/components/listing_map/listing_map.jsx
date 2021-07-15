@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class ListingMap extends React.Component {
-
-
   componentDidMount() {
 
     const mapOptions = {
