@@ -35,11 +35,12 @@ class ReviewsForm extends React.Component{
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        <input
-                            type='number'
-                            value={this.state.rating}
-                            onChange={this.updateRating}
-                        />
+                        <input 
+                            type="radio" 
+                            value={this.state.rating} 
+                            onChange={this.updateRating}>
+                        </input>
+                        
                         <textarea
                             cols="30"
                             rows="10"

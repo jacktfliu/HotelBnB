@@ -1,0 +1,35 @@
+.review-container{
+    overflow: scroll;
+}
+
+.review-rating{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.review-comment{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.x{
+    float: right;
+    color: grey;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.current-comment-user{
+    font-size: 16px;
+}
+
+.review-comment{
+    font-size: 14px;
+    color: grey;
+}
+
+.review-rating{
+    font-size: 16px;
+    color: rgb(255, 56, 92);
+}
+

@@ -16,7 +16,7 @@ const BackgroundBody = () => {
                     <span></span>
                     <button className='filter-buttons'>Guest</button>
                     <span></span>
-                    <Link to='/listings' className='filter-buttons-search'><i class="far fa-search"></i></Link>
+                    <Link to='/listings' className='filter-buttons-search'><i class="fas fa-search"></i></Link>
                 </div>
             </div>
             <Link to='/listings' className='suprise-me'>Suprise me</Link>
