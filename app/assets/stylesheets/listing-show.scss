@@ -2,11 +2,11 @@
     border: solid red 1px;
     height: 1000px;
     margin-left: 80px;
+    margin-right: 80px;
 }
 
 .show-header{
     margin-top: 40px;
-    border: solid blue 1px;
     display: flex;
     height: 100px;
     flex-direction: column;
@@ -28,10 +28,45 @@
     decoration: none;
 }
 
-.show-photo-left{
+.show-photo{
     border: solid red 1px;
     height: 400px;
 }
+
+.show-location{
+    margin-top: 14px;
+    font-size: 12px;
+}
+
+.show-photo-right{
+    float: left;
+    width: 50%;
+    border: solid blue 1px;
+    height: 90%;
+    width: 48%;
+    margin-left: 20px
+}
+
+.show-photo-left{
+    float: left;
+    width: 50%;
+    border: solid blue 1px;
+    height: 90%;
+    width: 48%;
+}
+
+.show-photo-two{
+    height: 45%;
+    width: 45%;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    column-gap: 10px;
+    row-gap: 15px;
+    border: solid red 1px;
+}
+
+
+
 
 
 

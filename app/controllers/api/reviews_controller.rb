@@ -5,11 +5,16 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
+  def index 
+    @reviews = Review.all
+    render :index 
+  end
+
   def create
     # puts review_params
     @review = Review.new(review_params)
     
-    if @review.save!
+    if @review.save
       render :show
     else
       render json: @review.errors.full_messages, status: 422

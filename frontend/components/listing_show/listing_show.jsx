@@ -28,12 +28,12 @@ class ListingShow extends React.Component{
         this.props.fetchListing(this.props.match.params.listingId).then(() =>{
             this.setState({loading: false})
         })
-
+        // this.props.fetchReviews()
         // this.props.fetchReview(this.props.match.params.reviewId)
     }
 
     compononetDidUpdate(){
-        
+
         if (this.props.listingId){
             this.props.fetchListing(this.props.match.params.listingId)
         } 
@@ -74,22 +74,25 @@ class ListingShow extends React.Component{
                     </div>
                     
                     <div>
-                        <p>Location: {listing.location}</p>
+                        <p className='show-location'>Location: {listing.location}</p>
                     </div>
                     <div>
                         {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
                     </div>
                 </div>
                 
-                <div className='show-photo-left'>
-                    <div className='show-photo-one'>PHOTOS</div>
-                </div>
+                <div className='show-photo'>
+                    <div className='show-photo-left'>
+                        <div className='show-photo-one'>PHOTOS</div>
+                    </div>
 
-                <div className='show-photo-right'>
-                    <div className='show-photo-two'></div>
-                    <div className='show-photo-two'></div>
-                    <div className='show-photo-two'></div>
-                    <div className='show-photo-two'></div>
+                    <div className='show-photo-right'>
+                        <div className='show-photo-two'></div>
+                        <div className='show-photo-two'></div>
+                        <div className='show-photo-two'></div>
+                        <div className='show-photo-two'></div>
+                    </div>
+    
                 </div>
 
                 <div className='show-body'>

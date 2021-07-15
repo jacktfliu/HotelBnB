@@ -12,7 +12,7 @@ const ReviewIndexItem = props => {
                 {props.review.body}
             </div>
             <div>
-                {props.currentUser && props.currentUser.id === props.review.user_id ? <button onClick={() => props.deleteReview(props.review.id)}>Delete</button> : '' }
+                {props.currentUser && props.currentUser.id === props.review.user_id ? <button onClick={() => props.deleteReview(props.review.id).then(() => {window.location.reload()})}>Delete</button> : '' }
             </div>
         </div>
     )
