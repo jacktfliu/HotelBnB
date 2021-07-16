@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactStars from "react-rating-stars-component";
+import { render } from "react-dom";
 
 class ReviewsForm extends React.Component{
     constructor(props){
@@ -8,7 +10,14 @@ class ReviewsForm extends React.Component{
         this.updateBody = this.updateBody.bind(this)
         this.updateRating = this.updateRating.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.ratingChanged = this.ratingChanged.bind(this)
     }
+
+    ratingChanged(rating){
+        this.setState({
+            rating: rating
+        })
+    };
 
 
     updateBody(e){
@@ -35,12 +44,16 @@ class ReviewsForm extends React.Component{
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        <input 
-                            type="radio" 
-                            value={this.state.rating} 
-                            onChange={this.updateRating}>
-                        </input>
-                        
+                       
+                        <ReactStars
+                            count={5}
+                            onChange={this.ratingChanged}
+                            value={this.state.rating}
+                            size={24}
+                            color="lightgray"
+                            activeColor="#FF5A5F"
+                        />
+                      
                         <textarea
                             cols="30"
                             rows="10"
