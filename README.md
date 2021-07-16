@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HotelBnB is a fullstack clone of AirBnB where users can explore, book and review listings.
 
-Things you may want to cover:
 
-* Ruby version
+# Technologies
+HotelBnB is built with Ruby on Rails and PostgreSQL on the backend. HotelBnB also utilizes JavaScript, React and Redux for the frontend state management. Styling is implemented with CSS and HTML5. Google Maps API is used to render maps on the application.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
