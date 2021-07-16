@@ -129,8 +129,20 @@ class ListingShow extends React.Component{
                                 </div>
                         </div>
                     </div>
+
+                    {/* show-body */}
                     <div className='listing-price'>
-                        <p>Price: {listing.price}</p>
+                        <div className='booking-container'>
+                            <div className='price-container'>
+                                <p className='booking-price'>${listing.price} / night</p>
+                            </div>
+                            <div className='date-wrapper'>
+                                <input type='date' className='date-button'/>
+                                <input type='date' className='date-button'/>
+                            </div>
+                            <button className='guest-button'>1 Guest</button>
+                            <button className='check-ava'>Check availbility</button>
+                        </div>
                     </div>
                 </div>
                 
