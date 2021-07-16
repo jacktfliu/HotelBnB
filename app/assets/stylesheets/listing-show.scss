@@ -114,9 +114,9 @@
         height: 100;
         display: flex;
         justify-content: center;
-        position: sticky;
-
+        
         .booking-container{
+            position: sticky;
             width: 350px;
             height: 250px;
             border: 1px solid rgb(221, 221, 221);
