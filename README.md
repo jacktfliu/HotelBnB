@@ -14,6 +14,9 @@ User Authentication
 Users are able to login and signup via a modal on any page that has a navbar. The users credentials is then authenticated through the backend and would display the appropiate response error messages to the user. A demo user was implemented to bypass signing up.
 
 Listing 
+Logged in users are able to create listings, update and delete listings. <img width="1365" alt="Screen Shot 2021-07-16 at 9 27 26 AM" src="https://user-images.githubusercontent.com/82416350/125956478-651f6587-ebe4-44d6-aff3-6ad624d0c67d.png">
+<img width="1357" alt="Screen Shot 2021-07-16 at 9 27 55 AM" src="https://user-images.githubusercontent.com/82416350/125956496-c3aeeb94-b2ce-41e6-ae74-0a51bbb7afb5.png">
+
 
 Booking
 
