@@ -65,3 +65,4 @@ class Api::ListingsController < ApplicationController
         params[:bounds]
     end
 end
+
