@@ -93,11 +93,27 @@
     margin-right: 110px;
 }
 
+.dropdown-content1 {
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    padding: 12px 16px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    flex-direction: column;
+    height: 140px;
+    position: relative;
+    margin-top: 220px;
+    margin-right: 110px;
+}
+
 .dropdown{
     position: absolute;
     flex-direction: column;
     display: flex;
     align-items: center;
+    
 }
 
 .drop-down-inside {
@@ -105,6 +121,7 @@
     margin-bottom: 20px;
     display: flex;
     align-content: left;
+    border: none;
 }
 
 .drop-down-inside:link{
