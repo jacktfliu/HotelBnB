@@ -23,8 +23,12 @@ class User < ApplicationRecord
         foreign_key: :host_id
 
     has_many :reviews,
-        class_name: :Review,
-        foreign_key: :user_id
+        foreign_key: :user_id,
+        class_name: :Review
+    
+    has_many :reservations,
+        foreign_key: :guest_id,
+        class_name: :Reservation
 
     attr_reader :password
 
