@@ -13,6 +13,7 @@ class ListingShow extends React.Component{
             loading: true
         }
 
+
         this.handleSubmit = this.handleSubmit.bind(this)
         this.userEditDelete = this.userEditDelete.bind(this)
     }
@@ -131,6 +132,7 @@ class ListingShow extends React.Component{
                     </div>
 
                     {/* show-body */}
+                    {/*should be a form */}
                     <div className='listing-price'>
                         <div className='booking-container'>
                             <div className='price-container'>
@@ -141,7 +143,7 @@ class ListingShow extends React.Component{
                                 <input type='date' className='date-button'/>
                             </div>
                             <button className='guest-button'>1 Guest</button>
-                            <button className='check-ava'>Check availbility</button>
+                            <button className='check-ava'>Reserve</button>
                         </div>
                     </div>
                 </div>

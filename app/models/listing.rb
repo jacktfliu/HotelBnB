@@ -27,4 +27,8 @@ class Listing < ApplicationRecord
         class_name: :Review,
         foreign_key: :listing_id
 
+    has_many :reservee,
+        foreign_key: :listing_id,
+        class_name: :Reservation
+
 end

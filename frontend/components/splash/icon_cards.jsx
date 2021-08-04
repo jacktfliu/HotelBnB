@@ -41,7 +41,7 @@ const IconCards = () => {
                 </h1>
             </div>
 
-            <div className='icon-cards'>
+            {/* <div className='icon-cards'>
                 <div className='cities'>Live anywhere</div>
                 <div className='explore-wrapper'>
                     <h1 className='explore'>
@@ -65,9 +65,9 @@ const IconCards = () => {
                 </div>
             </div>
 
-                <div className='footer-container'>
+                <div className='footer-container'> */}
 
-            </div>
+            {/* </div> */}
         </div>
     )
 }
