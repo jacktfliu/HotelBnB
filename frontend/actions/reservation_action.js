@@ -31,7 +31,7 @@ export const fetchReservation = (reservation) => dispatch => (
     ))
 )
 
-export const createResevation = (reservation) => dispatch => (
+export const createReservation = (reservation) => dispatch => (
     APIUtil.fetchReservation(reservation).then(reservation => (
         dispatch(receiveReservation(reservation))
     ))

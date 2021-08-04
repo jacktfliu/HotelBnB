@@ -1,4 +1,4 @@
-import {RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATIONS} from '../actions/reservation_action'
+import {RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION} from '../actions/reservation_action'
 
 const reservationsReducer = (state = {}, action) => {
     Object.freeze(state);
