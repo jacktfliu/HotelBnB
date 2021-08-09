@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getState = store.getState
     window.fetchListings = fetchListings;
     
+
+    
     ReactDOM.render(<Root store={store} />, document.getElementById('root'))
 })
 

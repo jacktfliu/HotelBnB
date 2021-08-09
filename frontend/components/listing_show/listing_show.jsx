@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ReviewsFormContainer from '../reviews_form/reviews_form_container'
 import ReviewIndexItem from '../reviews_form/review_index_item'
 import ListingMap from '../listing_map/listing_map'
+import ReservationForm from '../reservation/reservation_form'
 
 
 
@@ -135,15 +136,7 @@ class ListingShow extends React.Component{
                     {/*should be a form */}
                     <div className='listing-price'>
                         <div className='booking-container'>
-                            <div className='price-container'>
-                                <p className='booking-price'>${listing.price} / night</p>
-                            </div>
-                            <div className='date-wrapper'>
-                                <input type='date' className='date-button'/>
-                                <input type='date' className='date-button'/>
-                            </div>
-                            <button className='guest-button'>1 Guest</button>
-                            <button className='check-ava'>Reserve</button>
+                            <ReservationForm listingId={listingId} listing={listing}/>
                         </div>
                     </div>
                 </div>
@@ -153,7 +146,7 @@ class ListingShow extends React.Component{
                 </div>
 
                 <div className='review-submit'>
-                    <ReviewsFormContainer listingId={listingId}/>
+                    <ReviewsFormContainer listingId={listingId} />
                 </div>
                 <div className='span1'></div>
                 <div className='show-map-container'>

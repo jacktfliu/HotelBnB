@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import Reservations from './reservation_index_item'
+import ReservationForm from './reservation_form'
 import { createReservation } from '../../actions/reservation_action'
 
 const mSTP = (state) => ({
@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
     createReservation: (reservation) => dispatch(createReservation(reservation))
 })
 
-export default connect(mSTP, mDTP)(Reservations)
+export default connect(mSTP, mDTP)(ReservationForm)
