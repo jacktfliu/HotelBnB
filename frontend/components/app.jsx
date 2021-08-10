@@ -7,7 +7,7 @@ import ListingIndexContainer from "./listing_index/listing_index_container";
 import ListingShowContainer from './listing_show/listing_show_container'
 import CreateFormContainer from './listing_form/create_form_container'
 import EditFormContainer from './listing_form/edit_form_containter'
-import ReservationIndexContainer from './reservation/reservation_container';
+import ReservationPageContainer from './reservation/reservation_page_container'
 import { Fragment } from "react";
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -22,7 +22,7 @@ const App = () => (
             <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
             <ProtectedRoute path='/listing/new' component={CreateFormContainer}/>
             <ProtectedRoute path='/listings/:listingId/edit' component={EditFormContainer}/>
-            <ProtectedRoute path='/reservation' component={ReservationIndexContainer}/>
+            <ProtectedRoute path='/reservation' component={ReservationPageContainer}/>
           </Switch>
     </Fragment>
 

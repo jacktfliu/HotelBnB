@@ -2,7 +2,7 @@ import * as APIUtil from '../util/reservation_util'
 
 export const RECEIVE_RESERVATIONS = 'RECEIVE_RESERVATIONS'
 export const RECEIVE_RESERVATION = 'RECEIVE_RESERVATION'
-export const REMOVE_RESERVATION = 'REMOVE_RESERVATIONS'
+export const REMOVE_RESERVATION = 'REMOVE_RESERVATION'
 
 export const receiveReservations = reservations => ({
     type: RECEIVE_RESERVATIONS,
@@ -25,15 +25,15 @@ export const fetchReservations = () => dispatch => (
     ))
 )
 
-export const fetchReservation = (reservation) => dispatch => (
-    APIUtil.fetchReservation(reservation).then(reservation => (
-        dispatch(receiveReservation(reservation))
+export const fetchReservation = id => dispatch => (
+    APIUtil.fetchReservation(id).then(id => (
+        dispatch(receiveReservation(id))
     ))
 )
 
-export const createReservation = (reservation) => dispatch => (
-    APIUtil.fetchReservation(reservation).then(reservation => (
-        dispatch(receiveReservation(reservation))
+export const createReservation = formData => dispatch => (
+    APIUtil.createReservation(formData).then(reservations => (
+        dispatch(receiveReservation(reservations))
     ))
 )
 

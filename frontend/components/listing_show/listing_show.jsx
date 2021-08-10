@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ReviewsFormContainer from '../reviews_form/reviews_form_container'
 import ReviewIndexItem from '../reviews_form/review_index_item'
 import ListingMap from '../listing_map/listing_map'
-import ReservationForm from '../reservation/reservation_form'
+import ReservationFormContainer from '../reservation/reservation_container'
 
 
 
@@ -132,11 +132,10 @@ class ListingShow extends React.Component{
                         </div>
                     </div>
 
-                    {/* show-body */}
                     {/*should be a form */}
                     <div className='listing-price'>
                         <div className='booking-container'>
-                            <ReservationForm listingId={listingId} listing={listing}/>
+                            <ReservationFormContainer listingId={listingId} listing={listing}/>
                         </div>
                     </div>
                 </div>

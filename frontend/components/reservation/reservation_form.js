@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ReservationForm extends React.Component {
     constructor(props) {
@@ -22,36 +23,63 @@ class ReservationForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        if (this.state.check_in_date < this.state.check_out_date) return null;
-        const reservation = Object.assign({}, this.state, {listing_id: this.props.listing_id})
-        this.props.createReservation(reservation).then(this.props.ownProps.history.push('./reservation'))
-        this.setState(this.newState)
+        if (this.state.check_in_date < this.state.check_out_date) {
+            const reservation = Object.assign({}, this.state, {listing_id: this.props.listingId})
+            this.props.createReservation(reservation)
+            .then(this.props.history.push('/reservation'))
+            this.setState(this.newState)
+        } else {
+            return null;
+        }
     }
 
-    handleInput(){
-        
+    handleInput(field){
+        return (e) => {
+        this.setState({
+            [field]: e.target.value,
+            }); 
+        };
     }
     
     render(){
 
         return (
-            <form onSubmit={this.handleSubmit}>      
-
+            <div>
                 <div className='price-container'>
                     <p className='booking-price'>${this.props.listing.price} / night</p>
                 </div>
-                <div className='date-wrapper'>
-                    <input onChange={this.handleDate} type='date' className='date-button'/>
-                    <input onChange={this.handleDate} type='date' className='date-button'/>
-                </div>
-                <button className='guest-button'>1 Guest</button>
-                <button className='check-ava'>Reserve</button>
+                <form onSubmit={this.handleSubmit} className='reservation-wrapper'>      
 
-            </form>
+                    <div className='date-wrapper'>
+                        <label>
+                            <input type='date'
+                            onChange={this.handleDate('check_in_date')} 
+                            className='date-button'/>
+                        </label>
+                        <label>
+                            <input type='date' 
+                            onChange={this.handleDate('check_out_date')} 
+                            className='date-button'/>
+                        </label>
+                    </div>
+
+                    <select className='guest-button' onChange={this.handleInput('number_of_guest')}>
+                        <option value="1" defaultValue>1 guest</option>
+                        <option value="2">2 guest</option>
+                        <option value="3">3 guest</option>
+                        <option value="4">4 guest</option>
+                        <option value="5">5 guest</option>
+                        <option value="6">6 guest</option>
+                        <option value="7">7 guest</option>
+                    </select>
+
+                    <button type='submit' className='check-ava'>Reserve</button>
+                </form>
+            </div>
         )
     }
     
 }
 
-export default ReservationForm
+export default withRouter(ReservationForm)
 
