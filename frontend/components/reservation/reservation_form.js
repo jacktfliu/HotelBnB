@@ -24,9 +24,9 @@ class ReservationForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         if (this.state.check_in_date < this.state.check_out_date) {
-            const reservation = Object.assign({}, this.state, {listing_id: this.props.listingId})
-            this.props.createReservation(reservation)
-            .then(this.props.history.push('/reservation'))
+            const reservations = Object.assign({}, this.state, {listing_id: this.props.listingId})
+            this.props.createReservation(reservations)
+            .then(this.props.history.push('/reservations'))
             this.setState(this.newState)
         } else {
             return null;

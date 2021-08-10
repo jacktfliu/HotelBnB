@@ -6,6 +6,8 @@ class ReservationPage extends React.Component {
         this.state = {
             loading: true
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount(){
@@ -14,28 +16,29 @@ class ReservationPage extends React.Component {
         )
     }
 
-    // componentDidUnmount(){
-    //     this.props.deleteReservation()
-    // }
+    handleSubmit(e){
+        e.preventDefault()
+        this.props.deleteReservation(this.props.reservation.id)
+    }
 
     render(){
-        if(this.state.loading) return null
-        console.log(this.props)
-        const {first_name, last_name} = this.props.currentUser
-        const reservations = this.props.reservations.map((reservation, i) => {
-            <div key={`reservation-${i}`} className="reservations">
-                <div>
-                    <h1>{reservation.title}</h1>
-                    <p>{reservation.check_in_date} to {reservation.check_out_date}</p>
-                    <p>Guests: {reservation.number_of_guest}</p>
-                </div>
-            </div>
-        })
-        return(
+        
+        const reservations = this.props.reservations.map((reservation, i) => (
+            <div key={`reservation-${i}`}>
+                    <div>
+                        <h1>{reservation.title}</h1>
+                        <p>{reservation.check_in_date} to {reservation.check_out_date}</p>
+                        <p>Number of Guests: {reservation.number_of_guest}</p>
+                    </div>
 
-            <div>
-                
+                    <button  onClick={(this.handleSubmit)}>Cancel Reservation</button> 
             </div>
+        ))
+        return(
+            <div>
+                {reservations}
+            </div>
+
         )
     }
 }

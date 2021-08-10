@@ -22,7 +22,7 @@ const App = () => (
             <Route exact path='/listings/:listingId' component={ListingShowContainer}/>
             <ProtectedRoute path='/listing/new' component={CreateFormContainer}/>
             <ProtectedRoute path='/listings/:listingId/edit' component={EditFormContainer}/>
-            <ProtectedRoute path='/reservation' component={ReservationPageContainer}/>
+            <ProtectedRoute path='/reservations' component={ReservationPageContainer}/>
           </Switch>
     </Fragment>
 

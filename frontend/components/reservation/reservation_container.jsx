@@ -8,7 +8,8 @@ const mSTP = (state, ownProps) => ({
         check_out_date: null,
         number_of_guest: 1,
         guest_id: state.session.id
-    }
+    }, 
+    currentUser: state.entities.users[state.session.id],
 })
 
 const mDTP = dispatch => ({
