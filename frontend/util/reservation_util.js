@@ -1,15 +1,14 @@
-export const fetchReservations = reservation => (
+export const fetchReservations = reservations => (
     $.ajax({
         method: 'get',
-        url: '/api/reservation',
-        data: {reservation}
+        url: '/api/reservations'
     })
 )
 
 export const fetchReservation = id => (
     $.ajax({
         method: 'get',
-        url: `/api/reservation/${id}`,
+        url: `/api/reservations/${id}`,
     })
 )
 
@@ -24,6 +23,6 @@ export const createReservation = reservation => (
 export const deleteReservation = reservationId => (
     $.ajax({
         method: 'delete',
-        url: `/api/reservation/${reservationId}`,
+        url: `/api/reservations/${reservationId}`,
     })
 )

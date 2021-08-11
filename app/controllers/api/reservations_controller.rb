@@ -24,8 +24,12 @@ class Api::ReservationsController < ApplicationController
 
     def destroy
         @reservation = Reservation.find(params[:id])
-        @reservation.destroy
-        render json: @reservation
+        
+        if @review.destroy
+            render :show
+        else 
+            render json: @review.errors.full_messages, status: 403
+        end
     end
 
     def update 
