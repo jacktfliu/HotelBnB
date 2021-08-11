@@ -2,7 +2,6 @@ import React from 'react'
 
 const ReviewIndexItem = props => {
 
-
     return (
         <div className='review-container'>
             <div className='review-container'>
