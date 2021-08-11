@@ -19,16 +19,15 @@ class ReservationPage extends React.Component {
     }
 
     render(){
-
         const reservations = this.props.reservations.map((reservation, i) => (
             <div key={`reservation-${i}`}>
-                    <div>
-                        <p>{reservation.title}</p>
-                        <p>{reservation.check_in_date} to {reservation.check_out_date}</p>
-                        <p>Number of Guests: {reservation.number_of_guest}</p>
-                    </div>
+                <div>
+                    <p>{reservation.title}</p>
+                    <p>{reservation.check_in_date.split('T')[0]} to {reservation.check_out_date.split('T')[0]}</p>
+                    <p>Number of Guests: {reservation.number_of_guest}</p>
+                </div>
 
-                    <button onClick={() => this.props.deleteReservation(reservation.id)}>Cancel Reservation</button> 
+                <button onClick={() => this.props.deleteReservation(reservation.id)}>Cancel Reservation</button> 
             </div>
         ))
 

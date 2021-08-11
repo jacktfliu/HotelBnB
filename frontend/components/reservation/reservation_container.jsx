@@ -1,6 +1,9 @@
 import {connect} from 'react-redux'
 import ReservationForm from './reservation_form'
 import { createReservation } from '../../actions/reservation_action'
+import { openModal } from '../../actions/modal_actions'
+import {login} from '../../actions/session_actions'
+
 
 const mSTP = (state, ownProps) => ({    
     reservation: {
@@ -13,6 +16,8 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
+    openModal: (e) => dispatch(openModal(e)),
+    login: (user) => dispatch(login(user)),
     createReservation: (formData) => dispatch(createReservation(formData))
 })
 

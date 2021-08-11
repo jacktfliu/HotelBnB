@@ -23,13 +23,13 @@ class ReservationForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        if (this.state.check_in_date < this.state.check_out_date) {
+        if (this.props.currentUser){
+            if (this.state.check_out_date < this.state.check_in_date) return null
             const reservations = Object.assign({}, this.state, {listing_id: this.props.listingId})
-            this.props.createReservation(reservations)
-            .then(this.props.history.push('/reservations'))
+            this.props.createReservation(reservations).then(this.props.history.push('/reservations')) 
             this.setState(this.newState)
         } else {
-            return null;
+            this.props.openModal('login')
         }
     }
 
@@ -42,6 +42,12 @@ class ReservationForm extends React.Component {
     }
     
     render(){
+        let days = 0;
+        const { check_in_date, check_out_date} = this.state;
+        if(check_in_date && check_out_date) {
+            let diff_time = check_out_date.getTime() - check_in_date.getTime();
+            days = diff_time / (1000 * 3600 * 24);
+        }
 
         return (
             <div>
@@ -51,16 +57,18 @@ class ReservationForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className='reservation-wrapper'>      
 
                     <div className='date-wrapper'>
-                        <label>
-                            <input type='date'
+                         <input type='date'
                             onChange={this.handleDate('check_in_date')} 
-                            className='date-button'/>
-                        </label>
-                        <label>
-                            <input type='date' 
+                            className='date-button'
+                            min={new Date().toISOString().split('T')[0]}
+                        />
+                    </div>
+                    <div>
+                        <input type='date' 
                             onChange={this.handleDate('check_out_date')} 
-                            className='date-button'/>
-                        </label>
+                            className='date-button'
+                            min={new Date().toISOString().split('T')[0]}
+                        />
                     </div>
 
                     <select className='guest-button' onChange={this.handleInput('number_of_guest')}>
@@ -72,6 +80,10 @@ class ReservationForm extends React.Component {
                         <option value="6">6 guest</option>
                         <option value="7">7 guest</option>
                     </select>
+
+                    <div>
+                        Total: ${this.props.listing.price * days}
+                    </div>
 
                     <button type='submit' className='check-ava'>Reserve</button>
                 </form>
