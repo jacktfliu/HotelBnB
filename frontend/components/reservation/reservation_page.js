@@ -14,13 +14,16 @@ class ReservationPage extends React.Component {
         )
     }
 
+    compononetDidUpdate(){
+        this.props.fetchReservations()
+    }
+
     render(){
-        const {first_name, last_name} = this.props.currentUser
+
         const reservations = this.props.reservations.map((reservation, i) => (
             <div key={`reservation-${i}`}>
-                
                     <div>
-                        <h1>{reservation.title}</h1>
+                        <p>{reservation.title}</p>
                         <p>{reservation.check_in_date} to {reservation.check_out_date}</p>
                         <p>Number of Guests: {reservation.number_of_guest}</p>
                     </div>
@@ -28,10 +31,10 @@ class ReservationPage extends React.Component {
                     <button onClick={() => this.props.deleteReservation(reservation.id)}>Cancel Reservation</button> 
             </div>
         ))
+
         return(
             <div>
                 <div>
-                    <h1>Hey there {first_name, last_name}</h1>
                     <h2>Welcome to your reservations</h2>
                 </div>
                 <div>

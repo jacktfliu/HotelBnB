@@ -37,7 +37,7 @@ export const createReservation = formData => dispatch => (
     ))
 )
 
-export const deleteReservation = reservationId => dispatch (
+export const deleteReservation = reservationId => dispatch => (
     APIUtil.deleteReservation(reservationId).then(reservationId => (
         dispatch(removeReservation(reservationId))
     ))
