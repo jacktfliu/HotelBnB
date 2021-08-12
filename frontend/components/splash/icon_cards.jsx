@@ -11,32 +11,30 @@ const IconCards = () => {
                     <div className='city-row-wrapper'>
                         <div className='city-content'>
                             <Link to={`listings`} className='first-splash-box'>
-                                <div className='first-splash-image'>
-                                    <div className='newyork'></div>
-                                </div>
-                                <span className='first-splash-word'>New York</span>
+                                <div className='first-splash-image1'></div>
+                                <div className='first-splash-word'>New York City</div>
                             </Link>
                            <Link to={`listings`} className='first-splash-box'>
-                                <span className='first-splash-image'></span>
-                                <span className='first-splash-word'>Boston</span>
+                                <div className='first-splash-image2'></div>
+                                <div className='first-splash-word'>Miami Beach</div>
                             </Link>
                            <Link to={`listings`} className='first-splash-box'>
-                                <span className='first-splash-image' ></span>
-                                <span className='first-splash-word'>Las Vegas</span>
+                                <div className='first-splash-image3' ></div>
+                                <div className='first-splash-word'>Las Vegas</div>
                             </Link>
                         </div>
                         <div className='city-content'>
                              <Link to={`listings`} className='first-splash-box'>
-                                <span className='first-splash-image'></span>
-                                <span className='first-splash-word'>Florida</span>
+                                <div className='first-splash-image4'></div>
+                                <div className='first-splash-word'>Los Angeles</div>
                             </Link>
                            <Link to={`listings`} className='first-splash-box'>
-                                <span className='first-splash-image'></span>
-                                <span className='first-splash-word'>Philadelphia</span>
+                                <div className='first-splash-image5'></div>
+                                <div className='first-splash-word'>Atlantic City</div>
                             </Link>
                            <Link to={`listings`} className='first-splash-box'>
-                                <span className='first-splash-image'></span>
-                                <span className='first-splash-word'>Virginia Beach</span>
+                                <div className='first-splash-image6'></div>
+                                <div className='first-splash-word'>Chicago</div>
                             </Link>
                         </div>
                     </div>

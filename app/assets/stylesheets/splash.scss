@@ -88,16 +88,53 @@
                     display: flex;
                     flex-direction: row;
 
-                    .first-splash-image{
+                    .first-splash-image1{
                         border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
-
-                        .newyork{
-                            background-image: url('NewYorkCity.jpeg');
-                            background-size: 90px 90px;
-                        }
+                        background-image: url('NewYorkCity.jpeg');
+                        background-size: 100% 100%;
+                    }
+                    .first-splash-image2{
+                        border: red 1px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 12px;
+                        background-image: url('Miami.jpeg');
+                        background-size: 100% 100%;
+                    }
+                    .first-splash-image3{
+                        border: red 1px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 12px;
+                        background-image: url('LasVegas.jpeg');
+                        background-size: 100% 100%;
+                    }
+                    .first-splash-image4{
+                        border: red 1px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 12px;
+                        background-image: url('Los.jpeg');
+                        background-size: 100% 100%;
+                    }
+                    .first-splash-image5{
+                        border: red 1px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 12px;
+                        background-image: url('City.jpeg');
+                        background-size: 100% 100%;
+                    }
+                    .first-splash-image6{
+                        border: red 1px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 12px;
+                        background-image: url('Chi.jpeg');
+                        background-size: 100% 100%;
                     }
                 }
             }
