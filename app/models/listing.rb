@@ -29,6 +29,11 @@ class Listing < ApplicationRecord
 
     has_many :reservee,
         foreign_key: :listing_id,
-        class_name: :Reservation
+        class_name: :Reservation   
 
+    has_many_attached :photos
 end
+
+listing = Listing.first
+file = File.open('')
+
