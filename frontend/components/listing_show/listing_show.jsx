@@ -92,15 +92,17 @@ class ListingShow extends React.Component{
                     </div>
 
                     <div className='show-photo-right'>
-                        <div className='show-photo-1'></div>
-                        <div className='show-photo-2'></div>
+                        <div className='show-photo-down'>
+                            <img className='show-photo-1'src={listing.photos[1]}></img>
+                            <img className='show-photo-2'src={listing.photos[2]}></img>
+                        </div>
+                        <div className='show-photo-up'>
+                            <img className='show-photo-3'src={listing.photos[3]}></img>
+                            <img className='show-photo-4'src={listing.photos[4]}></img>
+                        </div>
                     </div>
-                    <div className='show-photo-right'>
-                        <div className='show-photo-3'></div>
-                        <div className='show-photo-4'></div>
-                    </div>
-    
                 </div>
+
                 <div className='body-container'>
                     <div className='show-body'>
                         <div className='show-body-header'>Entire place hosted by Jack</div>
