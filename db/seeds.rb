@@ -31,6 +31,9 @@ listing1 = Listing.create(
     owner_id: 1
 )
 
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', '1.jpg')), filename: '1.jpg')
+
+
 listing2 = Listing.create([{
     title: 'Palm Beach Resort',
     price: 200.00,

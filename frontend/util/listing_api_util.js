@@ -36,7 +36,7 @@ export const deleteListing = listingId => (
     })
 )
 
-export const receivePhoto = photo => (
+export const uploadPhoto = photo => (
     $.ajax({
         url: '/api/posts',
         method: 'POST',

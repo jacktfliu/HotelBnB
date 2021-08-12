@@ -86,7 +86,9 @@ class ListingShow extends React.Component{
                 
                 <div className='show-photo'>
                     <div className='show-photo-left'>
-                        <div className='show-photo-one'></div>
+                        <div className='show-photo-one'>
+                            <img className='show-photo-one'src={listing.photos[0]}></img>
+                        </div>
                     </div>
 
                     <div className='show-photo-right'>

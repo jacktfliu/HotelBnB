@@ -13,11 +13,11 @@ class ListingForm extends React.Component{
         this.props.action(this.state).then(
             (list) => this.props.history.push(`/listings/${list.listing.id}`)
         )
-        const formData = new FormData();
-        formData.append('post[title]', this.state.title);
-        if (this.state.photoFile) {
-            formData.append('post[photo]', this.state.photoFile);
-        }
+        // const formData = new FormData();
+        // formData.append('post[title]', this.state.title);
+        // if (this.state.photoFile) {
+        //     formData.append('post[photo]', this.state.photoFile);
+        // }
     }
 
     handleUpdate(field){

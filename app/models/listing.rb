@@ -34,6 +34,3 @@ class Listing < ApplicationRecord
     has_many_attached :photos
 end
 
-listing = Listing.first
-file = File.open('')
-

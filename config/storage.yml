@@ -7,19 +7,20 @@ local:
   root: <%= Rails.root.join("storage") %>
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
+
 amazon_dev:
   service: S3
-  access_key_id: <%= Rails.application.credentials.dig(:aws, :AKIA2FUN7JTMK5AREVGI) %>
-  secret_access_key: <%= Rails.application.credentials.dig(:aws, :sZ7Nw8+0lcVK7SPK4z20PZeBFtrmKp6A6wNucxPw) %>
-  region: us-east-1
-  bucket: hotelbnb-dev
+  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
+  region: <%= Rails.application.credentials.aws[:region] %>
+  bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
 
-amazon_pro:
+amazon_prod:
   service: S3
-  access_key_id: <%= Rails.application.credentials.dig(:aws, :AKIA2FUN7JTMK5AREVGI) %>
-  secret_access_key: <%= Rails.application.credentials.dig(:aws, :sZ7Nw8+0lcVK7SPK4z20PZeBFtrmKp6A6wNucxPw) %>
-  region: us-east-1
-  bucket: hotelbnb-pro
+  access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
+  secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
+  region: <%= Rails.application.credentials.aws[:region] %>
+  bucket: <%= Rails.application.credentials.aws[:prod][:bucket] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
