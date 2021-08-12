@@ -19,7 +19,7 @@ class ListingIndex extends React.Component{
                 <div className='listing-left'>
                     <h1 className='listing-page-header'>Stays in a selected city</h1>
                     <div className='listing-page-button'>
-                        <button className='curved-button'>PlaceHolder button1</button>
+                        <button className='curved-button'>Suprise me</button>
                         <button className='curved-button'>button2</button>
                         <button className='curved-button'>button3</button>
                         <button className='curved-button'>button4</button>

@@ -11,15 +11,19 @@ const ListingIndexItem = props => {
 
                 <Link className='listing-items-container' to={`/listings/${listing.id}`}>
                     <h1 className='listing-header'>
-                        <div className='listing-title'>{listing.title}</div>
+                        <div className='listing-description'>{listing.title}</div>
                     </h1>
-
-                    <div className='listing-description'>
-                        {listing.description}
-                    </div>
 
                     <div className='listing-index-am'>
                         Wifi · Air conditioning · Kitchen · Heating
+                            <br/>
+                            Bedrooms: {listing.bedroom} 
+                            <br/>
+                            Bathrooms: {listing.bathroom}
+                    </div>
+
+                    <div>
+                        Rating: {Math.random()}
                     </div>
 
                     <div className='listing-price'>

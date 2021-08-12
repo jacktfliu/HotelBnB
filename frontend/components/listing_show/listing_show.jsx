@@ -69,8 +69,8 @@ class ListingShow extends React.Component{
             
         return(
             
-            
             <div className='show-container'>
+                <Link to='/listings'>Back to listings</Link>
                 <div className='show-header'>
                     <div>
                         <h1 className='show-title'>{listing.title}</h1>
