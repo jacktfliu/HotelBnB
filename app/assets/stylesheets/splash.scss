@@ -15,6 +15,10 @@
         height: 60vh;
     }
 
+    .suprise-me-container{
+        height: 100%;
+    }
+
     .suprise-me{
         font-size: 20px;
         font-weight: bold;
@@ -22,17 +26,108 @@
         outline: none;
         background: white;
         border: 1px solid grey;
-        border-radius: 30px;
-        margin-top: 200px;
+        border-radius: 50px;
         display: flex;
-        box-shadow:rgba(0, 0, 0, 0.3) 1px 0px 12px;
-        justify-content: center;
-        line-height: 20px;
+        box-shadow:rgba(0, 0, 0, 0.5) 1px 0px 12px;
+        line-height: 24px;
 
         &:hover{
             box-shadow:rgba(255, 255, 255, 0.8) 1px 0px 12px;
         }
     }
+
+    //FILTER BAR 
+    .filter-box{
+        widtH: 800px;; 
+
+        .filter-container{
+            margin-bottom: 300px;
+            height: 70px;
+            padding: 0 10px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border-radius: 50px;
+            background-color: white;
+            box-shadow:rgba(0, 0, 0, .75) 0px 1px 12px;
+            margin-top: 100px;
+    
+            .filter-button-search{
+                display: inline-flex;
+                border-radius: 50px;
+                overflow: hidden;
+                align-items: center;
+                background: white;
+                height: 54px;
+                padding: 0 16px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                width: 25%;
+
+                &:hover{
+                    background-color: lightgrey;
+                }  
+            }
+
+            .filter-buttons{
+                display: inline-flex;
+                border-radius: 50px;
+                overflow: hidden;
+                align-items: center;
+                background: white;
+                height: 54px;
+                padding: 0 16px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                width: 20%;
+                text-align: center;
+
+                &:hover{
+                    background-color: lightgrey;
+                }  
+            }
+
+            .filter-button-guest{
+                display: inline-flex;
+                border-radius: 50px;
+                overflow: hidden;
+                align-items: center;
+                background: white;
+                height: 54px;
+                padding: 0 16px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                width: 20%;
+                text-align: center;
+
+                &:hover{
+                    background-color: lightgrey;
+                }  
+            }
+    
+            .filter-buttons-search{
+                background-color: rgb(255, 56, 92);
+                display: inline-flex;
+                border-radius: 50px;
+                overflow: hidden;
+                align-items: center;
+                height: 48px;
+                padding: 0 16px;
+                cursor: pointer;
+                border: none;
+                text-decoration: none;
+                color: white;
+
+                &:hover{
+                    background-color: rgb(192, 26, 57);
+                }
+            }
+        }
+    }
+
 
     .suprise-me:link{
         color: purple;
@@ -142,50 +237,4 @@
     }
 }
 
-
-//FILTER BAR 
-
-.filter-container{
-    height: 60px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    background-color: white;
-    box-shadow:rgba(0, 0, 0, .75) 0px 1px 12px;
-
-    .filter-buttons{
-        display: inline-flex;
-        border-radius: 24px;
-        overflow: hidden;
-        align-items: center;
-        background: white;
-        height: 48px;
-        padding: 0 16px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        &:hover{
-            background-color: lightgrey;
-        }
-        
-    }
-
-    .filter-buttons-search{
-        background-color: rgb(255, 56, 92);
-        display: inline-flex;
-        border-radius: 50px;
-        overflow: hidden;
-        align-items: center;
-        height: 48px;
-        padding: 0 16px;
-        cursor: pointer;
-        border: none;
-        text-decoration: none;
-        color: white;
-        &:hover{
-            background-color: rgb(192, 26, 57);
-        }
-    }
-}
 
