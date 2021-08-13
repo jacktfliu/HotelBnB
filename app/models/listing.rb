@@ -17,7 +17,7 @@
 #
 class Listing < ApplicationRecord
     validates :title, :price, :description, :location, :bedroom, presence: true 
-    validates :longitude, :latitude, :owner_id, presence: true 
+    validates :longitude, :latitude, :owner_id, :host_name, :city, presence: true 
 
     belongs_to :host,
         class_name: :User,
