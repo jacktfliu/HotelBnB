@@ -178,13 +178,12 @@
                 flex-direction: row;
 
                 .first-splash-box{
-                    border: green 1px solid;
                     width: 100%;
                     display: flex;
                     flex-direction: row;
+                    text-decoration: none;
 
                     .first-splash-image1{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
@@ -192,7 +191,6 @@
                         background-size: 100% 100%;
                     }
                     .first-splash-image2{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
@@ -200,7 +198,6 @@
                         background-size: 100% 100%;
                     }
                     .first-splash-image3{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
@@ -208,7 +205,6 @@
                         background-size: 100% 100%;
                     }
                     .first-splash-image4{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
@@ -216,7 +212,6 @@
                         background-size: 100% 100%;
                     }
                     .first-splash-image5{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
@@ -224,14 +219,47 @@
                         background-size: 100% 100%;
                     }
                     .first-splash-image6{
-                        border: red 1px solid;
                         width: 90px;
                         height: 90px;
                         border-radius: 12px;
                         background-image: url('Chi.jpeg');
                         background-size: 100% 100%;
                     }
+
+                    .first-splash-word{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        h1{
+                            padding: 3px 0px;
+                            padding-left: 14px;
+                        }
+
+                        p{
+                            padding: 10px 0px;
+                            padding-left: 14px;
+                            text-decoration: none;
+                            color: rgb(107, 105, 105);
+                        }
+                    }
                 }
+
+                    .first-splash-box:link{
+                        color: rgb(0, 0, 0);
+                    }
+                    .first-splash-box:visited{
+                        color: rgb(0, 0, 0);
+                    }
+                    .first-splash-box:hover{
+                        color: rgb(0, 0, 0);
+                    }
+                    .first-splash-box:focus{
+                        color: rgb(0, 0, 0);
+                    }
+                    .first-splash-box:active{
+                        color: rgb(0, 0, 0);
+                    }
             }
         }
     }
