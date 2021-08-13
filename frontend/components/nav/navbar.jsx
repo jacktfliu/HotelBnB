@@ -30,7 +30,7 @@ class NavBar extends React.Component{
                     <Link to='/' className='title'>HotelBnB</Link>
                 </div>
                 <div class='links'>
-                    <a href='https://github.com/jacktfliu/Monster-Dodge'><i className="fab fa-github"></i></a>
+                    <a href='https://github.com/jacktfliu/HotelBnB'><i className="fab fa-github"></i></a>
                     <a href='https://www.linkedin.com/in/jack-l-338a09141/'><i className="fab fa-linkedin"></i></a>
                     <a href='https://angel.co/u/jack-liu-43'><i className="fab fa-angellist"></i></a>
                 </div>
