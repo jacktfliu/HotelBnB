@@ -1,56 +1,30 @@
 
-.listing-page-header{
-    padding-left: 26px;
-    padding-top: 75px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.listing-page-button{
-    padding-top: 26px;
-    padding-left: 18px;
-}
-
-.curved-button{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    padding-top: 70px;
-    padding: 10px 20px;
-    outline: none;
-    background: transparent;
-    margin: 0;
-    border: 1px solid grey;
-    border-radius: 30px;
-    margin-right: 10px;
-    cursor: pointer;
-
-    &:hover{
-        border-color: black;
-    }
-}
-
-.listing-page-words{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    padding-top: 26px;
-    padding-left: 28px;
-    padding-bottom: 30px;
-    padding-right: 30px;
-    font-size: 15px;
-}
 
 .listing-items-container{
     width: 100%;
+    text-decoration: none;
+    color: black;
 }
 
-.listing-left{
-    overflow: scroll;
-    height: 100vh;
+.listing-items-container:link{
+    color: black;
+}
+.listing-items-container:visited{
+    color: black;
+}
+.listing-items-container:hover{
+    color: black;
+}
+.listing-items-container:focus{
+    color: black;
+}
+.listing-items-container:active{
+    color: black;
 }
 
 
 .listing-left-box{
-    border-top: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid rgb(185, 185, 185);
     padding: 24px 0;
     display: flex;
 
@@ -118,12 +92,77 @@
     margin-left: 20px;
     background-size: 450px 200px;
     border: red solid 1px;
-
 }
 
 
 .listing-container{
     position: relative;
+
+    .listing-left-container{
+        width: 840px;
+        overflow: scroll;
+        .listing-left{
+            min-height: calc(100vh - 80px);
+            width: 95%;
+            height: 100vh;
+            margin-left: 18px;
+
+            .listing-page-header{
+                padding-left: 26px;
+                padding-top: 75px;
+                color: black;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .listing-page-button{
+                padding-top: 26px;
+                padding-left: 18px;
+
+                .curved-button{
+                    padding-top: 70px;
+                    padding: 10px 20px;
+                    outline: none;
+                    background: transparent;
+                    margin: 0;
+                    border: 1px solid grey;
+                    border-radius: 30px;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    &:hover{
+                        border-color: black;
+                    }
+                }
+            }
+
+            .words-container-index{
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+                height: 50px;
+                width: 100%;
+                margin-top: 20px;
+                margin-left: 5px;
+                margin-bottom: 10px;
+                
+                .stays-gif{
+                    width: 50px;
+                    height: 50px; 
+                    background-image: url('trophy.gif');
+                    background-size: 100% 100%;   
+                }
+
+                .listing-page-words{
+                    padding-top: 10px;
+                    padding-left: 6px;
+                    padding-bottom: 30px;
+                    padding-right: 30px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 
     .main-map{
         width: calc(100% - 840px);
@@ -147,30 +186,6 @@
         position: sticky;
         top:0;
     }
-    
-    .listing-left{
-        min-height: calc(100vh - 80px);
-        width: 840px;
-    }
 
 }
 
-.listing-items-container:link{
-    color: black;
-}
-.listing-items-container:visited{
-    color: black;
-}
-.listing-items-container:hover{
-    color: black;
-}
-.listing-items-container:focus{
-    color: black;
-}
-.listing-items-container:active{
-    color: black;
-}
-.listing-items-container {
-    text-decoration: none;
-    color: black;
-}
