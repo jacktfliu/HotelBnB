@@ -66,22 +66,20 @@ class ListingShow extends React.Component{
                 )
             }  
         )
-            
+
         return(
-            
+
             <div className='show-container'>
-                <Link to='/listings'>Back to listings</Link>
                 <div className='show-header'>
-                    <div>
-                        <h1 className='show-title'>{listing.title}</h1>
-                    </div>
-                    
-                    <div>
-                        <p className='show-location'>Location: {listing.location}</p>
-                    </div>
-                    <div>
-                        {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
-                    </div>
+                    <Link className='back-to-listing' to='/listings'>
+                        <i class="fa fa-chevron-left"></i>
+                        Back to listings
+                    </Link>
+                    <h1 className='show-title'>{listing.title}</h1>
+                    <p className='show-location'>
+                        Location: {listing.location} · Bedroom: {listing.bedroom} · Bathroom: {listing.bathroom}
+                    </p>
+                    {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
                 </div>
                 
                 <div className='show-photo'>
@@ -103,20 +101,28 @@ class ListingShow extends React.Component{
 
                 <div className='body-container'>
                     <div className='show-body'>
-                        <div className='show-body-header'>Entire place hosted by Jack</div>
-                        <div className='show-body-header2'>Maximum {listing.bedroom} guests · whole place · Bedroom: {listing.bedroom}</div>
+                        <div className='show-body-header'>Entire place hosted by Owner Name</div>
+                        <div className='show-body-header2'>Have the entire place to yourself!</div>
                         <div className='span1'></div>
-                        <div className='show-body-superhost-header'>Jack is a superhost</div>
-                        <div className='superhost'>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests. </div>
+                        <div className='show-body-superhost-header'>Owner Name is a superhost</div>
+                        <div className='superhost'> 
+                            <i class="fa fa-medal"></i> 
+                            <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests. </p>
+                        </div>
                         <div className='span1'></div>
                         <div className='show-body-superhost-body'> 
+                            <p>Good to know</p>
                             <ul className='show-inside-body'>· Entire home to yourself</ul>
                             <ul className='show-inside-body'>· Committed to Enhanced Clean</ul>
-                            </div>
+                        </div>
                         <div className='span1'></div>
-                         {/* <p>{listing.description}</p> */}
-                        <h1 className='amentities-header'>What this place offers</h1>
-                        <div className='show-amentities'>
+                        <div className='description-box-container'>
+                            <h1>What this place is all about</h1>
+                            <p>{listing.description}</p>
+                        </div>
+                        <div className='span1'></div>
+                            <h1 className='amentities-header'>What this place offers</h1>
+                            <div className='show-amentities'>
                                 <div className='show-box1'>
                                     <ul className='amentities-bullet-point'>· Bedroom</ul>
                                     <ul className='amentities-bullet-point'>· Bathroom</ul>
@@ -131,9 +137,8 @@ class ListingShow extends React.Component{
                                     <ul className='amentities-bullet-point'>· Breakfast</ul>
                                     <ul className='amentities-bullet-point'>· Parking</ul>
                                 </div>
+                            </div>
                         </div>
-                    </div>
-
                     {/*should be a form */}
                     <div className='listing-price'>
                         <div className='booking-container'>
@@ -149,7 +154,7 @@ class ListingShow extends React.Component{
                 <div className='review-submit'>
                     <ReviewsFormContainer listingId={listingId} />
                 </div>
-                <div className='span1'></div>
+
                 <div className='show-map-container'>
                     <div className='map-where'>
                         Where you'll be
