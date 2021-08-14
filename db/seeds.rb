@@ -20,54 +20,24 @@ Listing.destroy_all
 ApplicationRecord.connection.reset_pk_sequence!('listings')
 
 listing1 = Listing.create(
-    title: "Empire State Building", 
+    title: "AC Hotel", 
     price: 150.00, 
-    description: 'In the Heart of New York City', 
-    location: 'NYC', 
+    description: '',
+    location: 'Downtown manhattan', 
     bedroom: 5, 
     bathroom: 3, 
     longitude: 40.7484, 
     latitude: 73.9857, 
-    owner_id: 1
+    owner_id: 1,
+    host_name: 'Jack', 
+    city: 'New York City'
 )
 
 listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', '1.jpg')), filename: '1.jpg')
 
 
-listing2 = Listing.create([{
-    title: 'Palm Beach Resort',
-    price: 200.00,
-    description: 'Glitzy estates, sun and beaches',
-    location: 'Florida',
-    bedroom: 3,
-    bathroom: 2,
-    longitude: -87.633537,
-    latitude: 30.256924,
-    owner_id: 1
-}])
 
-listing3 = Listing.create(
-    title: 'Hilton San Francisco',
-    price: 178.00,
-    description: 'Golden gate bridge isnt too far away',
-    location: 'Sand Francisco',
-    bedroom: 3,
-    bathroom: 2,
-    longitude: 	37.785900,
-    latitude: -122.410835,
-    owner_id: 1
-)
 
-listing4 = Listing.create(
-    title: 'Bellagio',
-    price: 165.00,
-    description: 'Inspired by the villages of Europe, Bellagio Resort & Casino overlooks a Mediterranean-blue lake',
-    location: 'Las Vegas',
-    bedroom: 4,
-    bathroom: 2,
-    longitude: -115.176704,
-    latitude: 36.112625,
-    owner_id: 1
-)
+
     
    

@@ -57,7 +57,9 @@ class Api::ListingsController < ApplicationController
             :bathroom, 
             :longitude, 
             :latitude,
-            :owner_id
+            :owner_id,
+            :host_name, 
+            :city
         )
     end
 

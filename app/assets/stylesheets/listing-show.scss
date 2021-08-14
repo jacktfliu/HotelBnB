@@ -47,7 +47,7 @@
 
 //photos on show page 
 .show-photo{
-    height: 475px;
+    height: 400px;
     width: 90%px;
     margin-top: 20px; 
     padding:0;
@@ -129,7 +129,7 @@
 .body-container{
     margin-top: 40px;
     width: 100%;
-    height: 500px;
+    height: 670px;
     display: flex;
 
 
@@ -204,7 +204,7 @@
             font-weight: bold;
         }
         .show-amentities{
-            height: 300px;
+            height: 160px;
             display: flex;
 
 
@@ -271,12 +271,6 @@
             border: none;
         }
 
-        .booking-price{
-            font-size: 20px;
-            font-weight: bold;
-            padding: 5px;
-        }
-
         .guest-button{
             height: 40px;
             width: 83%;
@@ -291,6 +285,15 @@
             align-items: center;
             padding: 5px;
         }
+    }
+}
+
+.price-container{
+
+    .booking-price{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
     }
 }
 
@@ -310,11 +313,9 @@
 }
 
 .review-box{
-    height: 30%;
+    height: 400px;
     width: 100%;
-    border: red 1px solid;
-    width: 100%;
-    height: 30%;
+    // border: red 1px solid;
 }
 
 .show-map-container{

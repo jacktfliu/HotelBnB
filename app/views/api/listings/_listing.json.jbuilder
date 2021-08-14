@@ -9,7 +9,9 @@ json.extract! listing,
             :bathroom, 
             :longitude, 
             :latitude,
-            :owner_id
+            :owner_id,
+            :host_name, 
+            :city
 
 x = listing.photos.map do |photo|
         url_for photo

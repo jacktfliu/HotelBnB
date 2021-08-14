@@ -68,7 +68,6 @@ class ListingShow extends React.Component{
         )
 
         return(
-
             <div className='show-container'>
                 <div className='show-header'>
                     <Link className='back-to-listing' to='/listings'>
@@ -101,10 +100,10 @@ class ListingShow extends React.Component{
 
                 <div className='body-container'>
                     <div className='show-body'>
-                        <div className='show-body-header'>Entire place hosted by Owner Name</div>
+                        <div className='show-body-header'>Entire place hosted by {listing.host_name}</div>
                         <div className='show-body-header2'>Have the entire place to yourself!</div>
                         <div className='span1'></div>
-                        <div className='show-body-superhost-header'>Owner Name is a superhost</div>
+                        <div className='show-body-superhost-header'>{listing.host_name} is a superhost</div>
                         <div className='superhost'> 
                             <i class="fa fa-medal"></i> 
                             <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests. </p>
@@ -121,40 +120,40 @@ class ListingShow extends React.Component{
                             <p>{listing.description}</p>
                         </div>
                         <div className='span1'></div>
-                            <h1 className='amentities-header'>What this place offers</h1>
-                            <div className='show-amentities'>
-                                <div className='show-box1'>
-                                    <ul className='amentities-bullet-point'>· Bedroom</ul>
-                                    <ul className='amentities-bullet-point'>· Bathroom</ul>
-                                    <ul className='amentities-bullet-point'>· Kitchen</ul>
-                                    <ul className='amentities-bullet-point'>· Air conditioning</ul>
-                                    <ul className='amentities-bullet-point'>· Microwave</ul>
-                                </div>
-                                <div className='show-box1'>
-                                    <ul className='amentities-bullet-point'>· Wifi</ul>
-                                    <ul className='amentities-bullet-point'>· Pets allowed</ul>
-                                    <ul className='amentities-bullet-point'>· Refrigerator</ul>
-                                    <ul className='amentities-bullet-point'>· Breakfast</ul>
-                                    <ul className='amentities-bullet-point'>· Parking</ul>
-                                </div>
+                        <h1 className='amentities-header'>What this place offers</h1>
+                        <div className='show-amentities'>
+                            <div className='show-box1'>
+                                <ul className='amentities-bullet-point'>· Bedroom</ul>
+                                <ul className='amentities-bullet-point'>· Bathroom</ul>
+                                <ul className='amentities-bullet-point'>· Kitchen</ul>
+                                <ul className='amentities-bullet-point'>· Air conditioning</ul>
+                                <ul className='amentities-bullet-point'>· Microwave</ul>
+                            </div>
+                            <div className='show-box1'>
+                                <ul className='amentities-bullet-point'>· Wifi</ul>
+                                <ul className='amentities-bullet-point'>· Pets allowed</ul>
+                                <ul className='amentities-bullet-point'>· Refrigerator</ul>
+                                <ul className='amentities-bullet-point'>· Breakfast</ul>
+                                <ul className='amentities-bullet-point'>· Parking</ul>
                             </div>
                         </div>
-                    {/*should be a form */}
+                        <div className='span1'></div>
+                    </div>
                     <div className='listing-price'>
                         <div className='booking-container'>
                             <ReservationFormContainer listingId={listingId} listing={listing}/>
                         </div>
                     </div>
                 </div>
-                
-                <div className='review-box'>
-                   {reviewItems}
-                </div>
-
+                <div className='show-review-box'>
+                    <div className='span1'></div>
+                    <div className='review-box'>
+                        {reviewItems}
+                    </div>
+                </div>           
                 <div className='review-submit'>
                     <ReviewsFormContainer listingId={listingId} />
                 </div>
-
                 <div className='show-map-container'>
                     <div className='map-where'>
                         Where you'll be
@@ -164,8 +163,7 @@ class ListingShow extends React.Component{
                     </div>
                 </div>
             </div>
-        )
-        }
+        )}
     }
 
 
