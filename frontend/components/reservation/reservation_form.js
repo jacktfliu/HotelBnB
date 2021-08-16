@@ -50,27 +50,23 @@ class ReservationForm extends React.Component {
         }
 
         return (
-            <div>
+            <div className='reservation-container'>
                 <div className='price-container'>
                     <p className='booking-price'>${this.props.listing.price} / night</p>
                 </div>
-                <form onSubmit={this.handleSubmit} className='reservation-wrapper'>      
-
+                <form onSubmit={this.handleSubmit} className='reservation-wrapper'>
                     <div className='date-wrapper'>
-                         <input type='date'
+                        <input type='date'
                             onChange={this.handleDate('check_in_date')} 
                             className='date-button'
                             min={new Date().toISOString().split('T')[0]}
                         />
-                    </div>
-                    <div>
-                        <input type='date' 
+                        <input type='date'
                             onChange={this.handleDate('check_out_date')} 
                             className='date-button'
                             min={new Date().toISOString().split('T')[0]}
                         />
-                    </div>
-
+                    </div> 
                     <select className='guest-button' onChange={this.handleInput('number_of_guest')}>
                         <option value="1" defaultValue>1 guest</option>
                         <option value="2">2 guest</option>
@@ -80,11 +76,11 @@ class ReservationForm extends React.Component {
                         <option value="6">6 guest</option>
                         <option value="7">7 guest</option>
                     </select>
-
-                    <div>
-                        Total: ${this.props.listing.price * days}
+                    <div className='total-wrapper'>
+                        <div className='total'>
+                            Total: ${this.props.listing.price * days}
+                        </div>
                     </div>
-
                     <button type='submit' className='check-ava'>Reserve</button>
                 </form>
             </div>
