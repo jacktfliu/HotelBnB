@@ -12,6 +12,7 @@ const ReviewIndexItem = props => {
             {/* <div className='current-comment-user'>{props.currentUser.username}</div>  */}
             <div className='review-rating'> <i className="fa fa-star"></i><div>
             </div>{props.review.rating}</div>
+            <div>{props.review.review_name}</div>
             <div className='review-comment'>{props.review.body}</div>
 
         </div>

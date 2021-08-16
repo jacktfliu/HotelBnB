@@ -242,7 +242,7 @@
         .booking-container{
             position: sticky;
             width: 80%;
-            height: 280px;
+            height: 300px;
             border: 1px solid rgb(221, 221, 221);
             border-radius: 18px;
             box-shadow:rgba(0, 0, 0, .35) 0px 1px 12px;
@@ -321,8 +321,6 @@
     }
 }
 
-
-
 .price-container{
     text-align: center;
     
@@ -331,11 +329,6 @@
         font-weight: bold;
         padding: 5px;
     }
-}
-
-.show-review-box{
-    display: flex;
-    align-items: bottom;
 }
 
 .show-reviews{
@@ -348,10 +341,15 @@
     display: flex;
 }
 
-.review-box{
-    height: 400px;
-    width: 100%;
-    // border: red 1px solid;
+.show-review-box{
+    border-top: solid 1px rgb(224, 224, 224);
+    overflow: scroll;
+
+    .review-box{
+        height: 400px;
+        margin-top: 20px;
+        margin-bottom: 20px;    
+    }
 }
 
 .show-map-container{

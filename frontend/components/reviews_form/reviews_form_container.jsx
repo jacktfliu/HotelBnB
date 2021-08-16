@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
     reviews: state.entities.reviews,
     review: {
+        review_name: "",
         body: "",
         rating: 0,
         user_id: state.session.id,

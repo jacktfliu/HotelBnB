@@ -11,6 +11,7 @@ class ReviewsForm extends React.Component{
         this.updateRating = this.updateRating.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.ratingChanged = this.ratingChanged.bind(this)
+        this.updateName = this.updateName.bind(this)
     }
 
     ratingChanged(rating){
@@ -24,6 +25,10 @@ class ReviewsForm extends React.Component{
         this.setState({body: e.currentTarget.value})
     }
 
+    updateName(e){
+        this.setState({review_name: e.currentTarget.value})
+    }
+
     updateRating(e){
         this.setState({rating: e.currentTarget.value})
     }
@@ -33,6 +38,7 @@ class ReviewsForm extends React.Component{
         if(this.props.currentUser){
             this.props.createReview(this.state)
             this.setState({
+                review_name: '',
                 body: '',
                 rating: 0,
                 listing_id: this.props.listingId
@@ -56,7 +62,15 @@ class ReviewsForm extends React.Component{
                             color="lightgray"
                             activeColor="#FF5A5F"
                         />
-                      
+
+                        <textarea
+                            cols="10"
+                            rows="10"
+                            value={this.state.review_name}
+                            onChange={this.updateName}
+                            placeholder='Please enter your name'
+                        />
+
                         <textarea
                             cols="30"
                             rows="10"

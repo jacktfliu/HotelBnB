@@ -137,7 +137,6 @@ class ListingShow extends React.Component{
                                 <ul className='amentities-bullet-point'>· Parking</ul>
                             </div>
                         </div>
-                        <div className='span1'></div>
                     </div>
                     <div className='listing-price'>
                         <div className='booking-container'>
@@ -145,8 +144,8 @@ class ListingShow extends React.Component{
                         </div>
                     </div>
                 </div>
+
                 <div className='show-review-box'>
-                    <div className='span1'></div>
                     <div className='review-box'>
                         {reviewItems}
                     </div>
