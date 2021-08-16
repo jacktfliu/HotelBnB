@@ -41,7 +41,7 @@ class ReviewsForm extends React.Component{
                 review_name: '',
                 body: '',
                 rating: 0,
-                listing_id: this.props.listingId
+                listing_id: this.props.listingId,
             })
         } else {
             this.props.openModal('login')
@@ -51,35 +51,38 @@ class ReviewsForm extends React.Component{
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
+                <form onSubmit={this.handleSubmit} className='review-form-container'>
+                    <label className='review-form-label'>
                        
-                        <ReactStars
-                            count={5}
-                            onChange={this.ratingChanged}
-                            value={this.state.rating}
-                            size={24}
-                            color="lightgray"
-                            activeColor="#FF5A5F"
-                        />
-
-                        <textarea
-                            cols="10"
-                            rows="10"
-                            value={this.state.review_name}
-                            onChange={this.updateName}
-                            placeholder='Please enter your name'
-                        />
-
-                        <textarea
-                            cols="30"
-                            rows="10"
-                            value={this.state.body}
-                            onChange={this.updateBody}
-                            placeholder='write a review'
-                        />
+                       <div className='review-stars'>
+                            <ReactStars
+                                count={5}
+                                onChange={this.ratingChanged}
+                                value={this.state.rating}
+                                size={24}
+                                color="lightgray"
+                                activeColor="#FF5A5F"
+                                className='stars'
+                            />
+                       </div>
+                        <div className='review-name'>
+                            <textarea
+                                value={this.state.review_name}
+                                onChange={this.updateName}
+                                placeholder='Please enter your name' 
+                            />
+                        </div>
+                        <div className='review-box'>
+                            <textarea
+                                cols="30"
+                                rows="10"
+                                value={this.state.body}
+                                onChange={this.updateBody}
+                                placeholder='write a review'
+                            />
+                        </div>
                     </label>
-                 <input type="submit" />
+                 <input type="submit" className='review-submit-button'/>
                 </form>
             </div>
         )

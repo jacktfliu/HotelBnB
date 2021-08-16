@@ -1,5 +1,5 @@
 .show-container{
-    height: 2600px;
+    height: 2480px;
     margin-left: 120px;
     margin-right: 120px;
 
@@ -283,7 +283,7 @@
                     
                     .guest-button{
                         height: 40px;
-                        width: 95%;
+                        width: 96%;
                         padding: 5px;
                         border-radius: 8px;
                         border: solid 1px rgb(224, 224, 224);
@@ -291,19 +291,19 @@
                     }
 
                     .total-wrapper{
-                        justify-content: center;
-                        align-items: center;
-                        display: flex;
                         width: 100%;
                         
                         .total{
                             border-radius: 8px;
                             height: 25px;
-                            width: 91%;
+                            width: 92%;
                             padding: 5px;
                             text-align: center;
                             border: solid 1px rgb(224, 224, 224);
                             margin: 5px;
+                            justify-content: center;
+                            align-items: center;
+                            display: flex;
                         }
                     }
 
@@ -312,8 +312,12 @@
                         background-color: rgb(255, 56, 92);
                         color: white;
                         border-radius: 8px;
-                        width: 95%;
+                        width: 96%;
                         border: none;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -355,6 +359,23 @@
 .show-map-container{
     height: 400px;
     width: 100%;
+
+    .map-where{
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .show-map{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.grey-line{
+    margin-top: 20px;
+    border-top: solid 1px rgb(224, 224, 224)
 }
 
 #map-container{
@@ -362,16 +383,6 @@
     width: 100%;
 }
 
-.show-map{
-    height: 100%;
-    width: 100%;
-}
-
-.map-where{
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
 
 
 

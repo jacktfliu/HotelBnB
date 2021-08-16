@@ -154,8 +154,9 @@ class ListingShow extends React.Component{
                     <ReviewsFormContainer listingId={listingId} />
                 </div>
                 <div className='show-map-container'>
+                    <div className='grey-line'></div>
                     <div className='map-where'>
-                        Where you'll be
+                        Where you'll be staying
                     </div>
                     <div className='show-map'>
                         <ListingMap/>
