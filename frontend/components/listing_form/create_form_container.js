@@ -12,7 +12,9 @@ const mSTP = (state) => ({
         bathroom: '',
         longitude: '',
         latitude: '',
-        owner_id: state.session.id
+        owner_id: state.session.id,
+        host_name: '', 
+        city: ''
     }
 })
 

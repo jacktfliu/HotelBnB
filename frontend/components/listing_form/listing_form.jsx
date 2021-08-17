@@ -30,8 +30,8 @@ class ListingForm extends React.Component{
         return(
             <div className='border-box-form'>
                 <h1>{this.props.formType}</h1>
+                <div className='share'>Share your home</div>
                 <form onSubmit={this.handleSubmit}>
-                    <div className='share'>Share your home</div>
                     <div className='update-edit'>
                         <div className=''>
                             <div>
@@ -118,6 +118,28 @@ class ListingForm extends React.Component{
                                 onChange={this.handleUpdate('latitude')} 
                                 type='text' 
                                 value={this.state.latitude}
+                            />
+                        </div>
+
+                        <div>
+                            <div>
+                                What is your name?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('host_name')} 
+                                type='text' 
+                                value={this.state.host_name}
+                            />
+                        </div>
+
+                        <div>
+                            <div>
+                                What is your city?
+                            </div>
+                            <input className='create-listing-form' 
+                                onChange={this.handleUpdate('city')} 
+                                type='text' 
+                                value={this.state.city}
                             />
                         </div>
                     </div>
