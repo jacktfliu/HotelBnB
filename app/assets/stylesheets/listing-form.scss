@@ -2,11 +2,244 @@
 .border-box-form{
     margin-left: 120px;
     margin-right: 120px;
-    border: 1px red solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .share{
-        border: 1px red solid;
-        font-size: 28px;
-        font-weight: bold;
+      font-size: 36px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
+
+    .update-edit{
+      border: 1px red solid;
+    }
+
+    .create-listing-title-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-title{
+        width: 100%;
+      }
+    }
+
+    .create-listing-price-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-price{
+        width: 100%;
+      }
+    }
+
+    .create-listing-description-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-description{
+        width: 100%;
+      }
+    }
+
+    .create-listing-location-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-location{
+        width: 100%;
+      }
+    }
+
+    .create-listing-city-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-city{
+        width: 100%;
+      }
+    } 
+    
+
+    .create-listing-bedroom-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-bedroom{
+        width: 100%;
+      }
+    } 
+    
+
+    .create-listing-bathroom-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-bathroom{
+        width: 100%;
+      }
+    }
+    
+    .create-listing-longitude-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-longitude{
+        width: 100%;
+      }
+    } 
+
+    .create-listing-latitude-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-latitude{
+        width: 100%;
+      }
+    }
+
+    .create-listing-name-container{
+      border: 1px red solid;
+      font-size: 20px;
+      margin: 20px;
+      padding: 10px;
+
+      p{
+        font-size: 30px;
+        font-weight: bold;        
+      }
+
+      h1{
+        font-size: 16px;
+      }
+
+      .create-listing-name{
+        width: 100%;
+      }
+    }
+}
+
+.create-buttons{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+
+  .form-button{
+    border: none;
+    color: white;
+    background-color: rgb(255, 56, 92);
+    height: 45px;
+    width: 40%;
+    margin: 20px;
+    border-radius: 8px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }

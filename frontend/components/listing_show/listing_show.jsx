@@ -44,9 +44,9 @@ class ListingShow extends React.Component{
 
     userEditDelete(){
         return(
-            <div>
-                <Link to={`/listings/${this.props.listing.id}/edit`}>Edit Listing</Link>
-                <button onClick={this.handleSubmit}>Delete Event</button>
+            <div className='edit-delete-wrapper'>
+                <button className='edit-delete' onClick={() => this.props.history.push(`/listings/${this.props.listing.id}/edit`)}>Edit Listing</button>
+                <button className='edit-delete' onClick={this.handleSubmit}>Delete Listing</button>
             </div>
         )
     }
@@ -75,10 +75,12 @@ class ListingShow extends React.Component{
                         Back to listings
                     </Link>
                     <h1 className='show-title'>{listing.title}</h1>
-                    <p className='show-location'>
-                        Location: {listing.location} · Bedroom: {listing.bedroom} · Bathroom: {listing.bathroom}
-                    </p>
-                    {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
+                    <div className='edit-delete-container'>
+                        <p className='show-location'>
+                            Location: {listing.location} · Bedroom: {listing.bedroom} · Bathroom: {listing.bathroom}
+                        </p>
+                        {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
+                    </div>
                 </div>
                 
                 <div className='show-photo'>

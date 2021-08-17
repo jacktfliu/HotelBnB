@@ -1,3 +1,23 @@
+.edit-delete-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+
+    .edit-delete{
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+        width: 100%; 
+        background-color: #ff385c;
+        color: white;
+        margin: 5px;
+    
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
 .show-container{
     height: 2480px;
     margin-left: 120px;
@@ -8,6 +28,12 @@
         display: flex;
         height: 100px;
         flex-direction: column;
+
+        .edit-delete-container{
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;     
+        }
     
         .back-to-listing:link{
             color: black;
