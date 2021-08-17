@@ -1,0 +1,33 @@
+.reservation-container{
+    border: 1px solid red;
+    margin-left: 120px;
+    margin-right: 120px;
+
+    
+}
+
+.reservatin-whole{
+    border: 1px solid blue;
+
+
+    .reservations{
+        border: 1px solid black;
+
+    }
+    
+}
+
+.reservation-header{
+    border: 1px solid red;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p{
+        font-size: 40px;
+        font-weight: bold;     
+    }
+}

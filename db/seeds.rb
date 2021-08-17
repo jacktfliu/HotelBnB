@@ -10,10 +10,8 @@
 #Users 
 User.destroy_all
 ApplicationRecord.connection.reset_pk_sequence!('users')
-User.create({username: "JackJack", email: "Jack@user.com", password: "JackJack",first_name: 'Jack', last_name: 'Jack'})
 User.create({username: "DemoUser", email: "demo@user.com", password: "DemoUser",first_name: 'Demo', last_name: 'Demo'})
-User.create({username: "Paul", email: "Paul@user.com", password: "PaulPaul",first_name: 'Paul', last_name: 'Paul'})
-User.create({username: "Chase", email: "Chase@user.com", password: "ChaseChase",first_name: 'Chase', last_name: 'Chase'})
+
 
 #HotelBnB Listings 
 Listing.destroy_all
