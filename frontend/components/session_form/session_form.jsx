@@ -58,106 +58,102 @@ class SessionForm extends React.Component {
     }
     
     if (this.props.formType === 'login'){
-        return (
-        <div>
-            <form onSubmit={this.handleSubmit} className='login-form-box'>
-              <div className='modal-content'>
-                <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
-                <div className='modal-header-message'>
-                  Welcome to HotelBnB!
-                </div>
-
-                <label className='login-box'>
-                    <input type="Username"
-                    placeholder='Username'
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className="login-input"
-                    />
-                </label>
-
-                <label>
-                    <input type="password"
-                    placeholder='Password'
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="login-input"
-                    />
-                </label>
-
-                <input className="session-button" type="submit" value={this.props.formType} />
-                <div> <div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
-                {this.renderErrors()}</div>
-              </div>
-            </form>
-    </div>)
-    } else {
-
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div className='modal-content'>
-          <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
-            <div className='modal-header-message'>
-              Welcome to HotelBnB!
-            </div>
-            <div className="login-form">
-              
-              <label>
-                  <input type="text"
-                  placeholder='Username'
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className="login-input"
-                  />
-              </label>
-              
-              <label>
-                  <input type="password"
-                  placeholder='Password'
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                  />
-              </label>
-              
-              
-              <label>
-                <input type="email"
-                  placeholder='Email'
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="login-input"
-                />
-              </label>
-              
-              
-              <label>
-                <input type="first_name"
-                  placeholder='First Name'
-                  value={this.state.first_name}
-                  onChange={this.update('first_name')}
-                  className="login-input"
-                />
-              </label>
-              
-              
-              <label>
-                <input type="last_name"
-                  placeholder='Last Name'
-                  value={this.state.last_name}
-                  onChange={this.update('last_name')}
-                  className="login-input"
-                />
-              </label>
-              
-              <input className="session-button" type="submit" value={this.props.formType} />
-              <div><div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
-              {this.renderErrors()}</div>
-            </div>
+      return (
+      <form onSubmit={this.handleSubmit} className='login-form'>
+        <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
+        <div className='modal-content'>
+          <div className='modal-header-message'>
+            Welcome to HotelBnB!
           </div>
-        </form>
+
+          <label className='login-box'>
+              <input type="Username"
+              placeholder='Username'
+              value={this.state.username}
+              onChange={this.update('username')}
+              className="login-input"
+              />
+          </label>
+
+          <label>
+              <input type="password"
+              placeholder='Password'
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              />
+          </label>
+
+          <input className="session-button" type="submit" value={this.props.formType} />
+          <div> <div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
+          {this.renderErrors()}</div>
+        </div>
+      </form>
+    )} else {
+    return (
+    <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className='modal-content'>
+      <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
+        <div className='modal-header-message'>
+          Welcome to HotelBnB!
+        </div>
+        <div className="login-form">
+          
+          <label>
+              <input type="username"
+              placeholder='Username'
+              value={this.state.username}
+              onChange={this.update('username')}
+              className="login-input"
+              />
+          </label>
+          
+          <label>
+              <input type="password"
+              placeholder='Password'
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              />
+          </label>
+          
+          
+          <label>
+            <input type="email"
+              placeholder='Email'
+              value={this.state.email}
+              onChange={this.update('email')}
+              className="login-input"
+            />
+          </label>
+          
+          
+          <label>
+            <input type="first_name"
+              placeholder='First Name'
+              value={this.state.first_name}
+              onChange={this.update('first_name')}
+              className="login-input"
+            />
+          </label>
+          
+          
+          <label>
+            <input type="last_name"
+              placeholder='Last Name'
+              value={this.state.last_name}
+              onChange={this.update('last_name')}
+              className="login-input"
+            />
+          </label>
+          
+          <input className="session-button" type="submit" value={this.props.formType} />
+          <div><div className='please-or'>Please {this.props.formType} or </div><div className='sign-up'>{this.props.otherForm}</div>
+          {this.renderErrors()}</div>
+        </div>
       </div>
+    </form>
+
       );
     }
   }

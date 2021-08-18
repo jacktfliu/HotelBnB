@@ -11,10 +11,11 @@ class NavBar extends React.Component{
         this.handleClick = this.handleClick.bind(this)
     }
 
-   handleClick(e){
-       e.preventDefault();
-       this.setState({clicked: !this.state.clicked})
-   }
+    handleClick(e){
+        e.preventDefault();
+        this.setState({clicked: !this.state.clicked})
+
+    }
 
 
     render(){

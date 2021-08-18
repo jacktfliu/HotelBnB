@@ -3,7 +3,7 @@ import {logout,signup,login} from '../../actions/session_actions'
 import { openModal } from '../../actions/modal_actions'
 import NavBar from './navbar'
 import { createListing } from '../../actions/listing_action'
-import create_form_container from '../listing_form/create_form_container'
+
 
 
 const mSTP = (state) => ({
