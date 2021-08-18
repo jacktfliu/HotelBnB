@@ -20,8 +20,8 @@
 
 .show-container{
     height: 2480px;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 150px;
+    margin-right: 150px;
 
     .show-header{
         margin-top: 25px;
@@ -76,7 +76,6 @@
     height: 400px;
     width: 90%px;
     margin-top: 20px; 
-    padding:0;
     display: flex;
 
     .show-photo-left{
@@ -84,6 +83,7 @@
         width: 50%;
         height: 100%;
         flex-direction: row;
+        margin-right: -2px;
 
         .show-photo-one{
             border-top-left-radius: 18px;
