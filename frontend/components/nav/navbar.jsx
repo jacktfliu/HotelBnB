@@ -4,19 +4,7 @@ import {Link} from 'react-router-dom'
 class NavBar extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            clicked: false
-        }
-        
-        this.handleClick = this.handleClick.bind(this)
     }
-
-    handleClick(e){
-        e.preventDefault();
-        this.setState({clicked: !this.state.clicked})
-
-    }
-
 
     render(){
         return(
@@ -31,7 +19,7 @@ class NavBar extends React.Component{
                     <a href='https://angel.co/u/jack-liu-43'><i className="fab fa-angellist"></i></a>
                 </div>
                 <div className='header'>
-                    <button className='icon-button' onClick={this.handleClick}>
+                    <div className='icon-button'>
                             <div className='icon1'>
                                 <i className="fas fa-grip-lines icon-large"></i>    
                             </div>
@@ -39,10 +27,9 @@ class NavBar extends React.Component{
                                 <i className="far fa-user-circle" ></i>
                             </div>
                             <div className='dropdown'>
-                                {   
-                                    this.state.clicked ?(
+                                {        
                                     this.props.currentUser ?
-                                    <div className='dropdown-content1' onClick={this.handleClick}>
+                                    <div className='dropdown-content' onClick={this.handleClick}>
                                         <ul className='drop-down-inside'>Welcome {this.props.currentUser.username}</ul>
                                         <Link className='drop-down-inside' to='/listing/new'>Host</Link>
                                         <Link className='drop-down-inside' to='/reservations'>Reservations</Link>
@@ -50,14 +37,14 @@ class NavBar extends React.Component{
                                     </div>
                                     :
                                     <div className='dropdown-content'>
+                                        <ul className='drop-down-inside'>Welcome to HotelBnB</ul>
                                         <ul className='drop-down-inside' onClick={() => this.props.openModal('login')}>Log In</ul>
                                         <ul className='drop-down-inside' onClick={() => this.props.openModal('signup')}>Sign Up</ul>
                                         <ul className='drop-down-inside' onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</ul>
-                                    </div>
-                                    ) : ''
-                                }
+                                    </div> 
+                                }  
                             </div>
-                    </button>
+                    </div>
                 </div>
             </nav>
         </div>
