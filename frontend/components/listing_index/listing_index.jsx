@@ -20,10 +20,26 @@ class ListingIndex extends React.Component{
                     <div className='listing-left'>
                         <h1 className='listing-page-header'>Stays in a selected city</h1>
                         <div className='listing-page-button'>
-                            <button className='curved-button'>Cancellation</button>
-                            <button className='curved-button'>Cities</button>
-                            <button className='curved-button'>Amentities</button>
-                            <button className='curved-button'>Ratings</button>
+                            <div className='curved-button'>Cancellation
+                                <div className="drop-content">
+                                    <p>Hello World!</p>
+                                </div>
+                            </div>
+                            <div className='curved-button'>Cities
+                                <div className="drop-content">
+                                    <p>Hello World!</p>
+                                </div>
+                            </div>
+                            <div className='curved-button'>Amentities
+                                <div className="drop-content">
+                                    <p>Hello World!</p>
+                                </div>
+                            </div>
+                            <div className='curved-button'>Ratings
+                                <div className="drop-content">
+                                    <p>Hello World!</p>
+                                </div>
+                            </div>
                         </div>
                         <div className='words-container-index'>
                             <div className='stays-gif'></div>

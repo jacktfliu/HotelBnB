@@ -4,7 +4,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(50, 50, 50, 0.5);
     z-index: 10;
 }
 
@@ -96,7 +96,16 @@
     margin-top: 10px;
     font-weight: lighter;
 
+    h1{
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+    }
+
     p{
+        margin-left: 5px;
         font-weight: bold;
         text-decoration: underline;
         &:hover{

@@ -165,7 +165,7 @@ class SessionForm extends React.Component {
             <button className="session-button" value={this.props.formType}>{this.props.formType}</button>
           </div>
           <div className='modal-footer'>
-            Please {this.props.formType} or
+            <h1>Please {this.props.formType} or</h1>
             <p>{this.props.otherForm}</p>
           </div>
       </form>
