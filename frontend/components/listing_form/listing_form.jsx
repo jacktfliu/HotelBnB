@@ -151,6 +151,19 @@ class ListingForm extends React.Component{
                                 value={this.state.latitude}
                             />
                         </div>
+                        <div className="listing-image-container">
+                            <p>Listing Image</p>
+                            <h1>
+                                Upload an image to promote your Listing.
+                            </h1>
+                            <input
+                                type="file"
+                                name="listing image"
+                                accept="image/*"
+                                className="listing-image-wrapper"
+                                // onChange={this.handleFile}
+                            />
+                        </div>
                     </div>
                     <div className='create-buttons'>
                         <button className='form-button' onClick={() => this.props.history.push('/listings')}>Cancel</button>

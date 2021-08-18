@@ -1,282 +1,306 @@
 
 .border-box-form{
-    margin-left: 300px;
-    margin-right: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .share{
+    font-size: 36px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .share{
-      font-size: 36px;
+  .create-listing-title-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold;  
+      margin: 10px;       
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-title{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey; 
+      border-radius: 8px;   
+      height: 40px;
+    }
+  }
+
+  .create-listing-price-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold; 
+      margin: 10px;        
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-price{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey;  
+      border-radius: 8px;   
+      height: 40px;
+    }
+  }
+
+  .create-listing-description-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold; 
+      margin: 10px;        
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-description{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey; 
+      border-radius: 8px;   
+      height: 100px; 
+      resize: none;
+    }
+  }
+
+  .create-listing-location-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold;   
+      margin: 10px;      
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-location{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey; 
+      border-radius: 8px;   
+      height: 40px; 
+    }
+  }
+
+  .create-listing-city-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold;   
+      margin: 10px;      
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-city{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey; 
+      border-radius: 8px;   
+      height: 40px; 
+    }
+  } 
+  
+
+  .create-listing-bedroom-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
       font-weight: bold;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 10px;         
     }
 
-    .create-listing-title-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold;  
-        margin: 10px;       
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-title{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey; 
-        border-radius: 8px;   
-        height: 40px;
-      }
+    h1{
+      font-size: 16px;
+      margin: 10px; 
     }
 
-    .create-listing-price-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
+    .create-listing-bedroom{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 8px;   
+      height: 40px;  
+    }
+  } 
+  
 
-      p{
-        font-size: 30px;
-        font-weight: bold; 
-        margin: 10px;        
-      }
+  .create-listing-bathroom-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
 
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-price{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey;  
-        border-radius: 8px;   
-        height: 40px;
-      }
+    p{
+      font-size: 30px;
+      font-weight: bold;  
+      margin: 10px;       
     }
 
-    .create-listing-description-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold; 
-        margin: 10px;        
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-description{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey; 
-        border-radius: 8px;   
-        height: 100px; 
-        resize: none;
-      }
+    h1{
+      font-size: 16px;
+      margin: 10px; 
     }
 
-    .create-listing-location-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
+    .create-listing-bathroom{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 8px;   
+      height: 40px;  
+    }
+  }
+  
+  .create-listing-longitude-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
 
-      p{
-        font-size: 30px;
-        font-weight: bold;   
-        margin: 10px;      
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-location{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey; 
-        border-radius: 8px;   
-        height: 40px; 
-      }
+    p{
+      font-size: 30px;
+      font-weight: bold; 
+      margin: 10px;        
     }
 
-    .create-listing-city-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold;   
-        margin: 10px;      
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-city{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey; 
-        border-radius: 8px;   
-        height: 40px; 
-      }
-    } 
-    
-
-    .create-listing-bedroom-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold;
-        margin: 10px;         
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-bedroom{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey;
-        border-radius: 8px;   
-        height: 40px;  
-      }
-    } 
-    
-
-    .create-listing-bathroom-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold;  
-        margin: 10px;       
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-bathroom{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey;
-        border-radius: 8px;   
-        height: 40px;  
-      }
-    }
-    
-    .create-listing-longitude-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold; 
-        margin: 10px;        
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-longitude{
-        width: 100%;
-        margin: 10px;
-        border: 1px solid lightgrey;
-        border-radius: 8px;   
-        height: 40px;  
-      }
-    } 
-
-    .create-listing-latitude-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold; 
-        margin: 10px;        
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px; 
-      }
-
-      .create-listing-latitude{
-        width: 100%;
-        margin: 10px; 
-        border: 1px solid lightgrey;
-        border-radius: 8px;   
-        height: 40px; 
-      }
+    h1{
+      font-size: 16px;
+      margin: 10px; 
     }
 
-    .create-listing-name-container{
-      // border: 1px red solid;
-      font-size: 20px;
-      margin: 20px;
-      padding: 10px;
-
-      p{
-        font-size: 30px;
-        font-weight: bold;
-        margin: 10px;        
-      }
-
-      h1{
-        font-size: 16px;
-        margin: 10px;        
-      }
-
-      .create-listing-name{
-        width: 100%;
-        margin: 10px;   
-        border: 1px solid lightgrey;   
-        border-radius: 8px;   
-        height: 40px;
-      }
+    .create-listing-longitude{
+      width: 100%;
+      margin: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 8px;   
+      height: 40px;  
     }
+  } 
+
+  .create-listing-latitude-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold; 
+      margin: 10px;        
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px; 
+    }
+
+    .create-listing-latitude{
+      width: 100%;
+      margin: 10px; 
+      border: 1px solid lightgrey;
+      border-radius: 8px;   
+      height: 40px; 
+    }
+  }
+
+  .create-listing-name-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px;        
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px;        
+    }
+
+    .create-listing-name{
+      width: 100%;
+      margin: 10px;   
+      border: 1px solid lightgrey;   
+      border-radius: 8px;   
+      height: 40px;
+    }
+  }
+
+  .listing-image-container{
+    // border: 1px red solid;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+
+    p{
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px;        
+    }
+
+    h1{
+      font-size: 16px;
+      margin: 10px;        
+    }
+
+    .listing-image-wrapper{
+      height: inherit; 
+      margin: 10px;  
+      border-radius: none;
+    }
+  }
 }
 
 .create-buttons{
