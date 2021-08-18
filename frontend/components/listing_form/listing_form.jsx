@@ -34,6 +34,7 @@ class ListingForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className='update-edit'>
                         <div className='create-listing-name-container'>
+                            <i className="fab fa-square-info"></i>
                             <p>Host name</p>
                             <h1>
                                 What is your name?
@@ -59,7 +60,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-price-container'>
                             <p>Price</p>
                             <h1>
-                                What is your Price per day? 
+                                Please enter the amount you would like to charge per night.
                             </h1>
                             <input className='create-listing-price' 
                                 onChange={this.handleUpdate('price')} 
@@ -82,7 +83,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-location-container'>
                             <p>Location</p>
                             <h1>
-                                What is your city location?
+                                Please choose one of the following locations
                             </h1>
                             <input className='create-listing-location' 
                                 onChange={this.handleUpdate('location')} 
@@ -94,7 +95,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-city-container'>
                             <p>City</p>
                             <h1>
-                                What is your city?
+                                What city is this place located in?
                             </h1>
                             <input className='create-listing-city' 
                                 onChange={this.handleUpdate('city')} 
@@ -106,7 +107,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-bedroom-container'>
                             <p>Bedrooms</p>
                             <h1>
-                                How many bedrooms do you have? 
+                                How many bedrooms does this place have?
                             </h1>
                             <input className='create-listing-bedroom' 
                                 onChange={this.handleUpdate('bedroom')} 
@@ -118,8 +119,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-bathroom-container'>
                             <p>Bathrooms</p>
                             <h1>
-                                How many bathrooms do you have?
-
+                                How many bathrooms does this place have?
                             </h1>
                             <input className='create-listing-bathroom' 
                                 onChange={this.handleUpdate('bathroom')} 
@@ -131,7 +131,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-longitude-container'>
                             <p>Longitude</p>
                             <h1>
-                                what is your longitude?
+                                What is the longitude of this place? 
                             </h1>
                             <input className='create-listing-longitude' 
                                 onChange={this.handleUpdate('longitude')} 
@@ -143,7 +143,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-latitude-container'>
                             <p>Latitude</p>
                             <h1>
-                                What is your latitude?
+                                What is the latitude of this place?
                             </h1>
                             <input className='create-listing-latitude' 
                                 onChange={this.handleUpdate('latitude')} 
@@ -151,8 +151,6 @@ class ListingForm extends React.Component{
                                 value={this.state.latitude}
                             />
                         </div>
-
-                        
                     </div>
                     <div className='create-buttons'>
                         <button className='form-button' onClick={() => this.props.history.push('/listings')}>Cancel</button>

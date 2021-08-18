@@ -9,12 +9,7 @@ class NavBar extends React.Component{
         }
         
         this.handleClick = this.handleClick.bind(this)
-        this.closeDropDown = this.closeDropDown.bind(this)
     }
-    
-   closeDropDown(){
-       this.setState({clicked: false})
-   }
 
    handleClick(e){
        e.preventDefault();
@@ -43,7 +38,7 @@ class NavBar extends React.Component{
                                 <i className="far fa-user-circle" ></i>
                             </div>
                             <div className='dropdown'>
-                                {
+                                {   
                                     this.state.clicked ?(
                                     this.props.currentUser ?
                                     <div className='dropdown-content1' onClick={this.handleClick}>
@@ -58,7 +53,6 @@ class NavBar extends React.Component{
                                         <ul className='drop-down-inside' onClick={() => this.props.openModal('signup')}>Sign Up</ul>
                                         <ul className='drop-down-inside' onClick={() => this.props.login({username: 'DemoUser', password: 'DemoUser'})}>Demo User</ul>
                                     </div>
-                                
                                     ) : ''
                                 }
                             </div>
