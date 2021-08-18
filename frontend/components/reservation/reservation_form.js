@@ -58,7 +58,7 @@ class ReservationForm extends React.Component {
                     <div className='date-wrapper'>
                         <input type='date'
                             onChange={this.handleDate('check_in_date')} 
-                            className='date-button'
+                            className='date-button1'
                             min={new Date().toISOString().split('T')[0]}
                         />
                         <input type='date'
@@ -76,11 +76,11 @@ class ReservationForm extends React.Component {
                         <option value="6">6 guest</option>
                         <option value="7">7 guest</option>
                     </select>
-                    <div className='total-wrapper'>
+
                         <div className='total'>
                             Total: ${this.props.listing.price * days}
                         </div>
-                    </div>
+
                     <button type='submit' className='check-ava'>Reserve</button>
                 </form>
             </div>

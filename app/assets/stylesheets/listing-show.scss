@@ -297,49 +297,51 @@
                         justify-content: center;
                         width: 100%;
 
-                        .date-button{
-                            border-radius: 8px;
-                            height: 35px;
-                            width: 41.5%;
-                            padding: 5px;
-                            margin: 5px;
+                        .date-button1{
+                            border-top-left-radius: 8px;
+                            height: 40px;
+                            width: 50%;
                             border: solid 1px rgb(224, 224, 224);
+                            margin-top: 5px;
+                        }
+                        .date-button{
+                            border-top-right-radius: 8px;
+                            height: 40px;
+                            width: 50%;
+                            border: solid 1px rgb(224, 224, 224);
+                            margin-top: 5px;
                         }
                     }
                     
                     .guest-button{
                         height: 40px;
-                        width: 96%;
-                        padding: 5px;
-                        border-radius: 8px;
+                        width: 100%;
                         border: solid 1px rgb(224, 224, 224);
-                        padding: 5px;
+                        border-top: none;
                     }
 
-                    .total-wrapper{
-                        width: 100%;
-                        
-                        .total{
-                            border-radius: 8px;
-                            height: 25px;
-                            width: 92%;
-                            padding: 5px;
-                            text-align: center;
-                            border: solid 1px rgb(224, 224, 224);
-                            margin: 5px;
-                            justify-content: center;
-                            align-items: center;
-                            display: flex;
-                        }
+                    .total{
+                        height: 35px;
+                        width: 99.5%;
+                        text-align: center;
+                        border: solid 1px rgb(224, 224, 224);
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                        border-bottom-right-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                        border-top: none
                     }
+
 
                     .check-ava{
                         height: 40px;
                         background-color: rgb(255, 56, 92);
                         color: white;
                         border-radius: 8px;
-                        width: 96%;
+                        width: 100%;
                         border: none;
+                        margin-top: 10px;
 
                         &:hover{
                             cursor: pointer;
