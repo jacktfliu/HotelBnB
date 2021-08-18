@@ -22,22 +22,22 @@ class ListingIndex extends React.Component{
                         <div className='listing-page-button'>
                             <div className='curved-button'>Cancellation
                                 <div className="drop-content">
-                                    <p>Hello World!</p>
+                                    <p>Reservation cancellation can be done anytime and anywhere through the reservations page when a user is logged in.</p>
                                 </div>
                             </div>
                             <div className='curved-button'>Cities
                                 <div className="drop-content">
-                                    <p>Hello World!</p>
+                                    <p>There are many different cities you can choose from. Go ahead and explore around.</p>
                                 </div>
                             </div>
                             <div className='curved-button'>Amentities
                                 <div className="drop-content">
-                                    <p>Hello World!</p>
+                                    <p>Every Listing has a variety of amentities that you can choose from.</p>
                                 </div>
                             </div>
                             <div className='curved-button'>Ratings
                                 <div className="drop-content">
-                                    <p>Hello World!</p>
+                                    <p>Listings have a average rating of 4.5 out of 5 stars </p>
                                 </div>
                             </div>
                         </div>
