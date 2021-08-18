@@ -75,6 +75,7 @@ class SessionForm extends React.Component {
               onChange={this.update('username')}
               className="login-input"
               />
+              {this.renderErrors()}
           </label>
 
           <label className='login-box'>
@@ -84,13 +85,16 @@ class SessionForm extends React.Component {
               onChange={this.update('password')}
               className="login-input"
               />
+              {this.renderErrors()}
           </label>
 
         </div>
-          <button className="session-button" value={this.props.formType}/>
-          <div>
-            Please {this.props.formType} or {this.props.otherForm}
-            {this.renderErrors()}
+          <div className='signup-button-container'>
+            <button className="session-button" value={this.props.formType}>{this.props.formType}</button>
+          </div>
+          <div className='modal-footer'>
+            Please {this.props.formType} or 
+            <p>{this.props.otherForm}</p>
           </div>
       </form>
     )} else {
@@ -99,7 +103,7 @@ class SessionForm extends React.Component {
           <div className='modal-header'>
             <div className='close-modal' onClick={this.props.closeModal}>&times;</div>
             <div className='modal-header-message'>
-              Welcome to HotelBnB!
+              Welcome to HotelBnB
             </div>
           </div>
           <div className='modal-content'>
@@ -111,6 +115,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('username')}
                 className="login-input"
                 />
+                {this.renderErrors()}
             </label>
             
             <label className='login-box'>
@@ -120,6 +125,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
                 />
+                {this.renderErrors()}
             </label>
             
             
@@ -130,6 +136,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('email')}
                 className="login-input"
               />
+              {this.renderErrors()}
             </label>
             
             
@@ -140,6 +147,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('first_name')}
                 className="login-input"
               />
+              {this.renderErrors()}
             </label>
             
             
@@ -150,11 +158,16 @@ class SessionForm extends React.Component {
                 onChange={this.update('last_name')}
                 className="login-input"
               />
+              {this.renderErrors()}
             </label>
           </div>
-          <button className="session-button" value={this.props.formType}/>
-          {this.props.otherForm}
-          {this.renderErrors()}
+          <div className='signup-button-container'>
+            <button className="session-button" value={this.props.formType}>{this.props.formType}</button>
+          </div>
+          <div className='modal-footer'>
+            Please {this.props.formType} or
+            <p>{this.props.otherForm}</p>
+          </div>
       </form>
       );
     }
