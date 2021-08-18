@@ -53,7 +53,6 @@ class ReviewsForm extends React.Component{
             <div>
                 <form onSubmit={this.handleSubmit} className='review-form-container'>
                     <label className='review-form-label'>
-                       
                        <div className='review-stars'>
                             <ReactStars
                                 count={5}
@@ -72,7 +71,7 @@ class ReviewsForm extends React.Component{
                                 placeholder='Please enter your name' 
                             />
                         </div>
-                        <div className='review-box'>
+                        <div className='review-comment'>
                             <textarea
                                 cols="30"
                                 rows="10"
