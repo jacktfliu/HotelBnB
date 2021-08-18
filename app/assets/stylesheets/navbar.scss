@@ -51,6 +51,10 @@
     }
 }
 
+// .navbar{
+//     position: fixed;
+// }
+
 .login-signup{
     height: 80px;
     padding: 0 24px;
@@ -126,20 +130,20 @@
     }
 }
 
-.dropdown{
-    position: absolute;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    
-}
-
 .drop-down-inside {
     font-size: 16px;
     margin-bottom: 20px;
     display: flex;
     align-content: left;
     border: none;
+}
+
+.dropdown{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    
 }
 
 .drop-down-inside:link{
