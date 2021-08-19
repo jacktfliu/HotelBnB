@@ -71,7 +71,7 @@ class ListingShow extends React.Component{
             <div className='show-container'>
                 <div className='show-header'>
                     <Link className='back-to-listing' to='/listings'>
-                        <i class="fa fa-chevron-left"></i>
+                        <i className="fa fa-chevron-left"></i>
                         Back to listings
                     </Link>
                     <h1 className='show-title'>{listing.title}</h1>
@@ -107,7 +107,7 @@ class ListingShow extends React.Component{
                         <div className='span1'></div>
                         <div className='show-body-superhost-header'>{listing.host_name} is a superhost</div>
                         <div className='superhost'> 
-                            <i class="fa fa-medal"></i> 
+                            <i className="fa fa-medal"></i> 
                             <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests. </p>
                         </div>
                         <div className='span1'></div>

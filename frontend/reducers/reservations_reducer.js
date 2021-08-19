@@ -1,4 +1,5 @@
 import {RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION} from '../actions/reservation_action'
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const reservationsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -12,6 +13,8 @@ const reservationsReducer = (state = {}, action) => {
         case REMOVE_RESERVATION: 
             delete newState[action.reservationId.id]
             return newState
+        case RECEIVE_CURRENT_USER: 
+            return action.currentUser.reservations || {};
         default: 
             return state
     }

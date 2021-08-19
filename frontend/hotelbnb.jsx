@@ -9,10 +9,12 @@ import {fetchReservation} from './actions/reservation_action'
 document.addEventListener("DOMContentLoaded", () => {
     let store;
     if (window.currentUser) {
+    const {reservations,...currentUser} = window.currentUser; 
     const preloadedState = {
         session: { id: window.currentUser.id },
         entities: {
-            users: { [window.currentUser.id]: window.currentUser }
+            users: { [window.currentUser.id]: currentUser },
+            reservations//: { [window.reservations]: reservations }
         }
     };
         store = configureStore(preloadedState);

@@ -117,13 +117,6 @@
             flex-direction: column;
             width: 200px;
             height: 130px;
-            border: 1px solid red;
-
-            ul{
-                &:hover{
-                    background-color: lightgrey;
-                }
-            }
 
         }  
     }
@@ -140,7 +133,6 @@
     align-content: left;
     border: none;
     width: 100%;
-    border: 1px red solid;
 }
 
 .drop-down-inside:link{

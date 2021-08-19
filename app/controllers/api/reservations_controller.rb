@@ -6,11 +6,6 @@ class Api::ReservationsController < ApplicationController
         render :show
     end
 
-    def index 
-        @reservations = Reservation.all
-        render :index 
-    end
-
     def create
         @reservation = Reservation.new(reservation_params)
         @reservation.guest_id = current_user.id
