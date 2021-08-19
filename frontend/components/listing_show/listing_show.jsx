@@ -14,7 +14,7 @@ class ListingShow extends React.Component{
             loading: true
         }
 
-
+        this.scrollFunc = this.scrollFunc.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.userEditDelete = this.userEditDelete.bind(this)
     }
@@ -51,12 +51,27 @@ class ListingShow extends React.Component{
         )
     }
 
+    scrollFunc() {
+        window.onscroll = function () {
+            if ($(window).scrollTop() >= 480 && $(window).scrollTop() <= 895) {
+                $(".booking-container").css("position", "fixed")
+                $(".booking-container").css("transform", "translateY(-150%)")
+            } else if ($(window).scrollTop() >= 895) {
+                $(".booking-container").css("position", "absolute")
+                $(".booking-container").css("transform", "translateY(150%)")
+            } else {
+                $(".booking-container").css("position", "absolute")
+                $(".booking-container").css("transform", "translateY(0%)")
+            }
+        }
+    }
+
     
     render(){
         if (this.state.loading){
             return null
         }
-        
+        this.scrollFunc()
 
         const {listing, currentUser, listingId, reviews, deleteReview} = this.props
         

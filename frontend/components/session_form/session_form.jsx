@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
         <div className='modal-content'>
           <label className='login-box'>
               <input type="Username"
-              placeholder={this.props.errors.session ? this.props.errors.session.invalid : 'Username'}
+              placeholder='Username'
               value={this.state.username}
               onChange={this.update('username')}
               className="login-input"
@@ -78,12 +78,11 @@ class SessionForm extends React.Component {
 
           <label className='login-box'>
               <input type="password"
-              placeholder={this.props.errors.session ? this.props.errors.session.invalid : 'Password'}
+              placeholder='Password'
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
               />
-          
           </label>
         </div>
           <div className='signup-button-container'>
@@ -93,6 +92,7 @@ class SessionForm extends React.Component {
             Please {this.props.formType} or 
             <span>{this.props.otherForm}</span>
           </div>
+            {this.props.errors.session ? this.props.errors.session.invalid : ''}
       </form>
     )} else {
     return (
@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
           <div className='modal-content'>
             <label className='login-box'>
                 <input type="username"
-                placeholder={this.props.errors.session ? this.props.errors.session.username : 'Username'}
+                placeholder={this.props.errors.session ? this.props.errors.session.username:'Username'}
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
@@ -115,7 +115,7 @@ class SessionForm extends React.Component {
             
             <label className='login-box'>
                 <input type="password"
-                placeholder={this.props.errors.session ? this.props.errors.session.password : 'Password'}
+                placeholder={this.props.errors.session ? this.props.errors.session.password:'Password'}
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
@@ -124,7 +124,7 @@ class SessionForm extends React.Component {
             
             <label className='login-box'>
               <input type="email"
-                placeholder={this.props.errors.session ? this.props.errors.session.email : 'Email'}
+                placeholder={this.props.errors.session ? this.props.errors.session.email:'Email'}
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
@@ -133,7 +133,7 @@ class SessionForm extends React.Component {
                 
             <label className='login-box'>
               <input type="first_name"
-                placeholder={this.props.errors.session ? this.props.errors.session.first : 'First Name'}
+                placeholder={this.props.errors.session ? this.props.errors.session.first:'First Name'}
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
                 className="login-input"
@@ -142,7 +142,7 @@ class SessionForm extends React.Component {
             
             <label className='login-box'>
               <input type="last_name"
-                placeholder={this.props.errors.session ? this.props.errors.session.last : 'Last Name'}
+                placeholder={this.props.errors.session ? this.props.errors.session.last:'Last Name'}
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
                 className="login-input"
