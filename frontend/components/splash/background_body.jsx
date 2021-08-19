@@ -7,9 +7,15 @@ const BackgroundBody = () => {
         <div className='splash-container'>
             <div className='filter-box'>
                 <div className='filter-container'>
-                    <button className='filter-button-search'>
-                        <span>Where are you going?</span>
-                    </button>
+                    <select className='filter-button-search'>
+                        <option disabled selected>Where are you going?</option>
+                        <option>New York City</option>
+                        <option>Miami</option>
+                        <option>Las Vegas</option>
+                        <option>Los Angeles</option>
+                        <option>Atlantic City</option>
+                        <option>Chicago</option>
+                    </select>
                     <span></span>
                     <input type='date' className='filter-buttons'/>
                     <span></span>

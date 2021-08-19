@@ -99,9 +99,14 @@ class ListingForm extends React.Component{
                             </h1>
                             <select className='create-listing-city' 
                                 onChange={this.handleUpdate('city')} 
-                                type='text' 
-                                value={this.state.city}
-                            ></select>
+                                value={this.state.city}>
+                                <option>New York City</option>
+                                <option>Miami</option>
+                                <option>Las Vegas</option>
+                                <option>Los Angeles</option>
+                                <option>Atlantic City</option>
+                                <option>Chicago</option>
+                            </select>
                         </div>
 
                         <div className='create-listing-bedroom-container'>

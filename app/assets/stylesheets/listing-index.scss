@@ -78,6 +78,13 @@
         width: 100%;
         text-decoration: none;
         color: black;
+
+        .listing-location{
+            color:rgb(185, 185, 185);
+            font-size: 15px;
+            margin-left: 1px;
+            margin-bottom: 5px;
+        }
     }
 
     .listing-items-container:link{
