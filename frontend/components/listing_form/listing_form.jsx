@@ -97,16 +97,16 @@ class ListingForm extends React.Component{
                             <h1>
                                 Please choose a location
                             </h1>
-                            <input className='create-listing-city' 
+                            <select className='create-listing-city' 
                                 onChange={this.handleUpdate('city')} 
-                                value={this.state.city}/>
-                                {/* <option>New York City</option>
+                                value={this.state.city}>
+                                <option>New York City</option>
                                 <option>Miami</option>
                                 <option>Las Vegas</option>
                                 <option>Los Angeles</option>
                                 <option>Atlantic City</option>
-                                <option>Chicago</option> */}
-                            {/* </select> */}
+                                <option>Chicago</option>
+                            </select>
                         </div>
 
                         <div className='create-listing-bedroom-container'>
