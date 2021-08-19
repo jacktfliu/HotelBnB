@@ -83,7 +83,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-location-container'>
                             <p>Location</p>
                             <h1>
-                                Please choose one of the following locations
+                                What city is your listing located in?
                             </h1>
                             <input className='create-listing-location' 
                                 onChange={this.handleUpdate('location')} 
@@ -95,13 +95,13 @@ class ListingForm extends React.Component{
                         <div className='create-listing-city-container'>
                             <p>City</p>
                             <h1>
-                                What city is this place located in?
+                                Please choose a location
                             </h1>
-                            <input className='create-listing-city' 
+                            <select className='create-listing-city' 
                                 onChange={this.handleUpdate('city')} 
                                 type='text' 
                                 value={this.state.city}
-                            />
+                            ></select>
                         </div>
 
                         <div className='create-listing-bedroom-container'>
