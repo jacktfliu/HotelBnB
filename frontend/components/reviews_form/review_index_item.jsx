@@ -4,7 +4,7 @@ const ReviewIndexItem = props => {
 
     return (
         <div className='review-container'>
-            <div className='review-container'>
+            <div>
                 {props.currentUser && props.currentUser.id === props.review.user_id ?
                 <div className='x' onClick={() => props.deleteReview(props.review.id)
                 .then(() => {window.location.reload()})}>&times;</div> : '' }
@@ -14,7 +14,6 @@ const ReviewIndexItem = props => {
             </div>{props.review.rating}</div>
             <div>{props.review.review_name}</div>
             <div className='review-comment'>{props.review.body}</div>
-
         </div>
     )
 }
