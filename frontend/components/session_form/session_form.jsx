@@ -39,24 +39,24 @@ class SessionForm extends React.Component {
       }
   }
 
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, j) => (
-          <li key={`error-${j}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return(
+  //     <ul>
+  //       {this.props.errors.map((error, j) => (
+  //         <li key={`error-${j}`}>
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   render() {
     const demoUser = {
         username: 'DemoUser',
         password: 'DemoUser'
     }
-    
+    console.log(this.props.errors)
     if (this.props.formType === 'login'){
       return (
       <form onSubmit={this.handleSubmit} className='login-form'>
@@ -75,7 +75,6 @@ class SessionForm extends React.Component {
               onChange={this.update('username')}
               className="login-input"
               />
-              {this.renderErrors()}
           </label>
 
           <label className='login-box'>
@@ -85,7 +84,6 @@ class SessionForm extends React.Component {
               onChange={this.update('password')}
               className="login-input"
               />
-              {this.renderErrors()}
           </label>
 
         </div>
@@ -94,7 +92,7 @@ class SessionForm extends React.Component {
           </div>
           <div className='modal-footer'>
             Please {this.props.formType} or 
-            <p>{this.props.otherForm}</p>
+            <span>{this.props.otherForm}</span>
           </div>
       </form>
     )} else {
@@ -107,7 +105,6 @@ class SessionForm extends React.Component {
             </div>
           </div>
           <div className='modal-content'>
-            
             <label className='login-box'>
                 <input type="username"
                 placeholder='Username'
@@ -115,7 +112,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('username')}
                 className="login-input"
                 />
-                {this.renderErrors()}
+
             </label>
             
             <label className='login-box'>
@@ -125,9 +122,8 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
                 />
-                {this.renderErrors()}
+
             </label>
-            
             
             <label className='login-box'>
               <input type="email"
@@ -136,10 +132,8 @@ class SessionForm extends React.Component {
                 onChange={this.update('email')}
                 className="login-input"
               />
-              {this.renderErrors()}
             </label>
-            
-            
+                
             <label className='login-box'>
               <input type="first_name"
                 placeholder='First Name'
@@ -147,9 +141,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('first_name')}
                 className="login-input"
               />
-              {this.renderErrors()}
             </label>
-            
             
             <label className='login-box'>
               <input type="last_name"
@@ -158,7 +150,6 @@ class SessionForm extends React.Component {
                 onChange={this.update('last_name')}
                 className="login-input"
               />
-              {this.renderErrors()}
             </label>
           </div>
           <div className='signup-button-container'>
@@ -166,7 +157,7 @@ class SessionForm extends React.Component {
           </div>
           <div className='modal-footer'>
             <h1>Please {this.props.formType} or</h1>
-            <p>{this.props.otherForm}</p>
+            <span>{this.props.otherForm}</span>
           </div>
       </form>
       );

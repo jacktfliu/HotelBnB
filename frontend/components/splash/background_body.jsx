@@ -22,7 +22,8 @@ const BackgroundBody = () => {
                     <input type='date' className='filter-buttons'/>
                     <span></span>
                     <select className='filter-button-guest'>
-                        <option value="1" defaultValue>1 guest</option>
+                        <option disabled selected>Guest</option>
+                        <option value="1">1 guest</option>
                         <option value="2">2 guest</option>
                         <option value="3">3 guest</option>
                         <option value="4">4 guest</option>
