@@ -67,7 +67,7 @@ class SessionForm extends React.Component {
           </div>
         </div>
         <div className='modal-content'>
-
+          {this.props.errors}
           <label className='login-box'>
               <input type="Username"
               placeholder='Username'
