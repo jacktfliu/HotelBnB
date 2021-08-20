@@ -17,9 +17,9 @@ const BackgroundBody = () => {
                         <option>Chicago</option>
                     </select>
                     <span></span>
-                    <input type='date' className='filter-buttons'/>
+                    <input type='date' min={new Date().toISOString().split('T')[0]} className='filter-buttons'/>
                     <span></span>
-                    <input type='date' className='filter-buttons'/>
+                    <input type='date' min={new Date().toISOString().split('T')[0]} className='filter-buttons'/>
                     <span></span>
                     <select className='filter-button-guest'>
                         <option disabled selected>Guest</option>

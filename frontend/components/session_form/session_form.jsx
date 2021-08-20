@@ -92,7 +92,9 @@ class SessionForm extends React.Component {
             Please {this.props.formType} or 
             <span>{this.props.otherForm}</span>
           </div>
+          <div className='error'>
             {this.props.errors.session ? this.props.errors.session.invalid : ''}
+          </div>
       </form>
     )} else {
     return (
@@ -106,48 +108,50 @@ class SessionForm extends React.Component {
           <div className='modal-content'>
             <label className='login-box'>
                 <input type="username"
-                placeholder={this.props.errors.session ? this.props.errors.session.username:'Username'}
+                placeholder='Username'
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
                 />
             </label>
-            
+            {this.props.errors.session ? this.props.errors.session.username : ''}
             <label className='login-box'>
                 <input type="password"
-                placeholder={this.props.errors.session ? this.props.errors.session.password:'Password'}
+                placeholder='Password'
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
                 />
-            </label>
             
+            </label>
+            {this.props.errors.session ? this.props.errors.session.password : ''}
             <label className='login-box'>
               <input type="email"
-                placeholder={this.props.errors.session ? this.props.errors.session.email:'Email'}
+                placeholder='Email'
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
               />
             </label>
-                
+            {this.props.errors.session ? this.props.errors.session.email : ''}    
             <label className='login-box'>
               <input type="first_name"
-                placeholder={this.props.errors.session ? this.props.errors.session.first:'First Name'}
+                placeholder='First Name'
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
                 className="login-input"
               />
             </label>
-            
+            {this.props.errors.session ? this.props.errors.session.first : ''}
             <label className='login-box'>
               <input type="last_name"
-                placeholder={this.props.errors.session ? this.props.errors.session.last:'Last Name'}
+                placeholder='Last Name'
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
                 className="login-input"
               />
             </label>
+            {this.props.errors.session ? this.props.errors.session.last : ''}
           </div>
           <div className='signup-button-container'>
             <button className="session-button" value={this.props.formType}>{this.props.formType}</button>
