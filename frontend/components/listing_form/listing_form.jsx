@@ -22,6 +22,7 @@ class ListingForm extends React.Component{
 
     handleUpdate(field){
         return (e) => {
+            console.log(e.target.value)
             this.setState({[field]: e.target.value})
         }
     }
@@ -81,31 +82,32 @@ class ListingForm extends React.Component{
                         </div>
 
                         <div className='create-listing-location-container'>
-                            <p>Location</p>
+                            <p>City</p>
                             <h1>
                                 What city is your listing located in?
                             </h1>
                             <input className='create-listing-location' 
-                                onChange={this.handleUpdate('location')} 
+                                onChange={this.handleUpdate('city')} 
                                 type='text' 
-                                value={this.state.location}
+                                value={this.state.city}
                             />
                         </div>
 
                         <div className='create-listing-city-container'>
-                            <p>City</p>
+                            <p>Location</p>
                             <h1>
                                 Please choose a location
                             </h1>
                             <select className='create-listing-city' 
-                                onChange={this.handleUpdate('city')} 
-                                value={this.state.city}>
-                                <option>New York City</option>
-                                <option>Miami</option>
-                                <option>Las Vegas</option>
-                                <option>Los Angeles</option>
-                                <option>Atlantic City</option>
-                                <option>Chicago</option>
+                                onChange={this.handleUpdate('location')} 
+                                value={this.state.location}>
+                                <option selected disabled> </option>
+                                <option value='NewYorkCity'>New York City</option>
+                                <option value='Miami'>Miami</option>
+                                <option value='Vegas'>Las Vegas</option>
+                                <option value='LosAngeles'>Los Angeles</option>
+                                <option value='AtlanticCity'>Atlantic City</option>
+                                <option value='Chicago'>Chicago</option>
                             </select>
                         </div>
 

@@ -9,7 +9,28 @@ class ListingIndex extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchListings()
+        // console.log(this.props)
+        this.props.fetchListings(this.props.filter)  
+    }
+
+    componentWillUnmount(){
+        this.props.clearFilters()
+    }
+
+    // componentDidUpdate(prevProps){
+    //     console.log(prevProps)
+    //     if (
+    //         this.props.filter !==
+    //         prevProps.filter
+    //         ) {
+    //         this.props.fetchListings(prevProps.filter);
+    //     }
+    // }
+    
+    componentDidUpdate(prevProps){
+        if (prevProps.filter !== this.props.filter) {
+            this.props.fetchListings(this.props.filter)
+        }
     }
 
     render(){
@@ -22,7 +43,7 @@ class ListingIndex extends React.Component{
                         <div className='listing-page-button'>
                             <div className='curved-button'>Cancellation
                                 <div className="drop-content">
-                                    <p>Reservation cancellation can be done anytime and anywhere through the reservations page when a user is logged in.</p>
+                                    <p>Reservation cancellation can be done anytime and anywhere through the reservations page.</p>
                                 </div>
                             </div>
                             <div className='curved-button'>Cities

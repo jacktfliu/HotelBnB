@@ -3,7 +3,9 @@ class Api::ListingsController < ApplicationController
 
     def index 
         @listings = Listing.all
-        render 'api/listings/index'
+        # byebug
+        @listings = @listings.where(location: params[:location])
+        render :index
     end
 
     def show 

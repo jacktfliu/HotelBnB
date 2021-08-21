@@ -20,8 +20,8 @@ export const removeListing = listingId => ({
 })
 
 
-export const fetchListings = () => dispatch => (
-  APIUtil.fetchListings().then(listings => (
+export const fetchListings = (location) => dispatch => (
+  APIUtil.fetchListings(location).then(listings => (
     dispatch(receiveListings(listings))
   ))
 );

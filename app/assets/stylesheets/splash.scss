@@ -34,6 +34,7 @@
 
         &:hover{
             box-shadow:rgba(255, 255, 255, 0.8) 1px 0px 12px;
+            cursor: pointer;
         }
     }
 
@@ -87,6 +88,7 @@
 
                 &:hover{
                     background-color: lightgrey;
+                    cursor: pointer;
                 }  
             }
 
@@ -190,6 +192,10 @@
                         border-radius: 12px;
                         background-image: url('NewYorkCity.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                     .first-splash-image2{
                         width: 90px;
@@ -197,6 +203,10 @@
                         border-radius: 12px;
                         background-image: url('Miami.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                     .first-splash-image3{
                         width: 90px;
@@ -204,6 +214,10 @@
                         border-radius: 12px;
                         background-image: url('LasVegas.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                     .first-splash-image4{
                         width: 90px;
@@ -211,6 +225,10 @@
                         border-radius: 12px;
                         background-image: url('Los.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                     .first-splash-image5{
                         width: 90px;
@@ -218,6 +236,10 @@
                         border-radius: 12px;
                         background-image: url('City.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                     .first-splash-image6{
                         width: 90px;
@@ -225,6 +247,10 @@
                         border-radius: 12px;
                         background-image: url('Chi.jpeg');
                         background-size: 100% 100%;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
 
                     .first-splash-word{
@@ -242,6 +268,10 @@
                             padding-left: 14px;
                             text-decoration: none;
                             color: rgb(107, 105, 105);
+                        }
+
+                        &:hover{
+                            cursor: pointer;
                         }
                     }
                 }

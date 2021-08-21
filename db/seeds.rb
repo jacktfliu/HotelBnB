@@ -21,14 +21,14 @@ listing1 = Listing.create(
     title: "AC Hotel", 
     price: 150.00, 
     description: '',
-    location: 'Downtown manhattan', 
+    location: 'NewYorkCity', 
     bedroom: 5, 
     bathroom: 3, 
     longitude: 40.7484, 
     latitude: 73.9857, 
     owner_id: 1,
     host_name: 'Jack', 
-    city: 'New York City'
+    city: 'slkdhfslf'
 )
 
 listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', '1.jpg')), filename: '1.jpg')

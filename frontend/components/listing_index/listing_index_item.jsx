@@ -8,7 +8,7 @@ const ListingIndexItem = props => {
         <div className='listing-left-box'>
                 <img className='listing-image' src={listing.photos[0]}></img>
                 <Link className='listing-items-container' to={`/listings/${listing.id}`}>
-                    <p className='listing-location'>{listing.location}</p>
+                    <p className='listing-location'>{listing.city}</p>
                     <h1 className='listing-header'>
                         <div className='listing-description'>{listing.title}</div>
                     </h1>

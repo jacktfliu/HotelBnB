@@ -92,7 +92,7 @@ class ListingShow extends React.Component{
                     <h1 className='show-title'>{listing.title}</h1>
                     <div className='edit-delete-container'>
                         <p className='show-location'>
-                            Location: {listing.location} · Bedroom: {listing.bedroom} · Bathroom: {listing.bathroom}
+                            Location: {listing.city} · Bedroom: {listing.bedroom} · Bathroom: {listing.bathroom}
                         </p>
                         {this.props.currentUser ? currentUser.id === listing.owner_id ? this.userEditDelete() : '' : '' }
                     </div>
