@@ -14,8 +14,9 @@ const mSTP = (state) => ({
         latitude: '',
         owner_id: state.session.id,
         host_name: '', 
-        city: null
-    }
+        city: '',
+    },
+
 })
 
 const mDTP = (dispatch) => ({

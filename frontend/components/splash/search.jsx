@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom'
 class Search extends React.Component{
     constructor(props) {
         super(props)
-        this.state = {minGuest: 1}
+        this.state = {
+            minGuest: 1,
+        }
     }
     
 
@@ -19,7 +21,6 @@ class Search extends React.Component{
 
     listingPage(location) {
         this.props.updateFilter('location', location)
-        this.props.history.push('/listings')
     }
 
     randomListing(){
@@ -59,7 +60,7 @@ class Search extends React.Component{
                         <option value="7">7 guest</option>        
                     </select>
                     <span></span>
-                    <div value='NewYorkCity' onClick={this.listingPage.bind(this, 'NewYorkCity')} className='filter-buttons-search'><i className="fas fa-search"></i></div>
+                    <div value='NewYorkCity' onClick={this.listingPage.bind(this)} className='filter-buttons-search'><i className="fas fa-search"></i></div>
                 </form>
             </div>
             <div className='suprise-me-container'> 

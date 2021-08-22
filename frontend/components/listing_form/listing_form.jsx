@@ -22,7 +22,6 @@ class ListingForm extends React.Component{
 
     handleUpdate(field){
         return (e) => {
-            console.log(e.target.value)
             this.setState({[field]: e.target.value})
         }
     }
