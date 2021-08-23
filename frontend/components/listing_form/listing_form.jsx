@@ -3,12 +3,12 @@ import React from 'react'
 class ListingForm extends React.Component{
     constructor(props){
         super(props)
-        this.state = Object.assign({}, { ...this.props.listing, photoFile: null,
+        this.state = {
+            listing: this.props.listing,
             photoUrl: null,
             photoFile: null
-        }),
+        },
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleUpdate = this.handleUpdate.bind(this)
         this.handleFile = this.handleFile.bind(this)
     }
 
@@ -16,17 +16,17 @@ class ListingForm extends React.Component{
         e.preventDefault();
         const {photos} = this.state
         const formData = new FormData();
-        formData.append('listing[title]', this.state.title);
-        formData.append('listing[price]', this.state.price);
-        formData.append('listing[description]', this.state.description);
-        formData.append('listing[location]', this.state.location);
-        formData.append('listing[bedroom]', this.state.bedroom);
-        formData.append('listing[bathroom]', this.state.bathroom);
-        formData.append('listing[longitude]', this.state.longitude);
-        formData.append('listing[latitude]', this.state.latitude);
-        formData.append('listing[owner_id]', this.state.owner_id);
-        formData.append('listing[host_name]', this.state.host_name);
-        formData.append('listing[city]', this.state.city);
+        formData.append('listing[title]', this.state.listing.title);
+        formData.append('listing[price]', this.state.listing.price);
+        formData.append('listing[description]', this.state.listing.description);
+        formData.append('listing[location]', this.state.listing.location);
+        formData.append('listing[bedroom]', this.state.listing.bedroom);
+        formData.append('listing[bathroom]', this.state.listing.bathroom);
+        formData.append('listing[longitude]', this.state.listing.longitude);
+        formData.append('listing[latitude]', this.state.listing.latitude);
+        formData.append('listing[owner_id]', this.state.listing.owner_id);
+        formData.append('listing[host_name]', this.state.listing.host_name);
+        formData.append('listing[city]', this.state.listing.city);
 
         // for (let i = 0; i < photos.length; i++){
         //     formData.append('listing[photos][]', photos[i])
@@ -40,11 +40,11 @@ class ListingForm extends React.Component{
         )
     }
 
-    handleUpdate(field){
-        return (e) => {
-            this.setState({[field]: e.target.value})
-        }
-    }
+    // handleUpdate(field){
+    //     return (e) => {
+    //         this.setState({[field]: e.target.value})
+    //     }
+    // }
 
     handleFile(e){
         const file = e.currentTarget.files[0]
@@ -59,6 +59,15 @@ class ListingForm extends React.Component{
             this.setState({photoFile: null, photoUrl: ''})
         }
     }
+
+    handleUpdate(field) {
+    return e => {
+        let nextListing = Object.assign({}, this.state.listing);
+        nextListing[field] = e.currentTarget.value;
+        this.setState({ listing: nextListing });
+        };
+    }
+
 
     render(){
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : '' 
@@ -76,9 +85,9 @@ class ListingForm extends React.Component{
                                 What is your name?
                             </h1>
                             <input className='create-listing-name' 
-                                onChange={this.handleUpdate('host_name')} 
                                 type='text' 
-                                value={this.state.host_name}
+                                onChange={this.handleUpdate('host_name')} 
+                                value={this.state.listing.host_name}
                             />
                         </div>
                         <div className='create-listing-title-container'>
@@ -89,7 +98,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-title' 
                                 onChange={this.handleUpdate('title')} 
                                 type='text' 
-                                value={this.state.title}
+                                value={this.state.listing.title}
                             />
                         </div>
 
@@ -101,7 +110,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-price' 
                                 onChange={this.handleUpdate('price')} 
                                 type='text' 
-                                value={this.state.price}
+                                value={this.state.listing.price}
                             />
                         </div>
 
@@ -112,7 +121,7 @@ class ListingForm extends React.Component{
                             </h1>
                             <textarea className='create-listing-description' 
                                 onChange={this.handleUpdate('description')}  
-                                value={this.state.description}
+                                value={this.state.listing.description}
                             />
                         </div>
 
@@ -124,7 +133,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-location' 
                                 onChange={this.handleUpdate('city')} 
                                 type='text' 
-                                value={this.state.city}
+                                value={this.state.listing.city}
                             />
                         </div>
 
@@ -135,7 +144,7 @@ class ListingForm extends React.Component{
                             </h1>
                             <select className='create-listing-city' 
                                 onChange={this.handleUpdate('location')} 
-                                value={this.state.location}>
+                                value={this.state.listing.location}>
                                 <option selected disabled> </option>
                                 <option value='NewYorkCity'>New York City</option>
                                 <option value='Miami'>Miami</option>
@@ -154,7 +163,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-bedroom' 
                                 onChange={this.handleUpdate('bedroom')} 
                                 type='text' 
-                                value={this.state.bedroom}
+                                value={this.state.listing.bedroom}
                             />
                         </div>
 
@@ -166,7 +175,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-bathroom' 
                                 onChange={this.handleUpdate('bathroom')} 
                                 type='text' 
-                                value={this.state.bathroom}
+                                value={this.state.listing.bathroom}
                             />
                         </div>
 
@@ -178,7 +187,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-longitude' 
                                 onChange={this.handleUpdate('longitude')} 
                                 type='text' 
-                                value={this.state.longitude}
+                                value={this.state.listing.longitude}
                             />
                         </div>
 
@@ -190,7 +199,7 @@ class ListingForm extends React.Component{
                             <input className='create-listing-latitude' 
                                 onChange={this.handleUpdate('latitude')} 
                                 type='text' 
-                                value={this.state.latitude}
+                                value={this.state.listing.latitude}
                             />
                         </div>
                         <div className="listing-image-container">
@@ -212,7 +221,7 @@ class ListingForm extends React.Component{
                         </div>
                     </div>
                     <div className='create-buttons'>
-                        <button className='form-button' onClick={() => this.props.history.push('/listings')}>Cancel</button>
+                        <button className='form-button' onClick={() => this.props.history.push(`/listings/${this.props.listing.id}`)}>Cancel</button>
                         <button className='form-button' type='submit'>Submit {this.props.formType}</button>
                     </div>
                 </form>

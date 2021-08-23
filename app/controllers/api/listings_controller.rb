@@ -18,7 +18,8 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        debugger
+        puts 'HELLLLOOOOOOOOOOOO'
+        puts listing_params
         @listing = Listing.new(listing_params)
 
         if @listing.save

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { createListing } from '../../actions/listing_action'
 import ListingForm from './listing_form'
+import { updateFilter } from '../../actions/filter_actions'
 
 const mSTP = (state) => ({
     listing: {
@@ -22,7 +23,8 @@ const mSTP = (state) => ({
 })
 
 const mDTP = (dispatch) => ({
-    action: listing => dispatch(createListing(listing))
+    action: listing => dispatch(createListing(listing)),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
 })
 
 export default connect(mSTP, mDTP)(ListingForm)

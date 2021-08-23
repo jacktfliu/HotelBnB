@@ -68,31 +68,6 @@ class SplashPage extends React.Component{
                                             </div>
                                         </div>
                                     </div>
-
-                                        {/* <div onClick={this.redirectListing.bind(this, "LosAngeles")} className='city-content'>
-                                            <div  className='first-splash-box'>
-                                            <div className='first-splash-image4'></div>
-                                            <div className='first-splash-word'>
-                                                <h1>Los Angeles</h1>
-                                                <p>The city of angels</p>
-                                            </div>
-                                        </div>
-                
-                                        <div  onClick={this.redirectListing.bind(this, "HELLO")} className='first-splash-box'>
-                                            <div className='first-splash-image5'></div>
-                                            <div className='first-splash-word'>
-                                                <h1>Atlantic City</h1>
-                                                <p>The world's playground</p>
-                                            </div>
-                                        </div>
-                                        <div  onClick={this.redirectListing.bind(this, "Chicago")} className='first-splash-box'>
-                                            <div className='first-splash-image6'></div>
-                                            <div className='first-splash-word'>
-                                                <h1>Chicago</h1>
-                                                <p>The windy city</p>
-                                            </div>
-                                            </div>
-                                        </div> */}
                                 </div>
                             </div>
                         </div>
