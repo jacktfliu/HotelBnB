@@ -3,21 +3,41 @@ import React from 'react'
 class ListingForm extends React.Component{
     constructor(props){
         super(props)
-        this.state = this.props.listing          
+        this.state = Object.assign({}, { ...this.props.listing, photoFile: null,
+            photoUrl: null,
+            photoFile: null
+        }),
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleUpdate = this.handleUpdate.bind(this)
+        this.handleFile = this.handleFile.bind(this)
     }
 
     handleSubmit(e){
-        e.preventDefault()
-        this.props.action(this.state).then(
+        e.preventDefault();
+        const {photos} = this.state
+        const formData = new FormData();
+        formData.append('listing[title]', this.state.title);
+        formData.append('listing[price]', this.state.price);
+        formData.append('listing[description]', this.state.description);
+        formData.append('listing[location]', this.state.location);
+        formData.append('listing[bedroom]', this.state.bedroom);
+        formData.append('listing[bathroom]', this.state.bathroom);
+        formData.append('listing[longitude]', this.state.longitude);
+        formData.append('listing[latitude]', this.state.latitude);
+        formData.append('listing[owner_id]', this.state.owner_id);
+        formData.append('listing[host_name]', this.state.host_name);
+        formData.append('listing[city]', this.state.city);
+
+        // for (let i = 0; i < photos.length; i++){
+        //     formData.append('listing[photos][]', photos[i])
+        // }
+        if (this.state.photoFile){
+            formData.append('listing[photos]', this.state.photoFile)
+        }
+        
+        this.props.action(formData, this.props.listing.id).then(
             (list) => this.props.history.push(`/listings/${list.listing.id}`)
         )
-        // const formData = new FormData();
-        // formData.append('post[title]', this.state.title);
-        // if (this.state.photoFile) {
-        //     formData.append('post[photo]', this.state.photoFile);
-        // }
     }
 
     handleUpdate(field){
@@ -26,7 +46,23 @@ class ListingForm extends React.Component{
         }
     }
 
+    handleFile(e){
+        const file = e.currentTarget.files[0]
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({photoFile: file, photoUrl: fileReader.result})
+        }
+
+        if (file){
+            fileReader.readAsDataURL(file)
+        } else {
+            this.setState({photoFile: null, photoUrl: ''})
+        }
+    }
+
     render(){
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : '' 
+
         return(
             <div className='border-box-form'>
                 <h1>{this.props.formType}</h1>
@@ -167,8 +203,12 @@ class ListingForm extends React.Component{
                                 name="listing image"
                                 accept="image/*"
                                 className="listing-image-wrapper"
-                                // onChange={this.handleFile}
+                                onChange={this.handleFile}
                             />
+                            <h3>Image Preview</h3>
+                            <div>
+                                {preview}
+                            </div>
                         </div>
                     </div>
                     <div className='create-buttons'>

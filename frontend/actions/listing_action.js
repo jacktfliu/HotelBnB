@@ -38,8 +38,8 @@ export const createListing = listing => dispatch => (
   ))
 );
 
-export const updateListing = listing => dispatch => (
-  APIUtil.updateListing(listing).then(listing => (
+export const updateListing = (formData, listingId) => dispatch => (
+  APIUtil.updateListing(formData, listingId).then(listing => (
     dispatch(receiveListing(listing))
   ))
 )
