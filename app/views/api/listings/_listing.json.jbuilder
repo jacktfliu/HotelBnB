@@ -14,7 +14,7 @@ json.extract! listing,
             :city
 
 x = listing.photos.map do |photo|
-        url_for photo
+        url_for(photo)
     end
 
 json.photos do 

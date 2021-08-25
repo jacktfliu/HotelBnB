@@ -3,6 +3,7 @@ import ListingShow from './listing_show'
 import { updateListing, fetchListings, fetchListing, deleteListing} from '../../actions/listing_action'
 import { deleteReview, fetchReviews} from '../../actions/review_action'
 import { createReservation } from '../../actions/reservation_action'
+import updateFilter from '../../actions/filter_actions'
 
 const mSTP = (state, ownProps) => {
     return{
@@ -21,6 +22,7 @@ const mDTP = (dispatch) => {
         updateListing: (listing) => dispatch(updateListing(listing)),
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         createReservation: (reservation) => dispatch(createReservation(reservation)),
+        updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     }
 }
 

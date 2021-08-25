@@ -13,9 +13,9 @@ class ListingIndex extends React.Component{
         this.props.fetchListings(this.props.filter)  
     }
 
-    componentWillUnmount(){
-        this.props.clearFilters()
-    }
+    // componentWillUnmount(){
+    //     this.props.clearFilters()
+    // }
     
     componentDidUpdate(prevProps){
         if (prevProps.filter !== this.props.filter) {

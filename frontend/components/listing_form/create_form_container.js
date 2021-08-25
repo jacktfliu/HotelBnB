@@ -16,10 +16,7 @@ const mSTP = (state) => ({
         owner_id: state.session.id,
         host_name: '', 
         city: '',
-        photoUrl: null,
     },
-    photoFile: null,
-
 })
 
 const mDTP = (dispatch) => ({

@@ -5,8 +5,7 @@ class ListingForm extends React.Component{
         super(props)
         this.state = {
             listing: this.props.listing,
-            photoUrl: null,
-            photoFile: null
+            photos: []
         },
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFile = this.handleFile.bind(this)
@@ -14,7 +13,7 @@ class ListingForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        // const {photos} = this.state
+        const {photos} = this.state
         const formData = new FormData();
         formData.append('listing[title]', this.state.listing.title);
         formData.append('listing[price]', this.state.listing.price);
@@ -28,12 +27,15 @@ class ListingForm extends React.Component{
         formData.append('listing[host_name]', this.state.listing.host_name);
         formData.append('listing[city]', this.state.listing.city);
 
-        // for (let i = 0; i < photos.length; i++){
-        //     formData.append('listing[photos][]', photos[i])
-        // }
-        if (this.state.photoFile){
-            formData.append('listing[photos]', this.state.photoFile)
+        if (this.state.photos){
+            for (let i = 0; i < photos.length; i++){
+                formData.append('listing[photos][]', photos[i].photoFile)
+            }
         }
+        debugger
+        // if (this.state.photoFile){
+        //     formData.append('listing[photos]', this.state.photoFile)
+        // }
         
         this.props.action(formData, this.props.listing.id).then(
             (list) => this.props.history.push(`/listings/${list.listing.id}`)
@@ -47,16 +49,18 @@ class ListingForm extends React.Component{
     // }
 
     handleFile(e){
-        const file = e.currentTarget.files[0]
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-            this.setState({photoFile: file, photoUrl: fileReader.result})
-        }
+        const files = e.currentTarget.files
+        const that = this
+        for(let i = 0; i < files.length; i++){
+            const fileReader = new FileReader();
+            fileReader.onloadend = () => {
+                let photo = {photoFile: files[i], photoUrl: fileReader.result}
+                that.state.photos.push(photo)
+            }
 
-        if (file){
-            fileReader.readAsDataURL(file)
-        } else {
-            this.setState({photoFile: null, photoUrl: ''})
+            if (files[i]){
+                fileReader.readAsDataURL(files[i])  
+            }
         }
     }
 
@@ -213,6 +217,7 @@ class ListingForm extends React.Component{
                                 accept="image/*"
                                 className="listing-image-wrapper"
                                 onChange={this.handleFile}
+                                multiple
                             />
                             <h3>Image Preview</h3>
                             <div>

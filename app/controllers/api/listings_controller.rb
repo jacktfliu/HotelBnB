@@ -17,7 +17,12 @@ class Api::ListingsController < ApplicationController
         render :new
     end
 
-    def create 
+    def create
+        debugger 
+        if params[:listing][:photos]
+            listing_params[:photos] = params[:listing][:photos]
+        end
+
         @listing = Listing.new(listing_params)
 
         if @listing.save
@@ -64,7 +69,7 @@ class Api::ListingsController < ApplicationController
             :owner_id,
             :host_name, 
             :city,
-            :photos
+            photos: []
         )
     end
 

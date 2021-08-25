@@ -36,11 +36,15 @@ class ListingShow extends React.Component{
     }
 
     compononetDidUpdate(){
-
         if (this.props.listingId){
             this.props.fetchListing(this.props.match.params.listingId)
         } 
     }
+
+    // componentWillUnmount(){
+    //     this.props.clearFilters()
+    // }
+    
 
     userEditDelete(){
         return(
