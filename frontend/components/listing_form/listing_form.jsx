@@ -14,7 +14,7 @@ class ListingForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        const {photos} = this.state
+        // const {photos} = this.state
         const formData = new FormData();
         formData.append('listing[title]', this.state.listing.title);
         formData.append('listing[price]', this.state.listing.price);
@@ -71,10 +71,10 @@ class ListingForm extends React.Component{
 
     render(){
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : '' 
-
+        // console.log(this.props.listingId)
         return(
             <div className='border-box-form'>
-                <h1>{this.props.formType}</h1>
+                {/* <h1>{this.props.formType}</h1> */}
                 <div className='share'>Host your place</div>
                 <form onSubmit={this.handleSubmit}>
                     <div className='update-edit'>

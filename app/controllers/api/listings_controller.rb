@@ -18,8 +18,6 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        puts 'HELLLLOOOOOOOOOOOO'
-        puts listing_params
         @listing = Listing.new(listing_params)
 
         if @listing.save
@@ -30,12 +28,13 @@ class Api::ListingsController < ApplicationController
     end
 
     def update
-        @listing = Listing.find(params[:id])
+        # debugger
+        @listing = Listing.find_by(id: params[:id])
 
         if @listing && @listing.update(listing_params)
             render :show
         else 
-            render json: @spot.errors.full_messages, status: 422
+            render json: @listing.errors.full_messages, status: 422
         end
     end
 

@@ -29,12 +29,13 @@ class EditForm extends React.Component{
 
 const mSTP = (state, ownProps) => ({
     listing: state.entities.listings[ownProps.match.params.listingId],
-    formType: 'Update Listing'
+    formType: 'Update Listing',
+    // listingId: ownProps.match.params.listingId
 })
 
 const mDTP = (dispatch) => ({
     fetchListing: listing => dispatch(fetchListing(listing)),
-    action: listing => dispatch(updateListing(listing)),
+    action: (formData, listingId) => dispatch(updateListing(formData, listingId)),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
 
 })
