@@ -29,7 +29,7 @@ class NavBar extends React.Component{
                             <div className='dropdown'>
                                 {        
                                     this.props.currentUser ?
-                                    <div className='dropdown-content' onClick={this.handleClick}>
+                                    <div className='dropdown-content'>
                                         <ul className='drop-down-inside'>Welcome {this.props.currentUser.username}</ul>
                                         <Link className='drop-down-inside' to='/listing/new'>Host</Link>
                                         <Link className='drop-down-inside' to='/reservations'>Reservations</Link>

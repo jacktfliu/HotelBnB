@@ -5,8 +5,7 @@ class ListingIndexMap extends React.Component {
     super(props)
   }
 
-componentDidMount() {
-
+  componentDidMount() {
     const mapOptions = {
       center: { lat: 37.7758, lng: -122.435 },
       zoom: 13
@@ -20,7 +19,6 @@ componentDidMount() {
       <div id='map-container' ref={ map => this.mapNode = map }></div>
     )
   }
-  
 }
 
 export default ListingIndexMap

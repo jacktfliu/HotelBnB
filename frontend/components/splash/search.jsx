@@ -39,16 +39,30 @@ class Search extends React.Component{
         return (
         <div className='splash-container'>
             <div className='filter-box'>
-                <form onSubmit={this.handleSubmit.bind(this)} className='filter-container'>
-                    <div className='filter-button-search'>
-                        <option disabled selected>Where are you going?</option>
-                        <option value='NewYorkCity' onClick={this.redirectListing.bind(this, "NewYorkCity")}>New York City</option>
-                        <option value='Miami' onClick={this.redirectListing.bind(this, "Miami")}>Miami</option>
-                        <option value='LasVegas' onClick={this.redirectListing.bind(this, "LasVegas")}>Las Vegas</option>
-                        <option value='LosAngeles' onClick={this.redirectListing.bind(this, "LosAngeles")}>Los Angeles</option>
-                        <option value='AtlanticCity' onClick={this.redirectListing.bind(this, "AtlanticCity")}>Atlantic City</option>
-                        <option value='Chicago' onClick={this.redirectListing.bind(this, "Chicago")}>Chicago</option>
-                    </div>           
+                <div className='filter-container'>
+                        {/* <div className='filter-button-search'>Where are you going?
+                            <div className='search-drop-down'>
+                                <ul className='search-drop-down-inside' disabled selected></ul>
+                                <ul className='search-drop-down-inside' value='NewYorkCity' onClick={this.redirectListing.bind(this, "NewYorkCity")}>New York City</ul>
+                                <ul className='search-drop-down-inside' value='Miami' onClick={this.redirectListing.bind(this, "Miami")}>Miami</ul>
+                                <ul className='search-drop-down-inside' value='LasVegas' onClick={this.redirectListing.bind(this, "LasVegas")}>Las Vegas</ul>
+                                <ul className='search-drop-down-inside' value='LosAngeles' onClick={this.redirectListing.bind(this, "LosAngeles")}>Los Angeles</ul>
+                                <ul className='search-drop-down-inside' value='AtlanticCity' onClick={this.redirectListing.bind(this, "AtlanticCity")}>Atlantic City</ul>
+                                <ul className='search-drop-down-inside' value='Chicago' onClick={this.redirectListing.bind(this, "Chicago")}>Chicago</ul>
+                            </div>
+                        </div>            */}
+                    <div className='where-button'>Where are you going?   
+                        <div className='dropdown'>                              
+                            <div className='dropdown-content'>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "NewYorkCity")}>New York City</ul>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "Miami")}>Miami</ul>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "LasVegas")}>Las Vegas</ul>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "LosAngeles")}>Los Angeles</ul>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "AtlanticCity")}>Atlantic City</ul>
+                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "Chicago")}>Chicago</ul>
+                            </div>
+                        </div>
+                    </div>
                     <span></span>
                     <input type='date' min={new Date().toISOString().split('T')[0]} className='filter-buttons'/>
                     <span></span>
@@ -66,7 +80,7 @@ class Search extends React.Component{
                     </select>
                     <span></span>
                     <div onClick={this.randomListing.bind(this)} className='filter-buttons-search'><i className="fas fa-search"></i></div>
-                </form>
+                </div>
             </div>
             <div className='suprise-me-container'> 
                 <div onClick={this.randomListing.bind(this)} className='suprise-me'>Suprise me</div>
