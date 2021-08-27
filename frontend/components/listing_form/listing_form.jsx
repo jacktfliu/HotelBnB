@@ -32,7 +32,7 @@ class ListingForm extends React.Component{
                 formData.append('listing[photos][]', photos[i].photoFile)
             }
         }
-        debugger
+        // debugger
         // if (this.state.photoFile){
         //     formData.append('listing[photos]', this.state.photoFile)
         // }

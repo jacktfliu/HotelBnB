@@ -12,7 +12,8 @@ json.reservations do
             :listing_id
             json.extract! reservation.listing,
             :title,
-            :price
+            :price    
+
         end
     end
 end

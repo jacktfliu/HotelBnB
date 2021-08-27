@@ -18,7 +18,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def create
-        debugger 
+        # debugger 
         if params[:listing][:photos]
             listing_params[:photos] = params[:listing][:photos]
         end

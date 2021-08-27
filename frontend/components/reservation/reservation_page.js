@@ -22,8 +22,7 @@ class ReservationPage extends React.Component {
     render(){ 
         if(this.state.loading) return null
         // const {reservations} = this.props.currentUser
-        
-        console.log(this.props.currentUser)
+        console.log(this.props)
         return(
             <div>
                 <div className='reservation-header'>
