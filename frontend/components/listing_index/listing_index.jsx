@@ -1,7 +1,7 @@
 import React from 'react'
 import ListingIndexItem from './listing_index_item'
 import { Link } from 'react-router-dom'
-import ListingMap from '../listing_map/listing_map'
+import ListingIndexMap from '../listing_map/listing_index_map'
 
 class ListingIndex extends React.Component{
     constructor(props){
@@ -65,7 +65,7 @@ class ListingIndex extends React.Component{
                 </div>
                 <div className='main-map'>
                     <div className='map-right'>
-                        <ListingMap/>
+                        <ListingIndexMap listings={listings}/>
                     </div>
                 </div>
             </div>

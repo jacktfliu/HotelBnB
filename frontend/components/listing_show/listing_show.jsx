@@ -180,7 +180,7 @@ class ListingShow extends React.Component{
                         Where you'll be staying
                     </div>
                     <div className='show-map'>
-                        <ListingMap/>
+                        <ListingMap listing={listing}/>
                     </div>
                 </div>
             </div>
