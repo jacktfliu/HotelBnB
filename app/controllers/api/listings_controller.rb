@@ -4,7 +4,11 @@ class Api::ListingsController < ApplicationController
     def index 
         @listings = Listing.all
         # byebug
-        @listings = @listings.where(location: params[:location])
+        if params[:location] 
+            @listings = @listings.where(location: params[:location])
+        else 
+            @listing = @listings.all
+        end
         render :index
     end
 

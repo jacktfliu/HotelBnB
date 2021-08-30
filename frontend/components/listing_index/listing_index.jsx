@@ -10,6 +10,7 @@ class ListingIndex extends React.Component{
 
     componentDidMount(){
         // console.log(this.props)
+        // debugger
         this.props.fetchListings(this.props.filter)  
     }
 
@@ -17,11 +18,12 @@ class ListingIndex extends React.Component{
     //     this.props.clearFilters()
     // }
     
-    componentDidUpdate(prevProps){
-        if (prevProps.filter !== this.props.filter) {
-            this.props.fetchListings(this.props.filter)
-        }
-    }
+    // componentDidUpdate(prevProps){
+    //     if (prevProps.filter !== this.props.filter) {
+    //         debugger
+    //         this.props.fetchListings(this.props.filter)
+    //     }
+    // }
 
     render(){
         const {listings} = this.props
