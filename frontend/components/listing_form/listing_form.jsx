@@ -97,7 +97,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-title-container'>
                             <p>Title</p>
                             <h1>
-                                Give your place a title.
+                                Give your place a unqiue title that will stand out.
                             </h1>
                             <input className='create-listing-title' 
                                 onChange={this.handleUpdate('title')} 
@@ -121,7 +121,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-description-container'>
                             <p>Describe your place</p>
                             <h1>
-                                Give a little description of your place. 
+                                Give a short or long description of your property and neighborhood.
                             </h1>
                             <textarea className='create-listing-description' 
                                 onChange={this.handleUpdate('description')}  
@@ -132,7 +132,7 @@ class ListingForm extends React.Component{
                         <div className='create-listing-location-container'>
                             <p>City</p>
                             <h1>
-                                What city is your listing located in?
+                                Please provide your city or town.
                             </h1>
                             <input className='create-listing-location' 
                                 onChange={this.handleUpdate('city')} 
@@ -144,7 +144,9 @@ class ListingForm extends React.Component{
                         <div className='create-listing-city-container'>
                             <p>Location</p>
                             <h1>
-                                Please choose a location
+                                Please choose the city based on where your property is located. 
+                                <br/>
+                                (Due to being a start up, we are only hosting in the cities provided)
                             </h1>
                             <select className='create-listing-city' 
                                 onChange={this.handleUpdate('location')} 
@@ -162,7 +164,9 @@ class ListingForm extends React.Component{
                         <div className='create-listing-bedroom-container'>
                             <p>Bedrooms</p>
                             <h1>
-                                How many bedrooms does this place have?
+                                Please list how many bedrooms this place has. 
+                                <br/>
+                                (Make sure your input is a integer)
                             </h1>
                             <input className='create-listing-bedroom' 
                                 onChange={this.handleUpdate('bedroom')} 
@@ -174,7 +178,9 @@ class ListingForm extends React.Component{
                         <div className='create-listing-bathroom-container'>
                             <p>Bathrooms</p>
                             <h1>
-                                How many bathrooms does this place have?
+                                Please list how many bathrooms this place has. 
+                                <br/>
+                                (Make sure your input is a integer)
                             </h1>
                             <input className='create-listing-bathroom' 
                                 onChange={this.handleUpdate('bathroom')} 
@@ -183,10 +189,25 @@ class ListingForm extends React.Component{
                             />
                         </div>
 
+                        <div className='create-listing-latitude-container'>
+                            <p>Latitude</p>
+                            <h1>
+                                Please provide the latitude of this location.
+                                <br/> 
+                                (Hint: use google)
+                            </h1>
+                            <input className='create-listing-latitude' 
+                                onChange={this.handleUpdate('latitude')} 
+                                type='text' 
+                                value={this.state.listing.latitude}
+                            />
+                        </div>
                         <div className='create-listing-longitude-container'>
                             <p>Longitude</p>
                             <h1>
-                                What is the longitude of this place? 
+                                Please provide the longitude of this location. 
+                                <br/> 
+                                (Hint: use google)
                             </h1>
                             <input className='create-listing-longitude' 
                                 onChange={this.handleUpdate('longitude')} 
@@ -195,21 +216,13 @@ class ListingForm extends React.Component{
                             />
                         </div>
 
-                        <div className='create-listing-latitude-container'>
-                            <p>Latitude</p>
-                            <h1>
-                                What is the latitude of this place?
-                            </h1>
-                            <input className='create-listing-latitude' 
-                                onChange={this.handleUpdate('latitude')} 
-                                type='text' 
-                                value={this.state.listing.latitude}
-                            />
-                        </div>
+
                         <div className="listing-image-container">
                             <p>Listing Image</p>
                             <h1>
-                                Upload an image to promote your Listing.
+                                Please select up to 5 photos to upload in order to promote your Listing.
+                                <br/>
+                                Once these photos are uploaded you will not be able to edit these.
                             </h1>
                             <input
                                 type="file"
