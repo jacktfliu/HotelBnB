@@ -133,6 +133,10 @@
     align-content: left;
     border: none;
     width: 100%;
+
+    &:hover{
+        decoration: underline;
+    }
 }
 
 .drop-down-inside:link{

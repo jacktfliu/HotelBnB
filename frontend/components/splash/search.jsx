@@ -58,8 +58,7 @@ class Search extends React.Component{
                     <input type='date' min={new Date().toISOString().split('T')[0]} className='filter-buttons'/>
                     <span></span>
                     <select className='filter-button-guest'>
-                        <option disabled selected>Guest</option>
-                        <option value="1">1 guest</option>
+                        <option defaultValue="1">1 guest</option>
                         <option value="2">2 guest</option>
                         <option value="3">3 guest</option>
                         <option value="4">4 guest</option>

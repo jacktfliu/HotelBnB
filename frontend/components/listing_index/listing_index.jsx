@@ -1,7 +1,7 @@
 import React from 'react'
 import ListingIndexItem from './listing_index_item'
 import { Link } from 'react-router-dom'
-import ListingIndexMap from '../listing_map/listing_index_map'
+import ListingIndexMap from './listing_index_map'
 
 class ListingIndex extends React.Component{
     constructor(props){
@@ -9,8 +9,6 @@ class ListingIndex extends React.Component{
     }
 
     componentDidMount(){
-        // console.log(this.props)
-        // debugger
         this.props.fetchListings(this.props.filter)  
     }
 
@@ -26,7 +24,8 @@ class ListingIndex extends React.Component{
     // }
 
     render(){
-        const {listings} = this.props
+        const {listings, filter, changeMap} = this.props
+        console.log(this.props.filter)
         return(
             <div className='listing-container'>
                 <div className='listing-left-container'>
@@ -67,7 +66,7 @@ class ListingIndex extends React.Component{
                 </div>
                 <div className='main-map'>
                     <div className='map-right'>
-                        <ListingIndexMap listings={listings}/>
+                        <ListingIndexMap listings={listings} changeMap={changeMap[filter]}/>
                     </div>
                 </div>
             </div>

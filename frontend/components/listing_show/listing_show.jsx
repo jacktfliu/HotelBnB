@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ReviewsFormContainer from '../reviews_form/reviews_form_container'
 import ReviewIndexItem from '../reviews_form/review_index_item'
-import ListingMap from '../listing_map/listing_map'
+import ListingMap from './listing_map'
 import ReservationFormContainer from '../reservation/reservation_container'
 
 
