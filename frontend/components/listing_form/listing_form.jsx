@@ -93,7 +93,9 @@ class ListingForm extends React.Component{
                                 onChange={this.handleUpdate('host_name')} 
                                 value={this.state.listing.host_name}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.host : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.host : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-title-container'>
@@ -106,7 +108,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.title}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.title : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.title : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-price-container'>
@@ -119,7 +123,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.price}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.price : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.price : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-description-container'>
@@ -131,7 +137,9 @@ class ListingForm extends React.Component{
                                 onChange={this.handleUpdate('description')}  
                                 value={this.state.listing.description}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.description : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.description : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-location-container'>
@@ -144,7 +152,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.city}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.location : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.location : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-city-container'>
@@ -165,7 +175,9 @@ class ListingForm extends React.Component{
                                 <option value='AtlanticCity'>Atlantic City</option>
                                 <option value='Chicago'>Chicago</option>
                             </select>
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.city : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.city : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-bedroom-container'>
@@ -180,7 +192,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.bedroom}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.bedroom : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.bedroom : ''} 
+                            </h2>
                         </div>
 
                         <div className='create-listing-bathroom-container'>
@@ -195,7 +209,6 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.bathroom}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.bathroom : ''} 
                         </div>
 
                         <div className='create-listing-latitude-container'>
@@ -210,7 +223,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.latitude}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.latitude : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.latitude : ''} 
+                            </h2>
                         </div>
                         <div className='create-listing-longitude-container'>
                             <p>Longitude</p>
@@ -224,7 +239,9 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.longitude}
                             />
-                        {this.props.listingErrors.error ? this.props.listingErrors.error.longitude : ''} 
+                            <h2>
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.longitude : ''} 
+                            </h2>
                         </div>
 
 
@@ -243,7 +260,6 @@ class ListingForm extends React.Component{
                                 onChange={this.handleFile}
                                 multiple
                             />
-                            <h3></h3>
                             <div>
                                 {preview}
                             </div>
