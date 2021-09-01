@@ -21,8 +21,6 @@ class ReservationPage extends React.Component {
     render(){ 
         if(this.state.loading) return null
         let photos = []
-        
-        console.log(this.props.listings)
         return(
             <div>
                 <div className='reservation-header'>

@@ -25,7 +25,6 @@ class ListingIndex extends React.Component{
 
     render(){
         const {listings, filter, changeMap} = this.props
-        console.log(this.props.filter)
         return(
             <div className='listing-container'>
                 <div className='listing-left-container'>

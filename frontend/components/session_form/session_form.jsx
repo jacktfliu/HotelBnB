@@ -56,7 +56,6 @@ class SessionForm extends React.Component {
         username: 'DemoUser',
         password: 'DemoUser'
     }
-    console.log(this.props)
     if (this.props.formType === 'login'){
       return (
       <form onSubmit={this.handleSubmit} className='login-form'>

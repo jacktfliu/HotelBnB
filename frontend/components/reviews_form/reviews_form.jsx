@@ -64,6 +64,9 @@ class ReviewsForm extends React.Component{
                                 className='stars'
                             />
                        </div>
+                        <h2>
+                            {this.props.reviewErrors.error ? this.props.reviewErrors.error.rating : ''} 
+                        </h2>
                         <div className='review-name'>
                             <textarea
                                 value={this.state.review_name}
@@ -71,6 +74,9 @@ class ReviewsForm extends React.Component{
                                 placeholder='Please enter your name' 
                             />
                         </div>
+                        <h2>
+                            {this.props.reviewErrors.error ? this.props.reviewErrors.error.review : ''}     
+                        </h2>
                         <div className='review-comment'>
                             <textarea
                                 cols="30"
@@ -80,6 +86,9 @@ class ReviewsForm extends React.Component{
                                 placeholder='write a review'
                             />
                         </div>
+                        <h2>
+                            {this.props.reviewErrors.error ? this.props.reviewErrors.error.body : ''} 
+                        </h2>
                     </label>
                  <input type="submit" className='review-submit-button'/>
                 </form>

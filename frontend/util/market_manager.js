@@ -8,7 +8,6 @@ export default class MarkerManager {
     }
 
     updateMarkers(listings) {
-        console.log('time to update')
         const listingsObj = {};
         listings.forEach(listing => listingsObj[listing.id] = listing);
 

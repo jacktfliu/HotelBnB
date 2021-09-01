@@ -14,6 +14,7 @@ const mSTP = (state, ownProps) => ({
         user_id: state.session.id,
         listing_id: parseInt(ownProps.listingId)
     },
+    reviewErrors: state.errors.review
 });
 
 const mDTP = dispatch => ({
