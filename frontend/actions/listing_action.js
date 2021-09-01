@@ -3,6 +3,7 @@ import * as APIUtil from '../util/listing_api_util'
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS'
 export const RECEIVE_LISTING = 'RECEIVE_LISTING'
 export const REMOVE_LISTING = 'REMOVE_LISTING'
+export const RECEIVE_LISTING_ERRORS = 'RECEIVE_LISTING_ERRORS ';
 
 export const receiveListings = listings => ({
     type: RECEIVE_LISTINGS,
@@ -19,6 +20,11 @@ export const removeListing = listingId => ({
     listingId
 })
 
+export const receiveErrors = errors => ({
+    type: RECEIVE_LISTING_ERRORS,
+    errors
+});
+
 
 export const fetchListings = (location) => dispatch => (
   APIUtil.fetchListings(location).then(listings => (
@@ -34,13 +40,15 @@ export const fetchListing = listing => dispatch => (
 
 export const createListing = listing => dispatch => (
   APIUtil.createListing(listing).then(listing => (
-    dispatch(receiveListing(listing))
+    dispatch(receiveListing(listing))), err => (
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const updateListing = (formData, listingId) => dispatch => (
   APIUtil.updateListing(formData, listingId).then(listing => (
-    dispatch(receiveListing(listing))
+    dispatch(receiveListing(listing))), err => (
+    dispatch(receiveErrors(err.responseJSON))
   ))
 )
 

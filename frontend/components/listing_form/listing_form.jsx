@@ -72,10 +72,10 @@ class ListingForm extends React.Component{
         };
     }
 
-
     render(){
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : '' 
-        // console.log(this.props.listingId)
+        const {listingErrors} = this.props
+        
         return(
             <div className='border-box-form'>
                 {/* <h1>{this.props.formType}</h1> */}
@@ -93,7 +93,9 @@ class ListingForm extends React.Component{
                                 onChange={this.handleUpdate('host_name')} 
                                 value={this.state.listing.host_name}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.host : ''} 
                         </div>
+
                         <div className='create-listing-title-container'>
                             <p>Title</p>
                             <h1>
@@ -104,6 +106,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.title}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.title : ''} 
                         </div>
 
                         <div className='create-listing-price-container'>
@@ -116,6 +119,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.price}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.price : ''} 
                         </div>
 
                         <div className='create-listing-description-container'>
@@ -127,6 +131,7 @@ class ListingForm extends React.Component{
                                 onChange={this.handleUpdate('description')}  
                                 value={this.state.listing.description}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.description : ''} 
                         </div>
 
                         <div className='create-listing-location-container'>
@@ -139,6 +144,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.city}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.location : ''} 
                         </div>
 
                         <div className='create-listing-city-container'>
@@ -146,7 +152,7 @@ class ListingForm extends React.Component{
                             <h1>
                                 Please choose the city based on where your property is located. 
                                 <br/>
-                                (Due to being a start up, we are only hosting in the cities provided)
+                                (We are only hosting in the cities provided)
                             </h1>
                             <select className='create-listing-city' 
                                 onChange={this.handleUpdate('location')} 
@@ -159,6 +165,7 @@ class ListingForm extends React.Component{
                                 <option value='AtlanticCity'>Atlantic City</option>
                                 <option value='Chicago'>Chicago</option>
                             </select>
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.city : ''} 
                         </div>
 
                         <div className='create-listing-bedroom-container'>
@@ -173,6 +180,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.bedroom}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.bedroom : ''} 
                         </div>
 
                         <div className='create-listing-bathroom-container'>
@@ -187,6 +195,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.bathroom}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.bathroom : ''} 
                         </div>
 
                         <div className='create-listing-latitude-container'>
@@ -201,6 +210,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.latitude}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.latitude : ''} 
                         </div>
                         <div className='create-listing-longitude-container'>
                             <p>Longitude</p>
@@ -214,6 +224,7 @@ class ListingForm extends React.Component{
                                 type='text' 
                                 value={this.state.listing.longitude}
                             />
+                        {this.props.listingErrors.error ? this.props.listingErrors.error.longitude : ''} 
                         </div>
 
 

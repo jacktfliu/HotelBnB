@@ -17,6 +17,7 @@ const mSTP = (state) => ({
         host_name: '', 
         city: '',
     },
+    listingErrors: state.errors.listing
 })
 
 const mDTP = (dispatch) => ({
