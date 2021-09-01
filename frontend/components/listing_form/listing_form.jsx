@@ -219,7 +219,7 @@ class ListingForm extends React.Component{
                                 onChange={this.handleFile}
                                 multiple
                             />
-                            <h3>Image Preview</h3>
+                            <h3></h3>
                             <div>
                                 {preview}
                             </div>
