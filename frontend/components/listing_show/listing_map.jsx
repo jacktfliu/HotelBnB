@@ -12,7 +12,8 @@ class ListingMap extends React.Component {
 
     const mapOptions = {
       center: { lat: listing.latitude, lng: listing.longitude },
-      zoom: 15
+      zoom: 15,
+      mapTypeId: 'terrain',
     };
 
 

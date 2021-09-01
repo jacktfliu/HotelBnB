@@ -10,7 +10,8 @@ class ListingIndexMap extends React.Component {
     const {changeMap, listings} = this.props
     const mapOptions = {
       center: { lat: changeMap.coords[0], lng: changeMap.coords[1]},
-      zoom: changeMap.zoom
+      zoom: changeMap.zoom,
+      mapTypeId: 'terrain'
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);

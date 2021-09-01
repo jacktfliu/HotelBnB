@@ -14,7 +14,7 @@ const mSTP = (state) => ({
         "Chicago": {coords: [41.8821009, -87.6377712], zoom: 14}, 
         "LosAngeles": {coords: [34.0450184, -118.3421892], zoom: 12}, 
         "LasVegas": {coords: [36.114704, -115.201462], zoom: 13}, 
-        "AtlanticCity": {coords: [39.362129, -74.443108], zoom: 14}
+        "AtlanticCity": {coords: [39.362129, -74.443108], zoom: 14},
     }
 })
 
