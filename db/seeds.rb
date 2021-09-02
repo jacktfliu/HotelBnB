@@ -403,74 +403,75 @@ listing25 = Listing.create!({
     city: 'New Jeresy'
 })
 
-# #Chicago 
+#Chicago 
 
-# listing26 = Listing.create!({
-#     title: '',
-#     price: ,
-#     description: '', 
-#     location: 'Chicago',
-#     bedroom: ,
-#     bathroom: ,
-#     longitude: ,
-#     latitude: ,
-#     owner_id: 2,
-#     host_name: '', 
-#     city: ''
-# })
+listing26 = Listing.create!({
+    title: 'River Norths Finest',
+    price: 150,
+    description: 'Great space...Great Location. Only blocks from Michigan Avenue shopping district and blocks from downtown loop. CTA Brown line station across the street. River North Art Galleries one street south. Great Dining, Millennium Park and all that Chicago has to offer only minutes away. Divvy bike station around the corner. Jump on the Brown Line across the street, be at Wrigley Field in 15 minutes.', 
+    location: 'Chicago',
+    bedroom: 2,
+    bathroom: 2,
+    longitude: -87.63736,
+    latitude: 41.89127,
+    owner_id: 2,
+    host_name: 'Vincent', 
+    city: 'Chicago'
+})
 
-# listing27 = Listing.create!({
-#     title: '',
-#     price: ,
-#     description: '', 
-#     location: 'Chicago',
-#     bedroom: ,
-#     bathroom: ,
-#     longitude: ,
-#     latitude: ,
-#     owner_id: 2,
-#     host_name: '', 
-#     city: ''
-# })
+listing27 = Listing.create!({
+    title: 'Your sweet home in Chicago',
+    price: 210,
+    description: 'Enjoy loft-style floor plans and top-notch amenities in a walkable neighborhood that is brimming with Chicago character. Your stay includes 1 parking space. Our one-bedroom apartments offer all the comforts and conveniences of home living. Each apartment is fully furnished and equipped with Wi-Fi; multi-channel cable TV; full kitchen; dining area; living room; queen-size bed; ensuite bathroom; and washer & dryer in each unit.', 
+    location: 'Chicago',
+    bedroom: 1,
+    bathroom: 1,
+    longitude: -87.63497,
+    latitude: 41.88509,
+    owner_id: 2,
+    host_name: 'Jack', 
+    city: 'Chicago'
+})
 
-# listing28 = Listing.create!({
-#     title: '',
-#     price: ,
-#     description: '', 
-#     location: 'Chicago',
-#     bedroom: ,
-#     bathroom: ,
-#     longitude: ,
-#     latitude: ,
-#     owner_id: 2,
-#     host_name: '', 
-#     city: ''
-# })
+listing28 = Listing.create!({
+    title: 'New Spot in West Town',
+    price: 130,
+    description: 'Comfortable spot thats close to downtown, without all the busy cars and street noise! Minutes away from the United Arena, as well as popular neighborhoods such as Wicker Park and South Loop. Guests with canine family members can enjoy a dog park a block away. The home also has smart technology features such as a key on your phone for added security. You can also enjoy great food from local Mexican, pizza, and burger places a short walk away.', 
+    location: 'Chicago',
+    bedroom: 2,
+    bathroom: 1,
+    longitude: -87.64310,
+    latitude: 41.88404,
+    owner_id: 2,
+    host_name: 'Eric', 
+    city: 'Chicago'
+})
 
-# listing29 = Listing.create!({
-#     title: '',
-#     price: ,
-#     description: '', 
-#     location: 'Chicago',
-#     bedroom: ,
-#     bathroom: ,
-#     longitude: ,
-#     latitude: ,
-#     owner_id: 2,
-#     host_name: '', 
-#     city: ''
-# })
+listing29 = Listing.create!({
+    title: 'Private Residence',
+    price: 95,
+    description: 'Fully FURNISHED 1 BED CONDO. Full Amenities building with outdoor pool, fitness center, party room & theater room. Open kitchen, granite counter tops, stainless steel appliances. Breakfast Bar. Hardwood floors. Flat screen TV in living room & bedroom. Newer Furniture throughout. King Bed. Comes with all linens, sheets & towels. Includes HDTV Cable w/DVR & WiFi Internet. ', 
+    location: 'Chicago',
+    bedroom: 1,
+    bathroom: 1,
+    longitude: -87.62667,
+    latitude: 41.89050,
+    owner_id: 2,
+    host_name: 'Kyle', 
+    city: 'Chicago'
+})
 
-# listing30 = Listing.create!({
-#     title: '',
-#     price: ,
-#     description: '', 
-#     location: 'Chicago',
-#     bedroom: ,
-#     bathroom: ,
-#     longitude: ,
-#     latitude: ,
-#     owner_id: 2,
-#     host_name: '', 
-#     city: ''
-# })
+listing30 = Listing.create!({
+    title: 'The Professional’s Playground ',
+    price: 150,
+    description: 'Located at the epicenter of Chicagos cultural, historical, and business attractions, this luxurious 2 bedroom apartment offers guests all the comforts of home, whether on the road for work or play.
+        Within walking distance are world famous attractions including: Millennium Park, the Bean, Navy Pier, Riverwalk, and museum campus. Additionally, guests are merely a block from an "L" train stop, which will transport passengers anywhere they could desire in the city.', 
+    location: 'Chicago',
+    bedroom: 2,
+    bathroom: 1,
+    longitude: -87.632827,
+    latitude: 41.8864,
+    owner_id: 2,
+    host_name: 'Kyle', 
+    city: 'Chicago'
+})
