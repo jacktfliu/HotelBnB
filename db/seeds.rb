@@ -614,7 +614,7 @@ listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images',
 listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '137.webp')), filename: '137.webp')
 listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '138.webp')), filename: '138.webp')
 listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '139.webp')), filename: '139.webp')
-listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets36', 'images', 'listing_images', '140.webp')), filename: '140.webp')
+listing28.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '140.webp')), filename: '140.webp')
 
 listing29 = Listing.create!({
     title: 'Private Residence',
