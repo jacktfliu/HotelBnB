@@ -54,6 +54,12 @@ listing2 = Listing.create!({
     city: 'Manhattan'
 })
 
+listing2.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '6.webp')), filename: '6.webp')
+listing2.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '7.webp')), filename: '7.webp')
+listing2.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '8.webp')), filename: '8.webp')
+listing2.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '9.webp')), filename: '9.webp')
+listing2.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '10.webp')), filename: '10.webp')
+
 listing3 = Listing.create!({
     title: 'High-rise: a birds eye view',
     price: 230,
@@ -67,6 +73,12 @@ listing3 = Listing.create!({
     host_name: 'Raph', 
     city: 'Manhattan'
 })
+
+listing3.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '11.webp')), filename: '11.webp')
+listing3.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '12.webp')), filename: '12.webp')
+listing3.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '13.webp')), filename: '13.webp')
+listing3.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '14.webp')), filename: '14.webp')
+listing3.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '15.webp')), filename: '15.webp')
 
 listing4 = Listing.create!({
     title: 'Luxury club life',
@@ -82,6 +94,12 @@ listing4 = Listing.create!({
     city: 'Manhattan'
 })
 
+listing4.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '16.webp')), filename: '16.webp')
+listing4.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '17.webp')), filename: '17.webp')
+listing4.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '18.webp')), filename: '18.webp')
+listing4.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '19.webp')), filename: '19.webp')
+listing4.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '20.webp')), filename: '20.webp')
+
 listing5 = Listing.create!({
     title: 'New York City Town House',
     price: 350,
@@ -95,6 +113,12 @@ listing5 = Listing.create!({
     host_name: 'Kin', 
     city: 'Manhattan'
 })
+
+listing5.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '21.webp')), filename: '21.webp')
+listing5.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '22.webp')), filename: '22.webp')
+listing5.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '23.webp')), filename: '23.webp')
+listing5.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '24.webp')), filename: '24.webp')
+listing5.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '25.webp')), filename: '25.webp')
 
 #Miami
 listing6 = Listing.create!({
