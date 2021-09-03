@@ -11,7 +11,7 @@
 User.destroy_all
 ApplicationRecord.connection.reset_pk_sequence!('users')
 User.create({username: "DemoUser", email: "demo@user.com", password: "DemoUser",first_name: 'Demo', last_name: 'Demo'})
-User.create({username: 'jack', email:'jack@jack.com', password:'jackjack', first_name: 'jack', last_name: 'jack'})
+jack = User.create({username: 'jack', email:'jack@jack.com', password:'jackjack', first_name: 'jack', last_name: 'jack'})
 
 
 #HotelBnB Listings 
@@ -28,10 +28,17 @@ listing1 = Listing.create!({
     bathroom: 2,
     longitude: -73.987747,
     latitude: 40.750433,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Vincent', 
-    city: 'Manhattan'
+    city: 'Manhattan',
 })
+
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '1.webp')), filename: '1.webp')
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '2.webp')), filename: '2.webp')
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '3.webp')), filename: '3.webp')
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '4.webp')), filename: '4.webp')
+listing1.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'listing_images', '5.webp')), filename: '5.webp')
+
 
 listing2 = Listing.create!({
     title: 'Center of it all',
@@ -42,7 +49,7 @@ listing2 = Listing.create!({
     bathroom: 1,
     longitude: -73.988704,
     latitude: 40.757921,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Yung', 
     city: 'Manhattan'
 })
@@ -56,7 +63,7 @@ listing3 = Listing.create!({
     bathroom: 1,
     longitude: -73.980187,
     latitude: 40.754951,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Raph', 
     city: 'Manhattan'
 })
@@ -70,7 +77,7 @@ listing4 = Listing.create!({
     bathroom: 1,
     longitude: -73.983882,
     latitude: 40.764633,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Jack', 
     city: 'Manhattan'
 })
@@ -84,7 +91,7 @@ listing5 = Listing.create!({
     bathroom: 2,
     longitude: -73.977070,
     latitude: 40.761798,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Kin', 
     city: 'Manhattan'
 })
@@ -99,7 +106,7 @@ listing6 = Listing.create!({
     bathroom: 1,
     longitude: -80.184443,
     latitude: 25.815239,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Miguel', 
     city: 'Miami'
 })
@@ -113,7 +120,7 @@ listing7 = Listing.create!({
     bathroom: 2,
     longitude: -80.200335,
     latitude: 25.794945,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Chase', 
     city: 'Miami'
 })
@@ -127,7 +134,7 @@ listing8 = Listing.create!({
     bathroom: 2,
     longitude: -80.190032,
     latitude: 25.798655,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Chase', 
     city: 'Miami'
 })
@@ -141,7 +148,7 @@ listing9 = Listing.create!({
     bathroom: 2,
     longitude: -80.200060,
     latitude: 25.806228,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Raph', 
     city: 'Miami'
 })
@@ -155,7 +162,7 @@ listing10 = Listing.create!({
     bathroom: 1,
     longitude: -80.195439,
     latitude: 25.803185,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Jack', 
     city: 'Miami'
 })
@@ -171,7 +178,7 @@ listing11 = Listing.create!({
     bathroom: 1,
     longitude: -115.1780532,
     latitude: 36.1094652,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Joseph', 
     city: 'Vegas'
 })
@@ -185,7 +192,7 @@ listing12 = Listing.create!({
     bathroom: 1,
     longitude: -115.160818,
     latitude: 36.111062,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Joseph', 
     city: 'Vegas'
 })
@@ -205,7 +212,7 @@ listing13 = Listing.create!({
     bathroom: 2,
     longitude: -115.186221,
     latitude: 36.115491,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Isaac', 
     city: 'Vegas'
 })
@@ -219,7 +226,7 @@ listing14 = Listing.create!({
     bathroom: 1,
     longitude: -115.1567827,
     latitude: 36.14435,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Isaac', 
     city: 'Vegas'
 })
@@ -238,7 +245,7 @@ listing15 = Listing.create!({
     bathroom: 2,
     longitude: -115.1508047,
     latitude: 36.140300,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Jack', 
     city: 'Vegas'
 })
@@ -254,7 +261,7 @@ listing16 = Listing.create!({
     bathroom: 3,
     longitude: -118.248597,
     latitude: 34.088243,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Sam', 
     city: 'LA'
 })
@@ -277,7 +284,7 @@ listing17 = Listing.create!({
     bathroom: 2,
     longitude: -118.410774,
     latitude: 34.00812,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Sam', 
     city: 'LA'
 })
@@ -294,7 +301,7 @@ listing18 = Listing.create!({
     bathroom: 1,
     longitude: -118.39787,
     latitude: 34.048271,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Eric', 
     city: 'LA'
 })
@@ -310,7 +317,7 @@ listing19 = Listing.create!({
     bathroom: 1,
     longitude: -118.26888,
     latitude: 34.03612,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Raph', 
     city: 'LA'
 })
@@ -324,7 +331,7 @@ listing20 = Listing.create!({
     bathroom: 2,
     longitude: -118.30669,
     latitude: 34.07164,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Kin', 
     city: 'LA'
 })
@@ -340,7 +347,7 @@ listing21 = Listing.create!({
     bathroom: 1,
     longitude: -74.414430,
     latitude: 39.370134,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Paul', 
     city: 'New Jeresy'
 })
@@ -356,7 +363,7 @@ listing22 = Listing.create!({
     bathroom: 1,
     longitude: -74.41471,
     latitude: 39.36404,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Ali', 
     city: 'New Jeresy'
 })
@@ -370,7 +377,7 @@ listing23 = Listing.create!({
     bathroom: 1,
     longitude: -74.41939,
     latitude: 39.36152,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Ali', 
     city: 'New Jeresy'
 })
@@ -384,7 +391,7 @@ listing24 = Listing.create!({
     bathroom: 1,
     longitude: -74.42352,
     latitude: 39.35927,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Sohrob', 
     city: 'New Jeresy'
 })
@@ -398,7 +405,7 @@ listing25 = Listing.create!({
     bathroom: 1,
     longitude: -74.41104,
     latitude: 39.36443,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Sohrob', 
     city: 'New Jeresy'
 })
@@ -414,7 +421,7 @@ listing26 = Listing.create!({
     bathroom: 2,
     longitude: -87.63736,
     latitude: 41.89127,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Vincent', 
     city: 'Chicago'
 })
@@ -428,7 +435,7 @@ listing27 = Listing.create!({
     bathroom: 1,
     longitude: -87.63497,
     latitude: 41.88509,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Jack', 
     city: 'Chicago'
 })
@@ -442,7 +449,7 @@ listing28 = Listing.create!({
     bathroom: 1,
     longitude: -87.64310,
     latitude: 41.88404,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Eric', 
     city: 'Chicago'
 })
@@ -456,7 +463,7 @@ listing29 = Listing.create!({
     bathroom: 1,
     longitude: -87.62667,
     latitude: 41.89050,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Kyle', 
     city: 'Chicago'
 })
@@ -471,7 +478,7 @@ listing30 = Listing.create!({
     bathroom: 1,
     longitude: -87.632827,
     latitude: 41.8864,
-    owner_id: 2,
+    owner_id: jack.id,
     host_name: 'Kyle', 
     city: 'Chicago'
 })
