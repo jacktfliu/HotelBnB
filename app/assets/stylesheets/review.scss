@@ -31,7 +31,6 @@
     font-size: 16px;
     color: rgb(255, 56, 92);
     margin-bottom: 10px;
-
 }
 
 .review-form-container{
@@ -58,8 +57,11 @@
         margin: 5px;       
     }
 
-    .review-submit-button{
+    .review-name{
+        margin-bottom: -8px;
+    }
 
+    .review-submit-button{
         height: 38px;
         width: 50.8%;
         border-radius: 8px;
@@ -68,6 +70,7 @@
         background-color: rgb(255, 56, 92);
         color: white;
         border: none;
+        margin-top: -1px;
 
         &:hover{
             cursor: pointer;
