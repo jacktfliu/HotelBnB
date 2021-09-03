@@ -17,17 +17,21 @@
 }
 
 .current-comment-user{
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .review-comment{
-    font-size: 14px;
+    font-size: 16px;
     color: grey;
+    margin-top: 10px;
 }
 
 .review-rating{
     font-size: 16px;
     color: rgb(255, 56, 92);
+    margin-bottom: 10px;
+
 }
 
 .review-form-container{
