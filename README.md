@@ -90,5 +90,8 @@ componentDidMount() {
 
 ## Search Bar
 
+Users are able to search through different listings based on different cities
+![serach](https://user-images.githubusercontent.com/82416350/132592464-6705959a-289e-4248-854a-ea49fc736f19.gif)
+
 
 
