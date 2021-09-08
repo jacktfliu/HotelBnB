@@ -32,18 +32,55 @@ Users can create listings based on different criteria.
 When a user is logged in, they can make reservations. Using the reservations tab, users can view and cancel their reservations. 
 ![Reserve](https://user-images.githubusercontent.com/82416350/132432237-59028fcc-3951-4b65-94ad-7172bf14b752.gif)
 
+
+You can find this code on the reservations page for the user. In order to make a reservation, the user must sign up or log in if they are not already logged in. Upon logging in and signing up, the user will be able to reserve the listing and then will be redirected to their reservations page. The code iterates through all listings associated with the specific user. It then retrieves the details of the reservation, including the listing image. The corresponding photo and details associated with the reservation are then displayed.
+
+```javascript
+<div className='reservations'>
+    {
+        this.props.reservations.map((reservation, i) => (
+            <div key={`reservation-${i}`} className='reservation-container'>
+                <img className='reservation-img' src={this.props.listings[reservation.listing_id] ?      
+                      this.props.listings[reservation.listing_id].photos[0] : ''}>
+                </img>
+                <div className='reservation-wrapper'>
+                    <h1>{reservation.title}</h1>
+                    <h2>Reservation dates: {reservation.check_in_date.split('T')[0]} to {reservation.check_out_date.split('T')[0]}</h2>
+                    <p>Number of Guests: {reservation.number_of_guest}</p>
+                </div>
+                <div className='cancel-reservation-container'>
+                    <button onClick={() => this.props.history.push(`listings/${reservation.listing_id}`)} className='back-to-link'>Go to 
+                     listing</button> 
+                    <button onClick={() => this.props.deleteReservation(reservation.id)} className='cancel-reservation'>Cancel Reservation</button>
+                </div>
+            </div>
+        ))
+    }
+</div>
+```
+
 ## Reviews
 Once logged in users are able to write and delete reviews for listings.
 ![Reviews](https://user-images.githubusercontent.com/82416350/132432844-4b803d57-c767-43bd-a438-6534e705269a.gif)
 
 ## Google Map Api filter 
-Newly created listings will have its own individual map with a pin on it. All the pins will be shown on the index page where it lists all the rentals. 
+Newly created listings will have its own individual map with a pin on it. All the pins will be shown on the index page where it showcase all the listings.
 
 ![Google](https://user-images.githubusercontent.com/82416350/132433165-4db108b7-0cc3-4e84-ae01-96b8b77a0519.gif)
 
+This block of code changes the map and pins of listings on that map depending on what city a user clicks on. 
+```javascript
+componentDidMount() {
+  const {changeMap, listings} = this.props
+  const mapOptions = {
+    center: { lat: changeMap.coords[0], lng: changeMap.coords[1]},
+    zoom: changeMap.zoom,
+    mapTypeId: 'terrain'
+  };
 
-
-
-
-
+  this.map = new google.maps.Map(this.mapNode, mapOptions);
+  this.MarkerManager = new MarkerManager(this.map);
+  this.MarkerManager.updateMarkers(this.props.listings);
+}
+```
 
