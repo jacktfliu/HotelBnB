@@ -49,6 +49,7 @@ class ReviewsForm extends React.Component{
     }
 
     render(){
+        console.log(this.props.currentUser)
         return(
             <div>
                 <form onSubmit={this.handleSubmit} className='review-form-container'>

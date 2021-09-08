@@ -5,8 +5,6 @@ import ReviewIndexItem from '../reviews_form/review_index_item'
 import ListingMap from './listing_map'
 import ReservationFormContainer from '../reservation/reservation_container'
 
-
-
 class ListingShow extends React.Component{
     constructor(props){
         super(props)

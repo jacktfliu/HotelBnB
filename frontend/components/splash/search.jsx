@@ -5,27 +5,19 @@ import {Link} from 'react-router-dom'
 class Search extends React.Component{
     constructor(props) {
         super(props)
-        this.state = {
-            minGuest: 1,
-        }
+
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     
 
     handleSubmit() {
-        this.props.history.push('/listing')
-    }
-
-    handleChange(filter) {
-        return e => this.props.updateFilter(filter, e.currentTarget.value)
-    }
-
-    listingPage(location) {
-        this.props.updateFilter('location', location)
-    }
-
-    redirectListing(location){
-        this.props.updateFilter('location', location)
         this.props.history.push(`/listings`) 
+    }
+
+    handleChange(e) {
+        this.props.updateFilter('location', e.target.value)
+        console.log(e.target.value)
     }
 
     randomListing(){
@@ -38,20 +30,17 @@ class Search extends React.Component{
     render() {
         return (
         <div className='splash-container'>
-            <div className='filter-box'>
+            <form className='filter-box'>
                 <div className='filter-container'>
-                    <div className='where-button'>Where are you going?   
-                        <div className='dropdown'>                              
-                            <div className='dropdown-content'>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "NewYorkCity")}>New York City</ul>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "Miami")}>Miami</ul>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "LasVegas")}>Las Vegas</ul>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "LosAngeles")}>Los Angeles</ul>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "AtlanticCity")}>Atlantic City</ul>
-                                <ul className='drop-down-inside' onClick={this.redirectListing.bind(this, "Chicago")}>Chicago</ul>
-                            </div>
-                        </div>
-                    </div>
+                    <select onChange={this.handleChange} className='where-button'>Where are you going?   
+                        <option disabled selected className='drop-down-inside' >Where are you going?</option>
+                        <option className='drop-down-inside' value='NewYorkCity'>New York City</option>
+                        <option className='drop-down-inside' value='Miami'>Miami</option>
+                        <option className='drop-down-inside' value='LasVegas'>Las Vegas</option>
+                        <option className='drop-down-inside' value='LosAngeles'>Los Angeles</option>
+                        <option className='drop-down-inside' value='AtlanticCity'>Atlantic City</option>
+                        <option className='drop-down-inside' value='Chicago'>Chicago</option>
+                    </select>
                     <span></span>
                     <input type='date' min={new Date().toISOString().split('T')[0]} className='filter-buttons'/>
                     <span></span>
@@ -67,9 +56,9 @@ class Search extends React.Component{
                         <option value="7">7 guest</option>        
                     </select>
                     <span></span>
-                    <div onClick={this.randomListing.bind(this)} className='filter-buttons-search'><i className="fas fa-search"></i></div>
+                    <div onClick={this.handleSubmit} className='filter-buttons-search'><i className="fas fa-search"></i></div>
                 </div>
-            </div>
+            </form>
             <div className='surprise-me-container'> 
                 <div onClick={this.randomListing.bind(this)} className='surprise-me'>Surprise me</div>
             </div>
