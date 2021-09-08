@@ -7,6 +7,11 @@
     <%=
       javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:MAPS_API_KEY]}&libraries=places"
       %>
+    <meta property="og:title" content="Hotelbnb" />
+    <meta property='og:image' content="<%= image_url('hotelbnb.png') %>" />
+    <meta property="og:description"
+      content="Full-stack clone of Airbnb; allows users to find, create, and reserve rentals." />
+    <meta property="og:url" content="https://hotelbnb-main.herokuapp.com/#/" />
     <script src="https://kit.fontawesome.com/23a6930115.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
