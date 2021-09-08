@@ -2,7 +2,8 @@
 
 HotelBnB is a fullstack clone of AirBnB where users can explore, book and review listings.
 
-![front](https://user-images.githubusercontent.com/82416350/132426165-21371abd-b946-46c4-adfd-24ea059c502d.gif)
+![front](https://user-images.githubusercontent.com/82416350/132426455-d53de0ab-7132-4689-b4fa-3beedf9c9c67.gif)
+
 
 
 
