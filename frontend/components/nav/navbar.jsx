@@ -14,9 +14,9 @@ class NavBar extends React.Component{
                     <Link to='/' className='title'>HotelBnB</Link>
                 </div>
                 <div className='links'>
-                    <a href='https://github.com/jacktfliu/HotelBnB'><i className="fab fa-github"></i></a>
-                    <a href='https://www.linkedin.com/in/jack-l-338a09141/'><i className="fab fa-linkedin"></i></a>
-                    <a href='https://angel.co/u/jack-liu-43'><i className="fab fa-angellist"></i></a>
+                    <a href='https://github.com/jacktfliu/HotelBnB' target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                    <a href='https://www.linkedin.com/in/jack-l-338a09141/' target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                    <a href='https://angel.co/u/jack-liu-43' target="_blank" rel="noopener noreferrer"><i className="fab fa-angellist"></i></a>
                 </div>
                 <div className='header'>
                     <div className='icon-button'>
