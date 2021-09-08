@@ -2,6 +2,8 @@
 
 HotelBnB is a fullstack clone of AirBnB where users can explore, book and review listings.
 
+Here is the [live site!](https://hotelbnb-main.herokuapp.com/)
+
 ![front](https://user-images.githubusercontent.com/82416350/132426455-d53de0ab-7132-4689-b4fa-3beedf9c9c67.gif)
 
 
@@ -17,7 +19,7 @@ Users are able to login and signup via a modal on any page that has a navbar. Th
 
 
 ## Listing 
-Logged in users are able to create, update and delete listings. Users who are creating a listing are able to upload five photos through AWS intergration. 
+Listings can be created, updated, and deleted by logged-in users. Through AWS integration, users are able to upload up to five photos for their listing. 
 
 Created listings are shown in the main index page. 
 ![listing](https://user-images.githubusercontent.com/82416350/132427202-c808ba83-ba64-4f14-9757-22ae62c7ee86.gif)
@@ -29,7 +31,7 @@ Users can create listings based on different criteria.
 ![hosting](https://user-images.githubusercontent.com/82416350/132427558-fdfbe3d5-02fc-4c39-9ca2-f2ff1adab450.gif)
 
 ## Reservations
-When a user is logged in, they can make reservations. Using the reservations tab, users can view and cancel their reservations. 
+Users can make reservations once they are logged in. Users can view and cancel their reservations using the reservations tab. 
 ![Reserve](https://user-images.githubusercontent.com/82416350/132432237-59028fcc-3951-4b65-94ad-7172bf14b752.gif)
 
 
@@ -64,11 +66,11 @@ Once logged in users are able to write and delete reviews for listings.
 ![Reviews](https://user-images.githubusercontent.com/82416350/132432844-4b803d57-c767-43bd-a438-6534e705269a.gif)
 
 ## Google Map Api filter 
-Newly created listings will have its own individual map with a pin on it. All the pins will be shown on the index page where it showcase all the listings.
+An individual pin will be displayed on the map for each newly created listing. The pins will be displayed on the index page where it displays all the listings.
 
 ![Google](https://user-images.githubusercontent.com/82416350/132433165-4db108b7-0cc3-4e84-ae01-96b8b77a0519.gif)
 
-This block of code changes the map and pins of listings on that map depending on what city a user clicks on. 
+This block of code changes the map and pins of listings on the map depending on which city the user clicks. 
 ```javascript
 componentDidMount() {
   const {changeMap, listings} = this.props
@@ -83,4 +85,10 @@ componentDidMount() {
   this.MarkerManager.updateMarkers(this.props.listings);
 }
 ```
+
+# BONUS Features
+
+## Search Bar
+
+
 
