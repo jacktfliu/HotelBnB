@@ -17,7 +17,6 @@ class Search extends React.Component{
 
     handleChange(e) {
         this.props.updateFilter('location', e.target.value)
-        console.log(e.target.value)
     }
 
     randomListing(){
@@ -32,8 +31,8 @@ class Search extends React.Component{
         <div className='splash-container'>
             <form className='filter-box'>
                 <div className='filter-container'>
-                    <select onChange={this.handleChange} className='where-button'>Where are you going?   
-                        <option disabled selected className='drop-down-inside' >Where are you going?</option>
+                    <select defaultValue='' onChange={this.handleChange} className='where-button'>Where are you going?   
+                        <option disabled value='' className='drop-down-inside' >Where are you going?</option>
                         <option className='drop-down-inside' value='NewYorkCity'>New York City</option>
                         <option className='drop-down-inside' value='Miami'>Miami</option>
                         <option className='drop-down-inside' value='LasVegas'>Las Vegas</option>
