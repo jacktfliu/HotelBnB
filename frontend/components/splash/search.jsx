@@ -70,8 +70,8 @@ class Search extends React.Component{
                     <div onClick={this.randomListing.bind(this)} className='filter-buttons-search'><i className="fas fa-search"></i></div>
                 </div>
             </div>
-            <div className='suprise-me-container'> 
-                <div onClick={this.randomListing.bind(this)} className='suprise-me'>Suprise me</div>
+            <div className='surprise-me-container'> 
+                <div onClick={this.randomListing.bind(this)} className='surprise-me'>Surprise me</div>
             </div>
         </div>     
         )
