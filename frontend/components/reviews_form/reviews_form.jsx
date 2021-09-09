@@ -5,7 +5,12 @@ import { render } from "react-dom";
 class ReviewsForm extends React.Component{
     constructor(props){
         super(props)
-        this.state = this.props.review
+        this.state = {
+            review_name: this.props.review_name,
+            body: this.props.body,
+            rating: this.props.rating,
+            listing_id: this.props.listing_id,
+        }
 
         this.updateBody = this.updateBody.bind(this)
         this.updateRating = this.updateRating.bind(this)
@@ -36,7 +41,7 @@ class ReviewsForm extends React.Component{
     handleSubmit(e){
         e.preventDefault()
         if(this.props.currentUser){
-            this.props.createReview(this.state)
+            this.props.createReview(Object.assign({user_id: this.props.user_id}, this.state))
             this.setState({
                 review_name: '',
                 body: '',

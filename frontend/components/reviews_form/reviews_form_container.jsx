@@ -5,17 +5,14 @@ import { openModal } from '../../actions/modal_actions'
 import {login} from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => {
-    const user_id = state.entities.users[state.session.id] ? state.entities.users[state.session.id].id : ''
     return({
         currentUser: state.entities.users[state.session.id],
         reviews: state.entities.reviews,
-        review: {
-            review_name: "",
-            body: "",
-            rating: 0,
-            user_id,
-            listing_id: parseInt(ownProps.listingId)
-        },
+        review_name: "",
+        body: "",
+        rating: 0,
+        user_id: state.session.id,
+        listing_id: parseInt(ownProps.listingId),
         reviewErrors: state.errors.review
     })
 };
