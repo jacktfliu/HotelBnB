@@ -153,7 +153,7 @@ class ListingForm extends React.Component{
                                 value={this.state.listing.city}
                             />
                             <h2>
-                                {this.props.listingErrors.error ? this.props.listingErrors.error.location : ''} 
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.city : ''} 
                             </h2>
                         </div>
 
@@ -176,7 +176,7 @@ class ListingForm extends React.Component{
                                 <option value='Chicago'>Chicago</option>
                             </select>
                             <h2>
-                                {this.props.listingErrors.error ? this.props.listingErrors.error.city : ''} 
+                                {this.props.listingErrors.error ? this.props.listingErrors.error.location : ''} 
                             </h2>
                         </div>
 

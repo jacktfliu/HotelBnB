@@ -14,14 +14,16 @@ class EditForm extends React.Component{
     }
 
     render(){
-        const {updateListing, formType, listing, action} = this.props
+        const {updateListing, formType, listing, action, listingErrors} = this.props
         return(
             <ListingForm
                 history={this.props.history}
                 updateListing={updateListing}
                 formType={formType}
                 listing={listing}
-                action={action}/>
+                action={action}
+                listingErrors={listingErrors}
+                />
         )
     }
 }
@@ -30,7 +32,7 @@ class EditForm extends React.Component{
 const mSTP = (state, ownProps) => ({
     listing: state.entities.listings[ownProps.match.params.listingId],
     formType: 'Update Listing',
-    // listingId: ownProps.match.params.listingId
+    listingErrors: state.errors.listing
 })
 
 const mDTP = (dispatch) => ({
